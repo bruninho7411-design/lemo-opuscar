@@ -1,0 +1,20 @@
+30 Segundos — "E se todas as propostas do Lula virassem realidade por 30 segundos?" · credits
+
+Everything visual is procedural (three.js code in this folder): city, promenade, sites, people, vehicles, signs. No image assets, no real logos, no likeness of any person.
+Proposal content: summaries of the 2026 government programme registered with the TSE, from press coverage (see FACTS.md). The film presents them as proposals ("e se…"), not as results.
+
+Fonts
+- Overpass & Overpass Mono — Delve Withrington, Dave Bailey, Thomas Jockin (Red Hat) — SIL Open Font License 1.1 (fonts/OFL-Overpass.txt), via @fontsource
+
+Voice
+- Kokoro-82M TTS (voice pf_dora, pt-BR), Apache-2.0, via kokoro-onnx
+- Speech check: Whisper small (MIT) run through sherpa-onnx (Apache-2.0)
+
+Music (original composition, mix.py)
+- Samples (CC0): FreePats project (freepats.zenvoid.org), Versilian Community Sample Library (Versilian Studios)
+
+Sound effects
+- All synthesized in mix.py with core/audio/sfx.py (no recorded samples)
+
+Libraries
+- three.js (MIT), playwright-core (Apache-2.0), ffmpeg (LGPL/GPL)
