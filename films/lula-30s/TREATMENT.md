@@ -1,6 +1,6 @@
 # TREATMENT — "30 Segundos de Plano de Governo"
 
-Style: **Tilt-Shift Miniature** · vertical 1080×1920 · 24 fps · ~52 s · pt-BR voice (Kokoro `pf_dora`) + burned-in captions.
+Style: **Tilt-Shift Miniature** · vertical 1080×1920 · 24 fps · ~52 s · pt-BR voice (VoiceStudio / OmniVoice, young male, dry irony; replaced Kokoro `pf_dora`) + burned-in captions.
 Audience: Gen Z, short-form feeds (Reels / TikTok / Shorts). Goal: retention + comments. Tone: high-energy, playful, politically neutral: each proposal is stated as written in the 2026 programme (FACTS.md), framed as a "what if", never as an outcome.
 
 ## 1. Three candidate structures

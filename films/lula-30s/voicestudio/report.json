@@ -1,0 +1,92 @@
+{
+ "h1": {
+  "take": "h1_s2.wav",
+  "dur": 4.48,
+  "wer": 0.08,
+  "asr": "E se todas as propostas do Lula virassem realidade por só 30 segundos?"
+ },
+ "h2": {
+  "take": "h2_s1.wav",
+  "dur": 0.9,
+  "wer": 0.0,
+  "asr": "Valendo."
+ },
+ "p1": {
+  "take": "p1_s2.wav",
+  "dur": 2.72,
+  "wer": 0.33,
+  "asr": "Tchau, escala 6 por 1, 40 horas por semana."
+ },
+ "p2": {
+  "take": "p2_s2.wav",
+  "dur": 2.3,
+  "wer": 0.12,
+  "asr": "Ganha até 5 mil imposto de renda. Zero."
+ },
+ "p3": {
+  "take": "p3_s2.wav",
+  "dur": 2.84,
+  "wer": 0.33,
+  "asr": "sexta básica sem imposto e cashback para os mais pobres."
+ },
+ "p4": {
+  "take": "p4_s2.wav",
+  "dur": 2.35,
+  "wer": 0.29,
+  "asr": "Cresce Pública e escolha em tempo integral."
+ },
+ "p5": {
+  "take": "p5_s2.wav",
+  "dur": 2.58,
+  "wer": 0.22,
+  "asr": "Pede meia pros estudantes e mais institutos federais."
+ },
+ "p6": {
+  "take": "p6_s2.wav",
+  "dur": 2.52,
+  "wer": 0.22,
+  "asr": "mais médicos, especialistas e a fila do Suzandã."
+ },
+ "p7": {
+  "take": "p7_s2.wav",
+  "dur": 1.41,
+  "wer": 0.0,
+  "asr": "mais farmácia popular."
+ },
+ "p8": {
+  "take": "p8_s2.wav",
+  "dur": 2.71,
+  "wer": 0.0,
+  "asr": "Ministério da Segurança Pública, mirando o dinheiro das facções."
+ },
+ "p9": {
+  "take": "p9_s2.wav",
+  "dur": 2.16,
+  "wer": 0.62,
+  "asr": "Tregador de app com INSS."
+ },
+ "p10": {
+  "take": "p10_s2.wav",
+  "dur": 3.07,
+  "wer": 0.2,
+  "asr": "política de cuidados para quem cuida e para quem envelhece."
+ },
+ "c1": {
+  "take": "c1_s2.wav",
+  "dur": 1.52,
+  "wer": 0.0,
+  "asr": "Tudo ao mesmo tempo."
+ },
+ "o1": {
+  "take": "o1_s2.wav",
+  "dur": 3.44,
+  "wer": 0.0,
+  "asr": "Agora, a pergunta é, quanto disso sai do papel em quatro anos?"
+ },
+ "o2": {
+  "take": "o2_s2.wav",
+  "dur": 2.97,
+  "wer": 0.0,
+  "asr": "Qual dessas você mais quer ver de verdade? Comenta aí!"
+ }
+}

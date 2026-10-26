@@ -8,7 +8,8 @@ export LIB
 cd "$LIB"
 SIZE=1080x1920
 Q=${Q:-"noev&ssaa=1&noao&sm=2048"}          # software-GL settings; on a GPU use Q="noev" (2× supersampling, GTAO, 4096 shadows)
-"$LIB/.venv/bin/python" core/tts/tts.py "$HERE/lines.json" "$HERE/voices/"
+# voice: VoiceStudio/OmniVoice, see voicestudio/lines.py (run with the VoiceStudio venv)
+# "$LIB/.venv/bin/python" core/tts/tts.py "$HERE/lines.json" "$HERE/voices/"
 node core/render/events.mjs "$HERE" --size $SIZE
 node "$HERE/subs.mjs" && "$LIB/.venv/bin/python" core/render/srt.py "$HERE/cues.json" "$HERE/lula-30s.srt"
 "$LIB/.venv/bin/python" "$HERE/mix.py"

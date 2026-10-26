@@ -7,8 +7,8 @@ Fonts
 - Overpass & Overpass Mono — Delve Withrington, Dave Bailey, Thomas Jockin (Red Hat) — SIL Open Font License 1.1 (fonts/OFL-Overpass.txt), via @fontsource
 
 Voice
-- Kokoro-82M TTS (voice pf_dora, pt-BR), Apache-2.0, via kokoro-onnx
-- Speech check: Whisper small (MIT) run through sherpa-onnx (Apache-2.0)
+- OmniVoice (k2-fsa/OmniVoice) via VoiceStudio: a young male voice designed with "male, young adult" (voicestudio/ref_voice.wav), then cloned for every line at the original line lengths (voicestudio/lines.py)
+- Speech check: Whisper small (MIT) via faster-whisper
 
 Music (original composition, mix.py)
 - Samples (CC0): FreePats project (freepats.zenvoid.org), Versilian Community Sample Library (Versilian Studios)
