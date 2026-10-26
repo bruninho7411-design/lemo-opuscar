@@ -1,0 +1,56 @@
+{
+ "v1": {
+  "take": "v1_s1.wav",
+  "dur": 2.946,
+  "wer": 0.08,
+  "asr": "3 da manhã, chuva lá fora, só você e o seu gato."
+ },
+ "v2": {
+  "take": "v2_s1.wav",
+  "dur": 1.665,
+  "wer": 0.0,
+  "asr": "Aí ele acorda. Do nada."
+ },
+ "v3": {
+  "take": "v3_s1.wav",
+  "dur": 1.953,
+  "wer": 0.0,
+  "asr": "e o copo d'água começa a tremer."
+ },
+ "v4": {
+  "take": "v4_s1.wav",
+  "dur": 3.729,
+  "wer": 0.15,
+  "asr": "Não corre para a porta. Abaixa, se protege debaixo da mesa e segura firme."
+ },
+ "v5": {
+  "take": "v5_s1.wav",
+  "dur": 3.193,
+  "wer": 0.0,
+  "asr": "E o gato não tenta pegar ele, ele vai se esconder sozinho."
+ },
+ "v6": {
+  "take": "v6_s1.wav",
+  "dur": 2.028,
+  "wer": 0.0,
+  "asr": "Longe da janela. Fica aí até parar."
+ },
+ "v7": {
+  "take": "v7_s2.wav",
+  "dur": 1.459,
+  "wer": 0.0,
+  "asr": "Parou, respira."
+ },
+ "v8": {
+  "take": "v8_s1.wav",
+  "dur": 4.328,
+  "wer": 0.0,
+  "asr": "Agora sim, calça um sapato, pega o gato e desce pela escada, nunca de elevador."
+ },
+ "v9": {
+  "take": "v9_s2.wav",
+  "dur": 2.117,
+  "wer": 0.0,
+  "asr": "Salva esse vídeo, pode salvar vocês dois."
+ }
+}

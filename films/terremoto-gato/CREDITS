@@ -1,0 +1,21 @@
+POV: um terremoto 8.0 chega enquanto você está em casa com seu gato · credits
+
+Everything visual is procedural (three.js code in this folder): the flat, furniture, you, the cat, the building, the city, the rain. No image assets, no real places, brands or people.
+Safety advice on screen and in the voice: see FACTS.md (Ready.gov, American Red Cross, local emergency-management pet guidance). The quake itself is fiction.
+
+Fonts
+- Josefin Sans — Santiago Orozco — SIL Open Font License 1.1 (via Google Fonts)
+- Quicksand — Andrew Paglinawan — SIL Open Font License 1.1 (via Google Fonts)
+
+Voice
+- OmniVoice (k2-fsa/OmniVoice, Apache-2.0) run through VoiceStudio: a voice designed as "male, young adult", cloned for every line (voicestudio/)
+- Speech check: Whisper small (MIT) via faster-whisper
+
+Music (original composition, mix.py)
+Samples (CC0): FreePats project (freepats.zenvoid.org), VS Chamber Orchestra: Community Edition (Versilian Studios), Versilian Community Sample Library (Versilian Studios)
+
+Sound effects
+- Synthesized in mix.py with core/audio/sfx.py (rain, rumble, falls, glass, bell, torch, purr)
+
+Libraries
+- three.js (MIT), playwright-core (Apache-2.0), ffmpeg (LGPL/GPL)
