@@ -1,0 +1,14 @@
+POV: você ficou milionário aos 23 — EP 1
+Everything in the picture is drawn in code; score, foley and ambience are synthesized in code (mix.py).
+
+Voice
+- VoiceStudio / OmniVoice (k2-fsa/OmniVoice model, Apache-2.0; VoiceStudio app code AGPL-3.0), run locally on CPU.
+  Narrator / "você": the series voice (designed "male, young adult", voicestudio/ref_voice.wav), cloned per line.
+  Caio: designed with OmniVoice voice design ("male, young adult, high pitch"), voicestudio/ref_caio.wav, cloned per line.
+- Speech check: faster-whisper "small" (MIT).
+
+Fonts (Google Fonts, SIL Open Font License 1.1)
+- Baloo 2 (Ek Type), VT323 (Peter Hull), Bungee (David Jonathan Ross)
+
+Engine
+- toon.js vector engine adapted from the Sci-Fi Sitcom Toon style of the library (see LICENSE of the library).
