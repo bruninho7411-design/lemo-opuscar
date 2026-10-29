@@ -1,0 +1,20 @@
+POV: você ficou milionário aos 23 — EP 5 · O dono
+
+Music        Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0
+             https://creativecommons.org/licenses/by/4.0/
+             "Hitman" and "Investigations", edited to the picture by mix.py
+             Credit line for the post: Música: "Hitman" e "Investigations" — Kevin MacLeod (incompetech.com), CC BY 4.0
+Voices       VoiceStudio / OmniVoice (k2-fsa/OmniVoice model, Apache-2.0; VoiceStudio app AGPL-3.0), run locally on CPU.
+             Narrator: the designed voice of EP 2–4; Você and Caio: the series voices from EP 1;
+             Seu Arlindo: designed voice ("male, elderly, moderate pitch", seed 3). Every line checked with faster-whisper (MIT).
+Backgrounds  Five illustrated plates (bg/*_v1.png: the office, its reverse angle, the cork wall, the counter, the shop front)
+             generated with GPT Image 2.5 on Higgsfield, with frames of EP 1 as the style reference; text and the Ω emblem drawn in code.
+Characters   AI-generated: keyframes (ai/k_*.png) made with GPT Image 2.5 on Higgsfield from the series' EP 1 character designs,
+             animated with Wan 2.7 on Higgsfield (ai/v_*.mp4, 3 s each, 720p): the lip-synced shots were driven by this
+             episode's own VoiceStudio lines; the chair turn, the phone, the keys and the follow still are image-to-video or stills.
+             Seu Arlindo, Caio and "você" are fictional characters of this series.
+Animation    Inserts (the contract, the wall, the boletos, the letter, the shop front), graphics, captions, camera moves and the
+             line boil drawn in code (toon.js, from EP 1 / the Sci-Fi Sitcom Toon style). The earlier all-code character rigs (chars.js)
+             still render with main.js?code=1.
+Sound FX     Synthesized in code (mix.py + core/audio/sfx.py). No samples.
+Fonts        Baloo 2, Bungee, VT323 (fonts/), Google Fonts, SIL Open Font License 1.1
