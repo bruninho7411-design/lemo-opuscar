@@ -1,0 +1,15 @@
+POV: você ficou milionário aos 23 — EP 2 · O segredo vazou
+
+Music        Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0
+             https://creativecommons.org/licenses/by/4.0/
+             "Hitman" and "Investigations", edited to the picture by mix.py
+             Credit line for the post: Música: "Hitman" e "Investigations" — Kevin MacLeod (incompetech.com), CC BY 4.0
+Voices       VoiceStudio / OmniVoice (k2-fsa/OmniVoice model, Apache-2.0; VoiceStudio app AGPL-3.0), run locally on CPU.
+             Narrator: designed voice ("male, middle-aged, very low pitch"); Você and Caio: the series voices from EP 1;
+             Homem de Terno: designed voice ("male, elderly, low pitch"). Every line checked with faster-whisper (MIT).
+Sound FX     Synthesized in code (mix.py + core/audio/sfx.py). No samples.
+3D assets    Poly Haven, CC0: photo_studio_loft_hall HDRI, american_walnut_veneer texture, tea_set_01, desk_lamp_arm_01
+Bricks       Bricks, characters, buildings and the car built procedurally in code (bricks.js from the Brick Toy style, figs.js, world.js).
+             Generic interlocking-brick shapes only; no brand logos, minifigure designs or set models.
+Font         Fredoka (core/fonts), Google Fonts, SIL Open Font License 1.1
+Code         three.js (MIT)

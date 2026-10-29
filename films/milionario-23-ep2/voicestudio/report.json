@@ -1,0 +1,110 @@
+{
+ "n1": {
+  "take": "n1_s1.wav",
+  "dur": 2.912,
+  "wer": 0.0,
+  "asr": "Seu melhor amigo descobriu que você é milionário."
+ },
+ "n2": {
+  "take": "n2_s1.wav",
+  "dur": 0.74,
+  "wer": 0.0,
+  "asr": "e postou."
+ },
+ "n3": {
+  "take": "n3_s1.wav",
+  "dur": 1.293,
+  "wer": 0.0,
+  "asr": "12 horas antes."
+ },
+ "n4": {
+  "take": "n4_s1.wav",
+  "dur": 5.385,
+  "wer": 0.0,
+  "asr": "Se você chegou agora, 23 anos, 3 lavanderias, 1 milhão na conta, e ninguém sabia."
+ },
+ "c1": {
+  "take": "c1_s1.wav",
+  "dur": 2.462,
+  "wer": 0.0,
+  "asr": "27 mil! Mano, de onde vem isso?"
+ },
+ "n5": {
+  "take": "n5_s1.wav",
+  "dur": 2.578,
+  "wer": 0.0,
+  "asr": "Você tinha duas opções, mentir ou mostrar."
+ },
+ "n6": {
+  "take": "n6_s1.wav",
+  "dur": 1.851,
+  "wer": 0.4,
+  "asr": "11h da noite, Lavanderia 1."
+ },
+ "n7": {
+  "take": "n7_s1.wav",
+  "dur": 4.067,
+  "wer": 0.0,
+  "asr": "Cada máquina gira umas oito vezes por dia. Doze máquinas, três lojas."
+ },
+ "n8": {
+  "take": "n8_s2.wav",
+  "dur": 3.791,
+  "wer": 0.07,
+  "asr": "Tirando aluguel, água e luz sobram 9 mil por mês, em cada uma."
+ },
+ "c2": {
+  "take": "c2_s1.wav",
+  "dur": 1.33,
+  "wer": 0.0,
+  "asr": "Mano, me ensina!"
+ },
+ "n9": {
+  "take": "n9_s1.wav",
+  "dur": 3.971,
+  "wer": 0.0,
+  "asr": "Se você também quer aprender, segue. A série tem 30 episódios."
+ },
+ "y1": {
+  "take": "y1_s1.wav",
+  "dur": 2.115,
+  "wer": 0.0,
+  "asr": "Te ensino, mas ninguém pode saber."
+ },
+ "c3": {
+  "take": "c3_s1.wav",
+  "dur": 0.665,
+  "wer": 0.0,
+  "asr": "Juro!"
+ },
+ "n10": {
+  "take": "n10_s1.wav",
+  "dur": 1.864,
+  "wer": 0.0,
+  "asr": "Ele jurou de dedos cruzados."
+ },
+ "n11": {
+  "take": "n11_s1.wav",
+  "dur": 2.533,
+  "wer": 0.14,
+  "asr": "7 da manhã, 1 milhão de visualizações."
+ },
+ "n12": {
+  "take": "n12_s1.wav",
+  "dur": 3.376,
+  "wer": 0.0,
+  "asr": "e as oito, tinha um homem de terno na porta da sua lavanderia."
+ },
+ "s1": {
+  "take": "s1_s1.wav",
+  "dur": 3.058,
+  "wer": 0.0,
+  "asr": "Você é o garoto das lavanderias? Precisamos conversar."
+ },
+ "n13": {
+  "take": "n13_s1.wav",
+  "dur": 3.042,
+  "wer": 0.11,
+  "asr": "No próximo episódio, a proposta segue para não perder."
+ }
+}
