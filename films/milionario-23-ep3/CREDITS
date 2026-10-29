@@ -13,3 +13,5 @@ Bricks       Bricks, characters, buildings and the car built procedurally in cod
              Generic interlocking-brick shapes only; no brand logos, minifigure designs or set models.
 Font         Fredoka (core/fonts), Google Fonts, SIL Open Font License 1.1
 Code         three.js (MIT)
+AI insert    One 2-second shot (5.3–7.5 s, the briefcase push-in) generated with Kling 3.0 Pro on Higgsfield (image-to-video,
+             5.25 credits) from a still of this film's own render: edit/insert_briefcase_kling.mp4. Everything else is rendered in code.

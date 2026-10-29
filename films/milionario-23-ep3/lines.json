@@ -1,15 +1,121 @@
 [
- {"id": "s1", "who": "s", "text": "Três milhões. À vista. Pelas suas três lavanderias.", "sub": "R$ 3 milhões. À vista. Pelas suas 3 lavanderias."},
- {"id": "n1", "who": "n", "text": "Você tem vinte e três anos... e nunca viu tanto dinheiro junto.", "sub": "Você tem 23 anos... e nunca viu tanto dinheiro junto."},
- {"id": "c1", "who": "c", "text": "Mano... aceita! Aceita agora!", "sub": "Mano... aceita! Aceita agora!"},
- {"id": "n2", "who": "n", "text": "Mas antes, faz a conta.", "sub": "Mas antes, faz a conta."},
- {"id": "n3", "who": "n", "text": "Vinte e sete mil por mês. Trezentos e vinte e quatro mil por ano.", "sub": "R$ 27 mil por mês. R$ 324 mil por ano."},
- {"id": "n4", "who": "n", "text": "Em dez anos, três milhões e duzentos mil. E as lavanderias continuam suas.", "sub": "Em 10 anos, R$ 3,2 milhões. E as lavanderias continuam suas."},
- {"id": "n5", "who": "n", "text": "Se você faria a conta antes de aceitar, segue. Essa série é pra você.", "sub": "Se você faria a conta antes de aceitar, segue. Essa série é pra você."},
- {"id": "y1", "who": "y", "text": "Não tá à venda.", "sub": "Não tá à venda."},
- {"id": "s2", "who": "s", "text": "Todo mundo tem um preço, garoto. A gente se vê.", "sub": "Todo mundo tem um preço, garoto. A gente se vê."},
- {"id": "n6", "who": "n", "text": "Ele deixou um cartão. Grupo Ômega.", "sub": "Ele deixou um cartão. Grupo Ômega."},
- {"id": "n7", "who": "n", "text": "Na manhã seguinte... abriu uma lavanderia nova. Bem na frente da sua.", "sub": "Na manhã seguinte... abriu uma lavanderia nova. Bem na frente da sua."},
- {"id": "c2", "who": "c", "text": "Mano... metade do preço?!", "sub": "Mano... metade do preço?!"},
- {"id": "n8", "who": "n", "text": "No próximo episódio: a guerra. Segue pra não perder.", "sub": "No próximo episódio: a guerra. Segue pra não perder."}
+ {
+  "id": "s1",
+  "who": "s",
+  "text": "Três milhões. À vista. Pelas suas três lavanderias.",
+  "sub": "R$ 3 milhões. À vista. Pelas suas 3 lavanderias.",
+  "hi": [
+   "R$ 3 milhões."
+  ]
+ },
+ {
+  "id": "n1",
+  "who": "n",
+  "text": "Você tem vinte e três anos... e nunca viu tanto dinheiro junto.",
+  "sub": "Você tem 23 anos... e nunca viu tanto dinheiro junto.",
+  "hi": [
+   "tanto dinheiro"
+  ]
+ },
+ {
+  "id": "c1",
+  "who": "c",
+  "text": "Mano... aceita! Aceita agora!",
+  "sub": "Mano... aceita! Aceita agora!",
+  "hi": [
+   "Aceita agora!"
+  ]
+ },
+ {
+  "id": "n2",
+  "who": "n",
+  "text": "Mas antes, faz a conta.",
+  "sub": "Mas antes, faz a conta.",
+  "hi": [
+   "faz a conta."
+  ]
+ },
+ {
+  "id": "n3",
+  "who": "n",
+  "text": "Vinte e sete mil por mês. Trezentos e vinte e quatro mil por ano.",
+  "sub": "R$ 27 mil por mês. R$ 324 mil por ano.",
+  "hi": [
+   "R$ 27 mil",
+   "R$ 324 mil"
+  ]
+ },
+ {
+  "id": "n4",
+  "who": "n",
+  "text": "Em dez anos, três milhões e duzentos mil. E as lavanderias continuam suas.",
+  "sub": "Em 10 anos, R$ 3,2 milhões. E as lavanderias continuam suas.",
+  "hi": [
+   "R$ 3,2 milhões.",
+   "continuam suas."
+  ]
+ },
+ {
+  "id": "n5",
+  "who": "n",
+  "text": "Se você faria a conta antes de aceitar, segue. Essa série é pra você.",
+  "sub": "Se você faria a conta antes de aceitar, segue. Essa série é pra você.",
+  "hi": [
+   "segue."
+  ]
+ },
+ {
+  "id": "y1",
+  "who": "y",
+  "text": "Não tá à venda.",
+  "sub": "Não tá à venda.",
+  "hi": [
+   "Não"
+  ]
+ },
+ {
+  "id": "s2",
+  "who": "s",
+  "text": "Todo mundo tem um preço, garoto. A gente se vê.",
+  "sub": "Todo mundo tem um preço, garoto. A gente se vê.",
+  "hi": [
+   "um preço,"
+  ]
+ },
+ {
+  "id": "n6",
+  "who": "n",
+  "text": "Ele deixou um cartão. Grupo Ômega.",
+  "sub": "Ele deixou um cartão. Grupo Ômega.",
+  "hi": [
+   "Grupo Ômega."
+  ]
+ },
+ {
+  "id": "n7",
+  "who": "n",
+  "text": "Na manhã seguinte... abriu uma lavanderia nova. Bem na frente da sua.",
+  "sub": "Na manhã seguinte... abriu uma lavanderia nova. Bem na frente da sua.",
+  "hi": [
+   "Bem na frente da sua."
+  ]
+ },
+ {
+  "id": "c2",
+  "who": "c",
+  "text": "Mano... metade do preço?!",
+  "sub": "Mano... metade do preço?!",
+  "hi": [
+   "metade do preço?!"
+  ]
+ },
+ {
+  "id": "n8",
+  "who": "n",
+  "text": "No próximo episódio: a guerra. Segue pra não perder.",
+  "sub": "No próximo episódio: a guerra. Segue pra não perder.",
+  "hi": [
+   "a guerra."
+  ]
+ }
 ]

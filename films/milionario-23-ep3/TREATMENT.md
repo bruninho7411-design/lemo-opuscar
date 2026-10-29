@@ -20,3 +20,11 @@ Goals: a hook in the first second (money on screen), a choice the viewer makes w
 ## 3. Sound
 
 Hitman under the offer, Investigations under the maths, Hitman again for the suit and the reveal; a latch on the case, a gulp from Caio, birds on the morning street.
+
+## 4. Retention edit (v2)
+
+Measured with Higgsfield's virality predictor on the first 15 s (v1: overall 44, hook 30; attention dipped at 4–7 s, the two static close-ups).
+Without moving a line: a "VOCÊ ACEITARIA?" question under the title in the first 3 s (answered at 25 s); the close-up of you cut at
+"…e nunca viu tanto dinheiro junto" to a 2 s push-in over the money (Kling 3.0 image-to-video from a clean still, `?clean=1`); subtitles
+redrawn opaque with the key words in yellow; the end card asks "E VOCÊ, ACEITARIA OS R$ 3 MILHÕES?" for comments; soft pops and a whoosh
+under the new graphics. Built by `ovl_render.mjs` (main.js `?ovl=1`, 2D only) composited over the first render, then remixed and muxed.

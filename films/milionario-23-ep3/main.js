@@ -188,19 +188,25 @@ const SUBS = Object.entries(VO).map(([id, t0]) => {
   const d = DURS[id]; let t1 = t0 + Math.max(d + .6, 1.8);
   const nxt = Object.values(VO).filter(v => v > t0 + .05).sort((a, b) => a - b)[0];
   if (nxt != null && t1 > nxt - .03) t1 = Math.max(nxt - .03, t0 + d + .1);
-  return { id, t0, t1: +t1.toFixed(3), who: LINE[id].who, text: LINE[id].sub };
+  return { id, t0, t1: +t1.toFixed(3), who: LINE[id].who, text: LINE[id].sub, hi: LINE[id].hi || [] };
 });
+function hiMask(text, hi) {   // per word: true when it belongs to one of the highlighted phrases
+  const w = text.split(' '), m = w.map(() => false);
+  for (const p of hi) { const pw = p.split(' '); for (let i = 0; i + pw.length <= w.length; i++) if (pw.every((x, k) => w[i + k] === x)) pw.forEach((_, k) => m[i + k] = true); }
+  return m;
+}
 function subs(t) {
   const s = SUBS.find(s => t >= s.t0 && t < s.t1); if (!s) return;
   const font = '600 54px Fredoka', lines = wrap(s.text, 780, font), lh = 66, ph = lines.length * lh + 40, y = 1560 - ph;
   const pw = Math.max(...lines.map(l => g.measureText(l).width)) + 150, x = (W - pw) / 2, pop = back(seg(t, s.t0, s.t0 + .14), 2);
   g.save(); g.translate(W / 2, y + ph / 2); g.scale(lerp(.92, 1, pop), lerp(.92, 1, pop)); g.translate(-W / 2, -(y + ph / 2));
-  g.fillStyle = 'rgba(16,18,24,.72)'; g.beginPath(); g.roundRect(x, y, pw, ph, 36); g.fill();
+  g.fillStyle = OVL ? '#16181e' : 'rgba(16,18,24,.72)'; g.beginPath(); g.roundRect(x - (OVL ? 2 : 0), y - (OVL ? 2 : 0), pw + (OVL ? 4 : 0), ph + (OVL ? 4 : 0), 37); g.fill();
   const who = WHO[s.who];
   brickIcon(x + 32, y + ph / 2 - 17, .9, who ? who[1] : '#ffffff');
   if (who) { g.font = '700 26px Fredoka'; const tw = g.measureText(who[0]).width + 40; g.fillStyle = who[1]; g.beginPath(); g.roundRect(x + 30, y - 22, tw, 40, 20); g.fill(); g.fillStyle = '#12141a'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(who[0], x + 30 + tw / 2, y - 1); }
   g.fillStyle = '#fff'; g.textAlign = 'left'; g.textBaseline = 'middle'; g.font = font;
-  lines.forEach((l, k) => g.fillText(l, x + 112, y + 20 + lh / 2 + k * lh + 2));
+  const mask = hiMask(s.text, s.hi); let wi = 0;
+  lines.forEach((l, k) => { let cx = x + 112; for (const w of l.split(' ')) { g.fillStyle = mask[wi++] ? '#f2cd37' : '#fff'; g.fillText(w, cx, y + 20 + lh / 2 + k * lh + 2); cx += g.measureText(w + ' ').width; } });
   g.restore();
 }
 function seriesBadge(t) {   // top: series + episode
@@ -262,17 +268,32 @@ function endCard(t) {
   g.fillStyle = '#f2cd37'; g.beginPath(); g.roundRect(-330, -60, 660, 120, 24); g.fill(); g.fillStyle = '#1b2a34'; g.font = '700 76px Fredoka'; g.fillText(EP.nextTitle, 0, 4); g.restore();
   followTile(t, W / 2, 1180, T.end + .9, VO[last] + DURS[last] * .6);
 }
-const CAPA = Q.get('capa') === '1';
+const CAPA = Q.get('capa') === '1', CLEAN = Q.get('clean') === '1';   // clean: no 2D layer (source stills for image-to-video)
+// ovl: the retention edit's 2D pass, composited over the first render (ovl_render.mjs): subtitles with highlighted words,
+// the hook question, the comment question, and the full 2D layer over the AI insert (INS) that replaces part of a shot
+const OVL = Q.get('ovl') === '1', INS = [[5.3, T.cuCaio]];
+function askTile(t, y, t0, l1, l2) {
+  const s = back(seg(q(t), t0, t0 + .3), 2.2); if (s <= 0) return;
+  g.save(); g.translate(W / 2, y); g.scale(s, s); g.textAlign = 'center'; g.textBaseline = 'middle';
+  const h = l2 ? 170 : 104; g.font = '700 60px Fredoka'; const tw = Math.max(g.measureText(l1).width, l2 ? g.measureText(l2).width : 0) + 90;
+  g.fillStyle = '#f2cd37'; g.beginPath(); g.roundRect(-tw / 2, -h / 2, tw, h, 26); g.fill(); g.fillStyle = 'rgba(0,0,0,.18)'; g.fillRect(-tw / 2 + 12, h / 2 - 10, tw - 24, 10);
+  g.fillStyle = '#1b2a34'; if (l2) { g.fillText(l1, 0, -34); g.fillText(l2, 0, 38); } else g.fillText(l1, 0, 3);
+  g.restore();
+}
 function overlay(t, name) {
-  g.clearRect(0, 0, W, H);
-  seriesBadge(t); stamps(t);
-  if (name === 'follow') followTile(t, W / 2, 1150, T.follow + .3, T.click);
-  if (name === 'end') endCard(t);
+  g.clearRect(0, 0, W, H); if (CLEAN) return;
+  const ins = INS.some(([a, b]) => t >= a && t < b);
+  if (!OVL || ins) { seriesBadge(t); stamps(t); }
+  if (!OVL && name === 'follow') followTile(t, W / 2, 1150, T.follow + .3, T.click);
+  if (!OVL && name === 'end') endCard(t);
+  if (OVL && t < T.cuYou) { g.save(); g.globalAlpha = 1 - ss(seg(t, T.cuYou - .3, T.cuYou)); askTile(t, 410, .9, 'VOCÊ ACEITARIA?'); g.restore(); }
+  if (OVL && name === 'end') askTile(t, 290, T.end + 1.2, 'E VOCÊ, ACEITARIA', 'OS R$ 3 MILHÕES?');
   if (!CAPA) subs(t);
 }
 
 // —— render ——
 function render(t0) {
+  if (OVL) return overlay(t0, shotAt(t0)[2]);
   const t = q(t0), st = shotAt(t0), name = st[2], night = st[3] === 'night';
   world.isNight = night; world.mood(st[3]);
   const P = act(t, name);
@@ -310,6 +331,7 @@ function events() {
   for (let k = 0; k < 6; k++) add('step', T.card + .45 + k * .3, { v: .45, p: .85 });
   add('rewind', T.morning - .3); add('hit', T.morning + .1, { v: .8 });
   add('slam', T.end + .1); add('click', T.end + .5, { v: 1 });
+  add('pop', .95, { v: .45 }); add('whoosh', INS[0][0] - .15, { v: .3 }); add('pop', T.end + 1.2, { v: .6 });   // the retention edit: hook question, AI insert, comment question
   const last = Object.keys(VO).at(-1); add('click', VO[last] + DURS[last] * .6, { v: .9 }); add('sparkle', VO[last] + DURS[last] * .6 + .02);
   return ev.sort((a, b) => a.t - b.t);
 }

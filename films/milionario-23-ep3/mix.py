@@ -97,7 +97,7 @@ for e in EV:
     elif tp == 'cut': S(whoosh(.18, .4), t0 - .06, .3)
     elif tp == 'step': S(step(p), t0, .6 * v)
     elif tp == 'ding': S(ding(1)[:int(1.2 * SR)], t0, .35 * v)
-    elif tp == 'pop': S(pop(1), t0, .6)
+    elif tp == 'pop': S(pop(1), t0, .6 * v)
     elif tp == 'sparkle': S(sparkle(), t0, .5)
     elif tp == 'creak': S(creak(), t0, .6 * v)
     elif tp == 'sting': S(sweep(900, 240, .5) * np.exp(-t_(.5) / .15) * .3, t0, v)
