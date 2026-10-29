@@ -481,6 +481,15 @@ function subs(t) {
     pop();
   });
 }
+function hookChip(t) {   // the first question the viewer holds, before the chair turns
+  if (t >= T.cuArl) return;
+  const s = back(seg(q(t), .05, .3), 2.2) * (1 - ss(seg(t, T.cuArl - .25, T.cuArl)));
+  if (s <= 0) return;
+  reset(); push(); translate(540, 1300); rotate(.02); scale(s);
+  shape(rr(-440, -66, 880, 132, 26), { fill: RED, lw: 9 });
+  text('QUEM QUER TE QUEBRAR?', 0, 6, { font: '400 54px Bungee', fill: '#fff' });
+  pop();
+}
 function capaBadge(t) {   // cover: the reveal on screen
   reset(); push(); translate(540, 1600); rotate(-.03);
   shape(rr(-440, -120, 880, 240, 30), { fill: INK, lw: 9 });
@@ -500,6 +509,7 @@ async function render(t) {
   titleCard(t);
   tag(t);
   if (CAPA) { capaBadge(t); return; }
+  hookChip(t);
   subs(t);
 }
 

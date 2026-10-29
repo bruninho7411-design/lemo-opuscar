@@ -9,7 +9,7 @@ export function build(D) {
   const say = (id, gap = .3) => { VO[id] = +(t + gap).toFixed(3); t = VO[id] + d(id); return VO[id]; };
   const at = (k, v) => (T[k] = +v.toFixed(3));
   // the reveal: the chair turns on his name
-  say('n1', .3); at('spin', VO.n1 + d('n1') * .55);
+  say('n1', .3); at('spin', .8);                      // the chair turns from the first second (the clip's turn starts .8 s in)
   at('cuArl', t + .25); t = T.cuArl; say('a1', .15); at('flip', VO.a1 + .1);
   at('cuCaio', t + .2); t = T.cuCaio; say('c1', .1);
   // back through the phone to the counter at 21
@@ -20,12 +20,12 @@ export function build(D) {
   // back to the office: the wall says it
   at('sw2', t + .35); t = T.sw2; at('wall', T.sw2); say('n4', .45); at('card', VO.n4 + d('n4') * .55);
   at('cuYou', t + .3); t = T.cuYou; say('y1', .25);
-  at('follow', t + .35); t = T.follow; say('n5', .2); at('click', VO.n5 + 1.0);
+  at('follow', t + .35); t = T.follow; say('n5', .2); at('click', VO.n5 + 2.0);   // on "segue"
   // the reversal
   at('boletos', t + .35); t = T.boletos; say('n6', .2);
   at('pay', t + .35); t = T.pay; say('y2', .5); at('slap', VO.y2 + d('y2') * .7);
   at('dead', t + .25);                                 // dead air: a slow push-in, the music cut
-  at('cuArl2', T.dead + 1.5); t = T.cuArl2; say('a3', .3); at('coin', VO.a3 + d('a3') + .05);
+  at('cuArl2', T.dead + .8); t = T.cuArl2; say('a3', .3); at('coin', VO.a3 + d('a3') + .05);
   at('morning', t + .6); t = T.morning; say('n7', .45);
   at('letter', t + .2); t = T.letter; say('c2', .5);
   at('end', t + .6); t = T.end; say('n8', .55);

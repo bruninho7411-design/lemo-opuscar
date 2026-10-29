@@ -41,3 +41,10 @@ GPT Image 2.5 keyframes in the EP 1 designs, animated by Wan 2.7 with the episod
 the keys, y1, y2 (+ a held push through the dead air), a3, c2; the follow beat is a boiled keyframe still. Inserts, graphics,
 captions and cameras stay in code. Structure, timings and the mix are unchanged; only the sounds tied to code-only actions (the coin
 flip, the glasses glint) are dropped.
+
+## v2 — the opening and the pauses, from the viewer's side
+
+Predictor (first 15 s): 42, hook 27, a dip at 1–2 s (the chair held still). So: the chair turns from the first second, a red
+question chip opens the loop before the turn ("QUEM QUER TE QUEBRAR?", for the viewer who never saw EP 1–4), "Ainda tem vinte e
+cinco episódios" is cut from n5 (it served nothing the hook promised; cut in the silence between sentences), and the dead air after
+"Paga." is .8 s instead of 1.5 s so the next loop opens before the viewer feels done. 52 → 49 s.

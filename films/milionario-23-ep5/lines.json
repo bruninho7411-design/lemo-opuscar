@@ -7,7 +7,7 @@
  {"id": "a2", "who": "a", "text": "Atrasou uma parcela... a lavanderia volta pra mim.", "sub": "Atrasou 1 parcela... a lavanderia volta pra mim.", "hi": ["volta pra mim."]},
  {"id": "n4", "who": "n", "text": "A guerra de preço nunca foi pra te vencer. Era pra você atrasar uma parcela.", "sub": "A guerra de preço nunca foi pra te vencer. Era pra você atrasar 1 parcela.", "hi": ["atrasar 1 parcela."]},
  {"id": "y1", "who": "y", "text": "Ele queria que eu quebrasse.", "sub": "Ele queria que eu quebrasse.", "hi": ["quebrasse."]},
- {"id": "n5", "who": "n", "text": "Se você sempre lê as letras miúdas, segue. Ainda tem vinte e cinco episódios.", "sub": "Se você sempre lê as letras miúdas, segue. Ainda tem 25 episódios.", "asr": "Se você sempre lê as letras miúdas, segue. Ainda tem 25 episódios.", "hi": ["segue."]},
+ {"id": "n5", "who": "n", "text": "Se você sempre lê as letras miúdas, segue.", "sub": "Se você sempre lê as letras miúdas, segue.", "asr": "Se você sempre lê as letras miúdas, segue.", "hi": ["segue."]},
  {"id": "n6", "who": "n", "text": "Mas as entregas salvaram seu caixa. Todas as parcelas, pagas em dia.", "sub": "Mas as entregas salvaram seu caixa. Todas as parcelas, pagas em dia.", "hi": ["pagas em dia."]},
  {"id": "y2", "who": "y", "text": "Última parcela. Paga.", "sub": "Última parcela. Paga.", "hi": ["Paga."]},
  {"id": "a3", "who": "a", "text": "Então eu comprei o prédio.", "sub": "Então eu comprei o prédio.", "hi": ["o prédio."]},
