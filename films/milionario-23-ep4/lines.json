@@ -1,0 +1,129 @@
+[
+ {
+  "id": "n1",
+  "who": "n",
+  "text": "Em uma semana, você perdeu metade dos clientes.",
+  "sub": "Em 1 semana, você perdeu metade dos clientes.",
+  "hi": [
+   "metade dos clientes."
+  ]
+ },
+ {
+  "id": "n2",
+  "who": "n",
+  "text": "A lavanderia da frente cobrava metade do preço.",
+  "sub": "A lavanderia da frente cobrava metade do preço.",
+  "hi": [
+   "metade do preço."
+  ]
+ },
+ {
+  "id": "c1",
+  "who": "c",
+  "text": "Abaixa o preço também, mano!",
+  "sub": "Abaixa o preço também, mano!",
+  "hi": [
+   "Abaixa o preço"
+  ]
+ },
+ {
+  "id": "n3",
+  "who": "n",
+  "text": "Guerra de preço, quem ganha é quem tem mais dinheiro. E ele tinha muito mais.",
+  "sub": "Guerra de preço, quem ganha é quem tem mais dinheiro. E ele tinha muito mais.",
+  "hi": [
+   "mais dinheiro.",
+   "muito mais."
+  ]
+ },
+ {
+  "id": "y1",
+  "who": "y",
+  "text": "Então a gente não vai brigar por preço.",
+  "sub": "Então a gente não vai brigar por preço.",
+  "hi": [
+   "não vai brigar"
+  ]
+ },
+ {
+  "id": "n4",
+  "who": "n",
+  "text": "Você mudou o jogo: coleta em casa, roupa pronta em vinte e quatro horas, entregue dobrada.",
+  "sub": "Você mudou o jogo: coleta em casa, roupa pronta em 24h, entregue dobrada.",
+  "hi": [
+   "mudou o jogo:",
+   "24h,"
+  ]
+ },
+ {
+  "id": "n5",
+  "who": "n",
+  "text": "Quem não tem tempo paga mais. Quinze reais por entrega.",
+  "sub": "Quem não tem tempo paga mais. R$ 15 por entrega.",
+  "hi": [
+   "R$ 15"
+  ]
+ },
+ {
+  "id": "c2",
+  "who": "c",
+  "text": "Eu entrego! Eu entrego!",
+  "sub": "Eu entrego! Eu entrego!",
+  "hi": []
+ },
+ {
+  "id": "n6",
+  "who": "n",
+  "text": "Em um mês: oitocentas entregas. Doze mil a mais por mês.",
+  "sub": "Em 1 mês: 800 entregas. R$ 12 mil a mais por mês.",
+  "hi": [
+   "800 entregas.",
+   "R$ 12 mil"
+  ]
+ },
+ {
+  "id": "n7",
+  "who": "n",
+  "text": "Se você gosta de virar o jogo, segue. Ainda tem vinte e seis episódios.",
+  "sub": "Se você gosta de virar o jogo, segue. Ainda tem 26 episódios.",
+  "hi": [
+   "segue."
+  ]
+ },
+ {
+  "id": "n8",
+  "who": "n",
+  "text": "A lavanderia da frente fechou.",
+  "sub": "A lavanderia da frente fechou.",
+  "hi": [
+   "fechou."
+  ]
+ },
+ {
+  "id": "n9",
+  "who": "n",
+  "text": "Mas aí você descobriu quem era o dono do Grupo Ômega.",
+  "sub": "Mas aí você descobriu quem era o dono do Grupo Ômega.",
+  "hi": [
+   "o dono"
+  ]
+ },
+ {
+  "id": "n10",
+  "who": "n",
+  "text": "Alguém que você conhecia muito bem.",
+  "sub": "Alguém que você conhecia muito bem.",
+  "hi": [
+   "muito bem."
+  ]
+ },
+ {
+  "id": "n11",
+  "who": "n",
+  "text": "No próximo episódio: o dono. Segue pra não perder.",
+  "sub": "No próximo episódio: o dono. Segue pra não perder.",
+  "hi": [
+   "o dono."
+  ]
+ }
+]

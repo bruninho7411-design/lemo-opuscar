@@ -20,3 +20,13 @@ Goals: open on the loss (empty shop against a queue across the street), show a c
 ## 3. Sound
 
 Hitman under the duel, Investigations under the plan, Hitman for the reveal; a bike bell, a ping on the phone counter, a slam for FECHADO.
+
+## 4. Retention pass (v2)
+
+Higgsfield's virality predictor (free) on 15 s windows of the first render: opening hook 26 (a high shot down the street, the road
+filling the frame), attention lowest at 37–43 s (the closed shop and the card). Fixed in 3D, no generation needed: the opening is a
+vertical standoff (you alone in the middle of the street, the queue at Ômega above); the plan shot follows each tile as it is named and
+pulls back on the whole plan (the tiles were wider than the vertical frame), long words shrink to fit their tile; the card shot orbits
+and pushes onto the Ω; the owner is a true silhouette (matte black, no front light, only the white hair). The 2D pass (`ovl_render.mjs`,
+main.js `?ovl=1`) adds "VOCÊ BAIXARIA O PREÇO?", highlighted words, "+R$ 15 POR ENTREGA" where the 3D tile hides behind the machines,
+and "QUEM VOCÊ ACHA QUE É O DONO?" on the end card.
