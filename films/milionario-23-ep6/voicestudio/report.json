@@ -7,9 +7,9 @@
  },
  "y1": {
   "take": "y1_s1.wav",
-  "dur": 2.019,
+  "dur": 1.518,
   "wer": 0.0,
-  "asr": "lugar nenhum. Ele errou duas vezes."
+  "asr": "mas ele errou duas vezes."
  },
  "n1": {
   "take": "n1_s1.wav",
@@ -37,9 +37,9 @@
  },
  "c2": {
   "take": "c2_s1.wav",
-  "dur": 1.698,
+  "dur": 1.814,
   "wer": 0.0,
-  "asr": "Então o prédio pode ser nosso!"
+  "asr": "Ou seja, o prédio podia ser seu."
  },
  "n5": {
   "take": "n5_s1.wav",
@@ -79,14 +79,20 @@
  },
  "a2": {
   "take": "a2_s1.wav",
-  "dur": 3.093,
+  "dur": 1.556,
   "wer": 0.0,
-  "asr": "900 mil garoto, quanto sobrou na sua conta?"
+  "asr": "900 mil garoto."
  },
  "n9": {
   "take": "n9_s1.wav",
   "dur": 2.783,
   "wer": 0.0,
   "asr": "No próximo episódio, o caixa. Segue pra não perder."
+ },
+ "a3": {
+  "take": "a3_s1.wav",
+  "dur": 1.401,
+  "wer": 0.0,
+  "asr": "Quanto sobrou na sua conta?"
  }
 }

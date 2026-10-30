@@ -7,8 +7,9 @@ Music        Kevin MacLeod (incompetech.com), licensed under Creative Commons: B
 Voices       VoiceStudio / OmniVoice (k2-fsa/OmniVoice model, Apache-2.0; VoiceStudio app AGPL-3.0), run locally on CPU.
              The series voices of EP 5 (narrator, você, Caio, Seu Arlindo). Every line checked with faster-whisper (MIT).
 Characters   AI-generated: keyframes made with GPT Image 2.5 on Higgsfield in the series' EP 1 designs (ai/k_*.png; k_caio_st and
-             k_arl_cu2 from EP 5), animated with Wan 2.7 on Higgsfield and lip-synced to this episode's VoiceStudio lines (ai/v_*.mp4,
-             see ai/PROMPTS.md). Seu Arlindo, Caio and "você" are fictional characters of this series.
+             k_arl_cu2 from EP 5), animated with Wan 2.7 on Higgsfield: Arlindo's furious line (ai/v_a1.mp4) was made for this
+             episode; four clips are EP 5's, reused (ai/v_*x.mp4) under lines written to their rhythm; the rest are keyframe stills
+             under the narrator. Seu Arlindo, Caio and "você" are fictional characters of this series.
 Backgrounds  The shop front and the office: the EP 5 plates (GPT Image 2.5 on Higgsfield), boiled by bg/boil.py.
 Animation    Inserts (the letter, the law cards, the lease, the court deposit, the building), graphics, captions, camera moves drawn
              in code (toon.js, from EP 1 / the Sci-Fi Sitcom Toon style).

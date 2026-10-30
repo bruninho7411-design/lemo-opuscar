@@ -31,3 +31,6 @@ the clip length is the padded line rounded up to whole seconds.
 | a2 | k_arl_cu2 (EP 5) | a2 | 4 s | 2D cartoon animation, adult animated sitcom style. The old man in the violet suit leans towards the viewer and says the line from the audio slowly, with a cold, menacing smile: his mouth moves in sync with the speech under the white moustache, his eyes narrow, his finger slides the gold coin forward on the desk. Slow camera push-in. Keep the exact 2D style … |
 
 After download: `sh ai/frames.sh` (clips → ai/f/), then the normal build; main.js swaps each keyframe for its clip by itself.
+
+**Not generated (2026-10-30):** the film was finished from the EP 5 clips instead (TREATMENT.md, last section). The list above stays as
+the recipe if the user later wants every EP 6 line on its own clip.

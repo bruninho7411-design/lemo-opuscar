@@ -32,7 +32,7 @@ function still(src) {
   if (!FC.has(src)) { FC.set(src, new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = src; })); if (FC.size > 48) FC.delete(FC.keys().next().value); }
   return FC.get(src);
 }
-const clipSrc = (clip, ct, key) => AIN[clip] ? `ai/f/${clip}/${String(clamp(Math.round(ct * 30), 0, AIN[clip] - 1) + 1).padStart(4, '0')}.jpg` : `ai/${key}`;
+const clipSrc = (clip, ct, key) => clip !== '-' && AIN[clip] ? `ai/f/${clip}/${String(clamp(Math.round(ct * 30), 0, AIN[clip] - 1) + 1).padStart(4, '0')}.jpg` : `ai/${key}`;
 function aiDraw(img, [cx, cy, z, sh = 0], t) {
   cam(cx, cy, z, sh, t); const m = getM();
   g.setTransform(m[0], m[1], m[2], m[3], m[4], m[5]); g.imageSmoothingQuality = 'high';
@@ -79,14 +79,18 @@ function doc(x, y, w, h, rot, head, sub, nLines = 10) {   // a sheet of paper wi
 
 // ———————————————— shots ————————————————
 // AI shots: shot → [clip, clip time, camera [cx, cy, z, shake], keyframe drawn until the clip exists]
-// Each lip-synced clip will start .4 s before its line (the padded audio Wan is given).
+// Each lip-synced clip starts .4 s before its line (the padded audio Wan was given). Clips named *x are EP 5's, reused: the
+// line said over each has the voice and the rhythm of the one it was animated to (c1x is EP 5's own c2, its pad cut .25 s in;
+// y2x shows you from behind), so no new generation was needed.
 const AISH = {
-  letter: t => ['c1', t - (VO.c1 - .4), [540, 1000, 1.05 + t * .015, shk(t, T.stamp + .12, 10)], 'k_caio_st.png'],
+  letter: t => ['c1x', t - (VO.c1 + .25), [540, 1000, 1.05 + t * .015, shk(t, T.stamp + .12, 10)], 'k_caio_st.png'],
   cuYou: t => ['y1', t - (VO.y1 - .4), [540, 900, 1.04 + (t - T.cuYou) * .03], 'k_you_st.png'],
   cuCaio: t => ['c2', t - (VO.c2 - .4), [540, 960, 1.05 + (t - T.cuCaio) * .03, shk(t, T.cuCaio, 8)], 'k_caio_in.png'],
-  cuYou2: t => ['y2', t - (VO.y2 - .4), [540, 900, 1.04 + (t - T.cuYou2) * .03], 'k_you_doc.png'],
+  saveShot: t => ['-', 0, [540, 880, 1.04 + (t - T.saveShot) * .03], 'k_you_doc.png'],
+  cuYou2: t => ['y2x', t - (VO.y2 - .4), [540, 960, 1.04 + (t - T.cuYou2) * .02, shk(t, VO.y2 + DURS.y2 * .82, 6, .2)], 'k_you_doc.png'],
   cuArl: t => ['a1', t - (VO.a1 - .4), [540, 960, 1.06 + (t - T.cuArl) * .04, shk(t, T.cuArl, 12)], 'k_arl_mad.png'],
-  cuArl2: t => ['a2', t - (VO.a2 - .4), [540, 960, 1.05 + (t - T.cuArl2) * .02], 'k_arl_cu2.png'],
+  cuArl2: t => ['a2x', t - (VO.a2 - .4), [540, 900, 1.04 + (t - T.cuArl2) * .03], 'k_arl_cu2.png'],
+  cuArl3: t => ['a3x', t - (VO.a3 - .4), [540, 960, 1.05, shk(t, T.coin, 12, .2)], 'k_arl_cu2.png'],
 };
 const AIX = {   // what the code draws over a clip (under the same camera first, then on screen)
   letter: t => {
@@ -95,7 +99,14 @@ const AIX = {   // what the code draws over a clip (under the same camera first,
     reset(); stampBox(540, 1240, -.08, lerp(2.2, 1, Math.min(1, s)), [['DESOCUPAR', 76], ['EM 30 DIAS', 76]], RED, 640, 190, CREAM);
     burst(540, 1240, t, T.stamp + .18, 10, 360, RED);
   },
+  saveShot: t => {   // the save + follow call, over you and the lease
+    const sv = pop_(t, T.save);
+    if (sv > 0) { reset(); push(); translate(880, 600); scale(sv); rotate(.08); shape([[-70, -90], [70, -90], [70, 100], [0, 50], [-70, 100]], { fill: t > T.save + .35 ? GOLD : '#fff', lw: 8 }); text('SALVA', 0, 170, { font: '400 46px Bungee', fill: '#fff', outlineW: 12 }); pop(); }
+    followUI(t, 470, 300, VO.n6, T.click, .8);
+  },
+  cuArl3: t => { if (t >= T.coin) { reset(); screenRect('#ff7ad9', .18 * (1 - seg(t, T.coin, T.coin + .35))); } },
   cuYou: t => {   // "duas vezes": two fingers of chalk on screen
+    text('LAVANDERIA 1', 537, 392, { font: '400 74px Bungee', fill: RED });   // the keyframe's blank sign, under the same camera
     const s = pop_(t, T.two); if (s <= 0) return;
     reset(); push(); translate(820, 560); rotate(.12); scale(s);
     shape(ell(0, 0, 110, 110, 40), { fill: MARK, lw: 8 }); text('2', 0, 8, { font: '400 130px Bungee', fill: INK });
@@ -176,8 +187,8 @@ SH.none = (t, tq) => {   // "ninguém te ofereceu nada": the phone, nothing
 SH.reg = (t, tq) => {   // the condition: the lease registered on the building's record, 30 days before the sale
   const u = t - T.reg;
   reset(); bands(MINT, 0, H);
-  const pk = eio(seg(t, T.reg, T.box + .4)), ok = eio(seg(t, VO.n6 - .2, VO.n6 + .5));   // push onto the empty box, back out for the call
-  cam(540, lerp(lerp(960, 1120, pk), 960, ok), lerp(lerp(1.0, 1.32, pk), 1.0, ok));
+  const pk = eio(seg(t, T.reg, T.box + .4));   // push onto the empty box
+  cam(540, lerp(960, 1120, pk), lerp(1.0, 1.32, pk));
   doc(540, 860, 860, 900, -.02, 'CONTRATO DE', 'LOCAÇÃO · Lavanderia 1', 6);
   push(); translate(540, 1130); rotate(-.02);
   const bk = seg(t, T.box, T.box + .4);
@@ -188,12 +199,8 @@ SH.reg = (t, tq) => {   // the condition: the lease registered on the building's
   text('(cartório de registro de imóveis)', 0, 30, { font: '700 34px "Baloo 2"', fill: '#8a8296' });
   pop();
   const fk = seg(q(t), VO.n5 + DURS.n5 * .74, VO.n5 + DURS.n5 * .74 + .16);   // "quase ninguém faz isso"
-  if (fk > 0 && t < VO.n6 + .3) { push(); translate(560, 1060); stampBox(0, 0, -.12, lerp(2.2, 1, eo(fk)), [['QUASE NINGUÉM', 50], ['FAZ ISSO', 50]], RED, 480, 150, CREAM); pop(); }
-  if (t < VO.n6 - .1) lawCard(t, T.box, 'ART. 33', '30 dias antes da venda, no mínimo', 270);
-  // the save + follow call
-  const sv = pop_(t, T.save);
-  if (sv > 0) { reset(); push(); translate(880, 560); scale(sv); rotate(.08); shape([[-70, -90], [70, -90], [70, 100], [0, 50], [-70, 100]], { fill: t > T.save + .35 ? GOLD : '#fff', lw: 8 }); text('SALVA', 0, 170, { font: '400 46px Bungee', fill: '#fff', outlineW: 12 }); pop(); }
-  if (t >= VO.n6) followUI(t, 470, 300, VO.n6, T.click, .8);
+  if (fk > 0) { push(); translate(560, 1060); stampBox(0, 0, -.12, lerp(2.2, 1, eo(fk)), [['QUASE NINGUÉM', 50], ['FAZ ISSO', 50]], RED, 480, 150, CREAM); pop(); }
+  lawCard(t, T.box, 'ART. 33', '30 dias antes da venda, no mínimo', 270);
 };
 SH.stamped = (t, tq) => {   // "registrei no dia que assinei": the empty box gets its stamp
   const u = t - T.stamped;
@@ -378,12 +385,12 @@ function events() {
   add('cut', T.cuCaio, { v: .4 }); add('boing', T.cuCaio + .05, { v: .4 });
   add('cut', T.reg, { v: .4 }); add('marker', T.box, { d: .4 }); add('stamp', VO.n5 + DURS.n5 * .74, { v: .7 });
   add('pop', T.save, { v: .7 }); add('pop', VO.n6 + .05); add('click', T.click); add('sparkle', T.click + .02);
-  add('cut', T.cuYou2, { v: .4 }); add('stamp', T.stamped + .15, { v: 1 }); add('hit', T.stamped + .15, { v: .5 });
+  add('cut', T.saveShot, { v: .4 }); add('cut', T.cuYou2, { v: .4 }); add('slap', VO.y2 + DURS.y2 * .82); add('stamp', T.stamped + .15, { v: 1 }); add('hit', T.stamped + .15, { v: .5 });
   for (const [tc] of WIPES) add('swirl', tc - .22);
   add('stamp', T.slip, { v: .9 }); add('kaching', T.slip + .1, { v: .6 });
   add('hit', T.cuArl, { v: .8 }); add('slap', T.cuArl + .05);
   add('stamp', T.zero, { v: 1 }); add('sparkle', T.zero + .1);
-  add('sting', T.cuArl2, { v: .7 }); add('coinslam', VO.a2 + DURS.a2 + .05); add('gulp', VO.a2 + DURS.a2 + .5);
+  add('sting', T.cuArl2, { v: .7 }); add('cut', T.cuArl3, { v: .4 }); add('coinslam', T.coin); add('gulp', T.coin + .45);
   add('sting', T.end); add('pop', T.end + .35); add('pop', T.end + 1.1, { v: .6 }); add('click', VO.n9 + DURS.n9 * .7); add('sparkle', VO.n9 + DURS.n9 * .7 + .02);
   return ev.sort((a, b) => a.t - b.t);
 }

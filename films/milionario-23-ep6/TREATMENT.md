@@ -61,3 +61,12 @@ The user chose to wait for the plan's credit renewal: until then the film render
 
 **Progress (2026-10-30):** voices done (VoiceStudio), the 4 new keyframes and the a1 clip made with the credits left (7 of
 7.87); `milionario-23-ep6_previa.mp4` is the animatic (keyframes as stills, a1 animated). Five clips remain (≈ 22.5 credits).
+
+## Finished without new credits (2026-10-30)
+
+With 0.87 credits left, the five missing clips were replaced from the EP 5 library: the opening is EP 5's own last shot and line
+(Caio with the letter, "Mano... a gente vai ser despejado?!"), "Registrei no dia que assinei." goes over EP 5's receipt slap (you
+from behind, so any line fits), and Arlindo's cliffhanger is split across his two EP 5 close-ups, each half written to the syllables
+of the line it was animated to ("Novecentos mil, garoto..." ↔ "Sentiu saudade, garoto?"; "Quanto sobrou na sua conta?" ↔ "Então
+eu comprei o prédio."), sped up 8–12 % to land. Two lines became narration over the paid keyframes ("Mas ele errou duas vezes.",
+"Ou seja: o prédio podia ser seu."), and k_you_doc carries the save/follow call. 55 s.
