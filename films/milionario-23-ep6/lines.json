@@ -1,0 +1,17 @@
+[
+ {"id": "c1", "who": "c", "text": "Trinta dias, mano! A gente vai pra onde?!", "sub": "30 dias, mano! A gente vai pra onde?!", "asr": "30 dias, mano! A gente vai pra onde?", "hi": ["30 dias,"]},
+ {"id": "y1", "who": "y", "text": "Lugar nenhum. Ele errou duas vezes.", "sub": "Lugar nenhum. Ele errou 2 vezes.", "asr": "Lugar nenhum. Ele errou duas vezes.", "hi": ["2 vezes."]},
+ {"id": "n1", "who": "n", "text": "Erro um: quem compra um prédio alugado tem que dar noventa dias. Não trinta.", "sub": "Erro 1: quem compra um prédio alugado tem que dar 90 dias. Não 30.", "asr": "Erro 1: quem compra um prédio alugado tem que dar 90 dias. Não 30.", "hi": ["90 dias."]},
+ {"id": "n2", "who": "n", "text": "O erro dois vale novecentos mil reais.", "sub": "O erro 2 vale 900 mil reais.", "asr": "O erro 2 vale 900 mil reais.", "hi": ["900 mil reais."]},
+ {"id": "n3", "who": "n", "text": "Quando o dono vende o prédio, tem que oferecer primeiro pra quem aluga. Pelo mesmo preço.", "sub": "Quando o dono vende o prédio, tem que oferecer primeiro pra quem aluga. Pelo mesmo preço.", "hi": ["primeiro", "mesmo preço."]},
+ {"id": "n4", "who": "n", "text": "Ninguém te ofereceu nada.", "sub": "Ninguém te ofereceu nada.", "hi": ["nada."]},
+ {"id": "c2", "who": "c", "text": "Então o prédio... pode ser nosso?!", "sub": "Então o prédio... pode ser nosso?!", "asr": "Então o prédio pode ser nosso?", "hi": ["nosso?!"]},
+ {"id": "n5", "who": "n", "text": "Só se o contrato de aluguel estiver registrado na matrícula do prédio, no cartório de imóveis. Quase ninguém faz isso.", "sub": "Só se o contrato de aluguel estiver registrado na matrícula do prédio, no cartório de imóveis. Quase ninguém faz isso.", "hi": ["na matrícula do prédio,"]},
+ {"id": "n6", "who": "n", "text": "Se você aluga um ponto, salva esse vídeo. E segue.", "sub": "Se você aluga um ponto, salva esse vídeo. E segue.", "hi": ["salva", "segue."]},
+ {"id": "y2", "who": "y", "text": "Registrei no dia que assinei.", "sub": "Registrei no dia que assinei.", "hi": ["no dia que assinei."]},
+ {"id": "n7", "who": "n", "text": "Você foi à Justiça e depositou o mesmo preço que ele pagou: novecentos mil.", "sub": "Você foi à Justiça e depositou o mesmo preço que ele pagou: R$ 900 mil.", "asr": "Você foi à justiça e depositou o mesmo preço que ele pagou: 900 mil.", "hi": ["R$ 900 mil."]},
+ {"id": "a1", "who": "a", "text": "Ele tomou o meu prédio?!", "sub": "Ele tomou o MEU prédio?!", "asr": "Ele tomou o meu prédio?", "hi": ["MEU"]},
+ {"id": "n8", "who": "n", "text": "Meses depois, o prédio estava no seu nome. Aluguel: zero.", "sub": "Meses depois, o prédio estava no seu nome. Aluguel: zero.", "hi": ["no seu nome.", "zero."]},
+ {"id": "a2", "who": "a", "text": "Novecentos mil, garoto... quanto sobrou na sua conta?", "sub": "900 mil, garoto... quanto sobrou na sua conta?", "asr": "900 mil, garoto, quanto sobrou na sua conta?", "hi": ["quanto sobrou"]},
+ {"id": "n9", "who": "n", "text": "No próximo episódio: o caixa. Segue pra não perder.", "sub": "No próximo episódio: o caixa. Segue pra não perder.", "hi": ["o caixa."]}
+]

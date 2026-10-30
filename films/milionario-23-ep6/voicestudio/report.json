@@ -1,0 +1,92 @@
+{
+ "c1": {
+  "take": "c1_s2.wav",
+  "dur": 2.373,
+  "wer": 0.0,
+  "asr": "30 dias mano, a gente vai pra onde?"
+ },
+ "y1": {
+  "take": "y1_s1.wav",
+  "dur": 2.019,
+  "wer": 0.0,
+  "asr": "lugar nenhum. Ele errou duas vezes."
+ },
+ "n1": {
+  "take": "n1_s1.wav",
+  "dur": 4.306,
+  "wer": 0.0,
+  "asr": "Erro 1. Quem compra um prédio alugado tem que dar 90 dias, não 30."
+ },
+ "n2": {
+  "take": "n2_s1.wav",
+  "dur": 2.17,
+  "wer": 0.0,
+  "asr": "O erro 2 vale 900 mil reais."
+ },
+ "n3": {
+  "take": "n3_s1.wav",
+  "dur": 5.089,
+  "wer": 0.06,
+  "asr": "Quando o dono vende o prédio, tem que oferecer primeiro para quem aluga, pelo mesmo preço."
+ },
+ "n4": {
+  "take": "n4_s1.wav",
+  "dur": 1.455,
+  "wer": 0.0,
+  "asr": "Ninguém te ofereceu nada."
+ },
+ "c2": {
+  "take": "c2_s1.wav",
+  "dur": 1.698,
+  "wer": 0.0,
+  "asr": "Então o prédio pode ser nosso!"
+ },
+ "n5": {
+  "take": "n5_s1.wav",
+  "dur": 6.946,
+  "wer": 0.0,
+  "asr": "Só se o contrato de aluguel estiver registrado na matrícula do prédio, no cartório de imóveis. Quase ninguém faz isso."
+ },
+ "n6": {
+  "take": "n6_s1.wav",
+  "dur": 2.96,
+  "wer": 0.0,
+  "asr": "Se você aluga um ponto, salva esse vídeo e segue."
+ },
+ "y2": {
+  "take": "y2_s1.wav",
+  "dur": 1.885,
+  "wer": 0.0,
+  "asr": "Registrei no dia que assinei."
+ },
+ "n7": {
+  "take": "n7_s1.wav",
+  "dur": 4.396,
+  "wer": 0.0,
+  "asr": "Você foi à justiça e depositou o mesmo preço que ele pagou, 900 mil."
+ },
+ "a1": {
+  "take": "a1_s2.wav",
+  "dur": 1.14,
+  "wer": 0.0,
+  "asr": "Ele tomou o meu prédio?"
+ },
+ "n8": {
+  "take": "n8_s1.wav",
+  "dur": 3.358,
+  "wer": 0.1,
+  "asr": "meses depois o prédio estava no seu nome. Aluguel 0."
+ },
+ "a2": {
+  "take": "a2_s1.wav",
+  "dur": 3.093,
+  "wer": 0.0,
+  "asr": "900 mil garoto, quanto sobrou na sua conta?"
+ },
+ "n9": {
+  "take": "n9_s1.wav",
+  "dur": 2.783,
+  "wer": 0.0,
+  "asr": "No próximo episódio, o caixa. Segue pra não perder."
+ }
+}
