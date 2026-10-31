@@ -57,7 +57,7 @@ function person(o) {
   // face
   const eyes = { open: grp(head, 0, 0, 0), closed: grp(head, 0, 0, 0) };
   for (const s of [-1, 1]) {
-    box(.09, .08, .02, '#ffffff', s * .1, .23, .205, eyes.open);
+    box(.09, .08, .02, '#dcd6cb', s * .1, .23, .205, eyes.open);
     box(.045, .07, .02, '#15110e', s * .1 + .015 * s * 0, .225, .212, eyes.open);
     box(.1, .025, .02, '#3a2418', s * .1, .215, .205, eyes.closed);
     box(.1, .025, .02, o.brow || o.hair || '#3a2418', s * .1, .31, .205, head);   // brows
@@ -231,6 +231,10 @@ export function buildWorld(scene) {
     napStand.armL.rotation.z = hands * .25; napStand.armR.rotation.z = -hands * .25;
     if (!hands) {   // the famous hand-in-waistcoat pose, other arm behind the back
       napStand.armR.rotation.x = -.6; napStand.armR.rotation.z = -.95; napStand.armL.rotation.x = .3;
+    }
+    if (t >= at('c1', 0) && t < at('v8', 0)) {   // salute for the like/follow ask
+      const k = eo(seg(t, at('c1', 0), at('c1', 0) + .35));
+      napStand.armR.rotation.x = lerp(-.6, -2.75, k); napStand.armR.rotation.z = lerp(-.95, -.55, k); napStand.armL.rotation.x = .1;
     }
     blink(napStand, t, true); talk(napStand, t, false);
     napStand.head.rotation.y = hands ? Math.sin(t * 9) * .12 : Math.sin(t * .9) * .15;

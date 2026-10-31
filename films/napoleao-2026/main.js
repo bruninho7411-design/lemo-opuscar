@@ -39,6 +39,7 @@ const SH = () => [
   [at('v4', 0) - .1, 'viral', 'crypt', 'stand', P([0, 1.2, 2.6], 25, 18, 7, { clip: 3.4 }), P([0, 1.2, 2.6], 35, 22, 7.6, { clip: 3.4 })],
   [at('v5', 0) - .1, 'measure', 'crypt', 'stand', P([.45, 1.05, 2.6], 0, 5, 8.6, { clip: 3.0 }), P([.45, 1.05, 2.6], 0, 5, 8.2, { clip: 3.0 })],
   [at('v7', 0) - .1, 'sad', 'crypt', 'stand', P([0, 1.55, 2.6], -8, 4, 3.6, { clip: 2.0 }), P([0, 1.55, 2.6], -8, 4, 3.2, { clip: 2.0 })],
+  [at('c1', 0) - .1, 'cta', 'crypt', 'stand', P([0, 1.35, 2.6], 14, 8, 5.0, { clip: 3.0 }), P([0, 1.35, 2.6], 4, 8, 4.4, { clip: 3.0 })],
   [at('v8', 0) - .1, 'march', 'street', 'st', P(null, 12, 9, 6.5, { follow: 1 }), P(null, -6, 7, 6.0, { follow: 1 })],
   [at('v9', K.border) - .15, 'border', 'street', 'st', P([60, 1.6, -6.5], 205, 12, 9), P([60, 1.6, -6.5], 195, 10, 8)],
   [at('v10', K.live) - .1, 'live', 'street', 'st', P([60, 1.45, -4.8], 172, 6, 3.6), P([60, 1.45, -4.8], 178, 6, 3.0)],
@@ -184,6 +185,33 @@ function live(t) {   // v10–v11: Napoleon goes live
   g.globalAlpha = a; for (let i = 0; i < 10; i++) { const u = ((t - t0) * .7 + hash(i + 3)) % 1; g.globalAlpha = a * (1 - u); g.font = `${50 * S}px "Noto Color Emoji"`; g.fillText(['❤️', '👑', '😂'][i % 3], W - 120 * S + Math.sin(u * 7 + i) * 24 * S, 1300 * S - u * 700 * S); }
   g.restore();
 }
+let AVATAR = null; { const im = new Image(); im.src = 'avatar.png'; AVATAR = im; }
+function ctaCard(t) {   // c1: like + follow
+  const t0 = at('c1', 0), t1 = at('v8', 0) - .05; if (t < t0 || t > t1 + .3) return;
+  const tl = at('c1', 'curte'), tf = at('c1', 'segue');
+  // the like heart pops on "curte"
+  if (t >= tl - .05) { const u = seg(t, tl - .05, tl + .3), p = back(u, 2.6), a = 1 - seg(t, tl + 1.0, tl + 1.4);
+    g.save(); g.globalAlpha = a; g.translate(W / 2, 560 * S); g.scale(p * 1.0, p * 1.0); g.font = `${300 * S}px "Noto Color Emoji"`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('❤️', 0, 0); g.restore();
+    for (let i = 0; i < 10; i++) { const k = seg(t, tl + .05, tl + .9), ang = i / 10 * TAU; g.save(); g.globalAlpha = a * (1 - k); g.font = `${60 * S}px "Noto Color Emoji"`; g.textAlign = 'center'; g.fillText('❤️', W / 2 + Math.cos(ang) * k * 330 * S, 560 * S + Math.sin(ang) * k * 330 * S); g.restore(); } }
+  // follow card slides in, the finger taps "Seguir" on "segue"
+  const inn = back(seg(t, tl + .6, tl + 1.0), 1.8), out = 1 - seg(t, t1, t1 + .3), tap = tf + .1, tapped = t >= tap;
+  if (t < tl + .6) return;
+  const cw = 900 * S, ch = 160 * S, x = (W - cw) / 2, y = 930 * S;
+  g.save(); g.globalAlpha = out; g.translate(W / 2, y + ch / 2); g.scale(inn, inn); g.translate(-W / 2, -(y + ch / 2));
+  g.shadowColor = 'rgba(0,0,0,.45)'; g.shadowBlur = 30 * S; g.fillStyle = '#fff'; rr(x, y, cw, ch, 42 * S); g.fill(); g.shadowBlur = 0;
+  const ax = x + 84 * S, ay = y + ch / 2; g.save(); g.beginPath(); g.arc(ax, ay, 56 * S, 0, 7); g.clip(); if (AVATAR.complete) g.drawImage(AVATAR, ax - 56 * S, ay - 56 * S, 112 * S, 112 * S); g.restore();
+  g.lineWidth = 5 * S; g.strokeStyle = GOLD; g.beginPath(); g.arc(ax, ay, 58 * S, 0, 7); g.stroke();
+  g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillStyle = '#111'; g.font = `900 ${40 * S}px Overpass`; g.fillText('o_que_aconteceria_se', x + 160 * S, y + 60 * S);
+  g.fillStyle = '#666'; g.font = `700 ${30 * S}px Overpass`; g.fillText('toda semana, alguém acorda', x + 160 * S, y + 106 * S);
+  const bw = 200 * S, bh = 78 * S, bx = x + cw - bw - 26 * S, by = y + (ch - bh) / 2, press = tapped ? 1 - .08 * Math.exp(-(t - tap) * 10) : 1;
+  g.save(); g.translate(bx + bw / 2, by + bh / 2); g.scale(press, press); g.fillStyle = tapped ? '#e9e9ec' : '#4f5bf7'; rr(-bw / 2, -bh / 2, bw, bh, 20 * S); g.fill();
+  g.fillStyle = tapped ? '#111' : '#fff'; g.font = `900 ${34 * S}px Overpass`; g.textAlign = 'center'; g.fillText(tapped ? 'Seguindo ✓' : 'Seguir', 0, 4 * S); g.restore();
+  const fu = seg(t, tl + .8, tap), fx = lerp(W + 80 * S, bx + bw * .6, eo(fu)), fy = lerp(y + 380 * S, by + bh * .7, eo(fu));
+  g.font = `${100 * S}px "Noto Color Emoji"`; g.textAlign = 'center'; g.fillText('👆', fx, fy + 74 * S);
+  if (tapped && t < tap + .5) { const u = seg(t, tap, tap + .5); g.strokeStyle = `rgba(79,91,247,${1 - u})`; g.lineWidth = 6 * S; g.beginPath(); g.arc(bx + bw * .6, by + bh / 2, (20 + u * 90) * S, 0, 7); g.stroke(); }
+  g.restore();
+  TXT.push({ id: 'cta', text: 'o_que_aconteceria_se Seguir', x0: x, y0: y, x1: x + cw, y1: y + ch });
+}
 function endCard(t) {
   const t0 = at('v11', 0) - .05; if (t < t0) return;
   const a = seg(t, t0, t0 + .3);
@@ -198,6 +226,8 @@ function endCard(t) {
   const pa = seg(t, t0 + .9, t0 + 1.2), pul = 1 + .05 * Math.sin(t * 7);
   g.save(); g.globalAlpha = pa; g.translate(W / 2, 1330 * S); g.scale(pul, pul); g.fillStyle = GOLD; rr(-260 * S, -60 * S, 520 * S, 120 * S, 60 * S); g.fill(); g.lineWidth = 6 * S; g.strokeStyle = '#14110f'; g.stroke();
   txt('💬 COMENTA', 0, 6 * S, 64 * S, '#14110f', { sw: 0 }); g.restore();
+  const pf = back(seg(t, at('v11', 'segue') - .05, at('v11', 'segue') + .3), 2);
+  if (t >= at('v11', 'segue') - .05) { g.save(); g.translate(W / 2, 1480 * S); g.scale(pf, pf); g.fillStyle = '#4f5bf7'; rr(-330 * S, -50 * S, 660 * S, 100 * S, 50 * S); g.fill(); txt('➕ SEGUE PRO PRÓXIMO', 0, 5 * S, 48 * S, '#fff', { sw: 0 }); g.restore(); }
   TXT.push({ id: 'end', text: 'QUEM A GENTE ACORDA NO PRÓXIMO?', x0: 60, y0: 560, x1: W - 60, y1: 1400 });
 }
 function hud(t) {
@@ -205,7 +235,7 @@ function hud(t) {
   flashes(t);
   counter(t, 'ANOS DESDE A MORTE', 0, 205, at('v1', 0), at('v1', 'depois'), at('v2', 0) - .1);
   counter(t, 'CELULARES APONTADOS', 0, 50, at('v2', K.phonesUp), at('v2', K.phonesUp) + .9, at('v3', 0) - .1, GOLD);
-  phoneUI(t); ruler(t); euStars(t); live(t);
+  phoneUI(t); ruler(t); euStars(t); live(t); ctaCard(t);
   captions(t); hook(t); endCard(t);
 }
 
@@ -233,7 +263,7 @@ function events() {
   SHOTS.slice(1).forEach(s => ev.push({ t: s[0], type: 'cut', name: s[1] }));
   PUNCH().forEach(([t, v]) => ev.push({ t, type: 'punch', v }));
   ev.push({ t: at('v7', 'baixinho'), type: 'sting' }, { t: at('v9', K.border), type: 'stars' }, { t: at('v10', K.live), type: 'live' }, { t: at('v11', 0), type: 'end' },
-    { t: at('v4', 0), type: 'phone' }, { t: at('v5', 'metro'), type: 'ruler' }, { t: at('v6', 'setenta'), type: 'ruler' });
+    { t: at('v4', 0), type: 'phone' }, { t: at('c1', 'curte'), type: 'like' }, { t: at('c1', 'segue') + .1, type: 'follow' }, { t: at('v11', 'segue'), type: 'follow' }, { t: at('v5', 'metro'), type: 'ruler' }, { t: at('v6', 'setenta'), type: 'ruler' });
   return ev.sort((a, b) => a.t - b.t);
 }
 window.render = render; window.DUR = DUR; window.EV = events(); window.TEXTS = t => { render(t); return TXT; };

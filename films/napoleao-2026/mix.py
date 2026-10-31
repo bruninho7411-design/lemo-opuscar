@@ -70,6 +70,8 @@ for e in E:
     elif k == 'stars': put(sfx, chime(1), t, .25)
     elif k in ('live', 'phone'): put(sfx, notif(1), t, .3); put(sfx, SFX['pop'](1), t, .25)
     elif k == 'ruler': put(sfx, riser(1.0, 1), t, .2); put(sfx, SFX['ding'](1), t + .9, .3)
+    elif k == 'like': put(sfx, SFX['pop'](1), t, .35); put(sfx, chime(1), t + .05, .15)
+    elif k == 'follow': put(sfx, SFX['tap'](1), t, .5); put(sfx, notif(1), t + .05, .25)
     elif k == 'end': put(sfx, impact(.7), t, .4); put(sfx, SFX['pop'](1), t + .4, .3)
     elif k == 'punch' and e.get('v', 1) < .9: put(sfx, impact(.5), t, .25 * e['v'])
 put(sfx, impact(1), 0, .5)
