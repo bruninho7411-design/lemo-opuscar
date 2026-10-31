@@ -1,0 +1,281 @@
+{
+ "day": 1,
+ "title": "NÃO ABRA A PORTA",
+ "direction": "[tense, gripping storyteller, brisk pace]",
+ "replace": {
+  "quarenta e sete": "47",
+  "vinte e nove": "29",
+  "três zero dois": "302",
+  "trinta": "30"
+ },
+ "scenes": [
+  {
+   "id": "s01",
+   "say": "Se um apocalipse zumbi começasse hoje... você sobreviveria trinta dias? Dia um.",
+   "motion": "video",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 100,
+    "comida": 70,
+    "agua": 70
+   },
+   "prompt": "Wide establishing shot of a big Brazilian city at dawn seen from an apartment balcony: dense apartment towers, favela houses on a hill, a highway; several thick columns of dark smoke rising, a military helicopter in the sky, tiny panicked figures in the streets far below. In the foreground, the stick figure character with the mustard-yellow bucket hat stands on the balcony seen from behind, looking at the city. Ominous orange-grey sky.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s02",
+   "say": "Você acorda com quarenta e sete notificações e sirenes por toda a cidade.",
+   "motion": "pushin",
+   "fx": [
+    "siren"
+   ],
+   "hud": {
+    "vida": 100,
+    "comida": 70,
+    "agua": 70
+   },
+   "prompt": "Small simple Brazilian bedroom at early morning, dim. The stick figure character with the mustard-yellow bucket hat sits up in bed holding a glowing smartphone, eyes wide, surprised. Red and blue police siren light shines through the window blinds onto the wall. A fan, a football poster, clothes on a chair.",
+   "refs": [
+    "voce"
+   ],
+   "sfx": [
+    {
+     "type": "notif",
+     "v": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s03",
+   "say": "Na TV, uma única frase: fiquem em casa. Não abram a porta pra ninguém.",
+   "motion": "zoomtv",
+   "fx": [],
+   "hud": {
+    "vida": 100,
+    "comida": 70,
+    "agua": 70
+   },
+   "prompt": "Brazilian apartment living room. Over-the-shoulder view from behind the stick figure character with the mustard-yellow bucket hat sitting on a worn sofa, facing a TV on a rack. On the TV screen a stick figure news anchor at a desk with a big red breaking-news banner that reads exactly 'URGENTE: FIQUEM EM CASA'. The TV glow lights the dark room.",
+   "refs": [
+    "voce"
+   ],
+   "text_ok": true,
+   "sfx": [
+    {
+     "type": "static",
+     "v": 0.3
+    }
+   ],
+   "focus": [
+    0.5,
+    0.3
+   ]
+  },
+  {
+   "id": "s04",
+   "say": "Da janela, você vê um motoboy caído no meio da rua. Ele levanta... torto. E morde o primeiro que passa.",
+   "motion": "pandown",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 100,
+    "comida": 70,
+    "agua": 70
+   },
+   "prompt": "High angle view from a third-floor window down onto a Brazilian street: a fallen delivery motorbike, a delivery rider zombie in an orange jacket and black helmet getting up crookedly in the middle of the street, a stopped city bus, people (stick figures) running away in panic, an abandoned food delivery box. The window frame is visible at the edges.",
+   "refs": [
+    "zumbis"
+   ]
+  },
+  {
+   "id": "s05",
+   "say": "",
+   "motion": "punch",
+   "fx": [
+    "shake"
+   ],
+   "hud": {
+    "vida": 100,
+    "comida": 70,
+    "agua": 70
+   },
+   "prompt": "Dramatic close action shot on a Brazilian street: the zombie delivery rider in the orange jacket and black helmet lunges with arms forward at a terrified stick figure man in a business shirt who drops his coffee and briefcase. Motion lines, dynamic angle. Cartoonish, no blood, no gore.",
+   "refs": [
+    "zumbis"
+   ],
+   "sfx": [
+    {
+     "type": "impact",
+     "v": 0.8
+    }
+   ],
+   "at": "morde",
+   "at_scene": "s04"
+  },
+  {
+   "id": "s06",
+   "say": "Você tranca tudo, empurra o sofá na porta e conta o que tem: dois miojos e meia garrafa d'água. Se você quer saber se sobrevive, segue o perfil: ainda faltam vinte e nove dias.",
+   "motion": "panright",
+   "fx": [],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "prompt": "Inside a small Brazilian apartment: the stick figure character with the mustard-yellow bucket hat, sweating and determined, pushes a heavy sofa against the front door. In the foreground on a kitchen table: exactly two packets of instant noodles and one plastic water bottle half full. Morning light, tense mood.",
+   "refs": [
+    "voce"
+   ],
+   "hud_at": "miojos"
+  },
+  {
+   "id": "s07",
+   "say": "Meio-dia. Batidas na porta. É o seu Jorge, do três zero dois: abre, pelo amor de Deus! Eu só fui arranhado!",
+   "motion": "peephole",
+   "fx": [
+    "knock"
+   ],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "prompt": "Fisheye view through a door peephole into a dim apartment building hallway: an older neighbor stick figure (bald round white head, grey mustache, white tank top, shorts, flip-flops) stands very close to the door, pale and sweaty, desperate face, his forearm wrapped in a stained t-shirt. Circular vignette of the peephole, dark edges.",
+   "refs": [],
+   "focus": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "id": "s08",
+   "say": "Pelo olho mágico, o braço dele tá enrolado numa camiseta. Aí as batidas param... e começa um arranhado lento na porta.",
+   "motion": "slowpush",
+   "fx": [
+    "shake_soft",
+    "dark",
+    "heartbeat"
+   ],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "prompt": "Inside the dark apartment entrance: the stick figure character with the mustard-yellow bucket hat presses his back against the barricaded front door, terrified, eyes wide, sweat drops. Under the door, a shadow of two feet. Thin light from the hallway through the gap. Very tense.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s09",
+   "say": "Às oito da noite, a cidade inteira apaga. E no escuro... o arranhado continua.",
+   "motion": "pullback",
+   "fx": [
+    "dark",
+    "flicker",
+    "heartbeat"
+   ],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "prompt": "Night. Big Brazilian city skyline in a total blackout seen through the apartment window: every building dark, only moonlight and a few distant fires. The stick figure character with the mustard-yellow bucket hat stands in the dark room in silhouette, holding a single lit candle, looking back over his shoulder at the front door.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s10",
+   "say": "Comenta: você teria aberto a porta?",
+   "motion": "end",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "prompt": "",
+   "reuse": "s08",
+   "blur": 6
+  }
+ ],
+ "cta_from": {
+  "scene": "s06",
+  "word": "se"
+ },
+ "cta_to": {
+  "scene": "s06",
+  "word": "dias"
+ },
+ "hook_hi": [
+  "zumbi",
+  "30",
+  "dias"
+ ],
+ "end_lines": [
+  "VOCÊ TERIA",
+  "ABERTO A PORTA?"
+ ],
+ "events": [
+  {
+   "scene": "s07",
+   "word": "batidas",
+   "type": "knock"
+  },
+  {
+   "scene": "s07",
+   "word": "abre",
+   "type": "knock",
+   "v": 0.8
+  },
+  {
+   "scene": "s08",
+   "word": "arranhado",
+   "type": "scratch",
+   "v": 0.8
+  },
+  {
+   "scene": "s09",
+   "word": "apaga",
+   "type": "blackout"
+  },
+  {
+   "scene": "s09",
+   "word": "arranhado",
+   "type": "scratch",
+   "v": 0.6
+  },
+  {
+   "scene": "s04",
+   "word": "morde",
+   "type": "groan",
+   "v": 0.6
+  }
+ ],
+ "cover": {
+  "img": "s08",
+  "focus": [
+   0.5,
+   0.36
+  ],
+  "zoom": 1.22,
+  "bright": 1.45,
+  "lines": [
+   "NÃO ABRA",
+   "A PORTA"
+  ],
+  "hi": -1
+ },
+ "cold_open": {
+  "src": "s05",
+  "dur": 2.3
+ }
+}

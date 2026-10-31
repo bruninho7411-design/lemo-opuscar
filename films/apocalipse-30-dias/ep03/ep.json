@@ -1,0 +1,311 @@
+{
+ "day": 3,
+ "title": "O MERCADINHO",
+ "replace": {
+  "vinte e sete": "27",
+  "cinquenta": "50",
+  "três": "3"
+ },
+ "hook_hi": [
+  "última",
+  "água"
+ ],
+ "end_lines": [
+  "VOCÊ TERIA LEVADO",
+  "O CARAMELO?"
+ ],
+ "cta_from": {
+  "scene": "s06",
+  "word": "se"
+ },
+ "cta_to": {
+  "scene": "s06",
+  "word": "dias"
+ },
+ "tags": {
+  "Na rua,": "[whispering]",
+  "Se você tá gostando": "[conversational]",
+  "Você levanta o taco": "[building tension]",
+  "Porque lá fora": "[urgent]",
+  "Comenta:": "[conversational]"
+ },
+ "events": [
+  {
+   "scene": "s04",
+   "word": "deles",
+   "type": "groan",
+   "v": 0.5
+  },
+  {
+   "scene": "s05",
+   "word": "rastejando",
+   "type": "rattle",
+   "v": 0.4
+  },
+  {
+   "scene": "s07",
+   "word": "barulho",
+   "type": "rattle",
+   "v": 0.35
+  },
+  {
+   "scene": "s08",
+   "word": "cachorro",
+   "type": "bark",
+   "v": 0.5
+  },
+  {
+   "scene": "s09",
+   "word": "latir",
+   "type": "bark",
+   "v": 0.9
+  },
+  {
+   "scene": "s10",
+   "word": "forçando",
+   "type": "bang",
+   "v": 0.8
+  },
+  {
+   "scene": "s10",
+   "word": "porta",
+   "type": "rattle",
+   "v": 0.9
+  }
+ ],
+ "cover": {
+  "img": "s09",
+  "focus": [
+   0.5,
+   0.4
+  ],
+  "zoom": 1.2,
+  "bright": 1.15,
+  "lines": [
+   "O VIRA-LATA",
+   "CARAMELO"
+  ],
+  "hi": 1
+ },
+ "scenes": [
+  {
+   "id": "s01",
+   "say": "Você ignorou aquele cartaz. Mas hoje de manhã... a última gota de água acabou. Dia três.",
+   "motion": "pushin",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 20,
+    "agua": 0
+   },
+   "hud_at": "acabou",
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "prompt": "Morning in the small Brazilian apartment. The stick figure character with the mustard-yellow bucket hat holds an empty plastic water bottle upside down above his open mouth; one last single drop of water falls from it. His face is desperate. Dusty sunlight through the window behind him.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s02",
+   "say": "O mercadinho do seu Zé fica a cinquenta metros. Cinquenta metros nunca pareceram tão longe.",
+   "motion": "zoomtv",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 20,
+    "agua": 0
+   },
+   "focus": [
+    0.5,
+    0.62
+   ],
+   "prompt": "High angle view from a third-floor window down a long empty Brazilian street. Far down the street, a small corner grocery store with a hand-painted sign that reads exactly 'MERCADINHO DO ZÉ' and a half-open steel roll-up door. Abandoned cars, trash, and three green-headed zombie stick figures wandering in between. Overcast morning.",
+   "refs": [
+    "zumbis"
+   ],
+   "text_ok": true
+  },
+  {
+   "id": "s03",
+   "say": "Você pega o taco de sinuca e desce a escada no escuro.",
+   "motion": "pandown",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 20,
+    "agua": 0
+   },
+   "prompt": "Dark narrow apartment building stairwell, light coming only from a small dirty window. The stick figure character with the mustard-yellow bucket hat and a small backpack slowly sneaks down the stairs on tiptoes, holding a long wooden pool cue like a weapon, scared eyes looking down. Graffiti and peeling paint on the walls.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s04",
+   "say": "Na rua, três deles. Você passa agachado atrás dos carros, sem respirar.",
+   "motion": "panright",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 20,
+    "agua": 0
+   },
+   "prompt": "Street level on an empty Brazilian street: in the foreground the stick figure character with the mustard-yellow bucket hat crouches low behind an abandoned car, holding the pool cue, holding his breath with puffed cheeks. In the background, three green-headed zombie stick figures stand hunched over a pile of garbage bags, their backs turned. Overcast light.",
+   "refs": [
+    "voce",
+    "zumbis"
+   ]
+  },
+  {
+   "id": "s05",
+   "say": "A porta de aço do mercadinho tá meio aberta. Você entra rastejando por baixo.",
+   "motion": "slowpush",
+   "fx": [],
+   "hud": {
+    "vida": 95,
+    "comida": 20,
+    "agua": 0
+   },
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "prompt": "Front of a small Brazilian corner grocery store with a hand-painted sign 'MERCADINHO DO ZÉ' and a rusty steel roll-up door that is only half open. The stick figure character with the mustard-yellow bucket hat lies flat on the sidewalk, crawling under the gap of the steel door into the dark store, pushing the pool cue ahead of him.",
+   "refs": [
+    "voce"
+   ],
+   "text_ok": true
+  },
+  {
+   "id": "s06",
+   "say": "Se você tá gostando, curte o vídeo e segue o perfil: faltam vinte e sete dias.",
+   "motion": "pushin",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 20,
+    "agua": 0
+   },
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "prompt": "Inside a small dark Brazilian grocery store (mercadinho): overturned shelves, scattered snack packets, a broken fridge with its door open, dim light coming only from the gap under the half-open steel door. The stick figure character with the mustard-yellow bucket hat stands up inside, holding the pool cue, looking around nervously.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s07",
+   "say": "Lá dentro, tudo revirado. Mas tem água! Você enche a mochila... e ouve um barulho atrás do balcão.",
+   "motion": "pandown",
+   "fx": [],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "hud_at": "mochila",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "prompt": "Inside the dark grocery store: the stick figure character with the mustard-yellow bucket hat happily stuffs water bottles and snack packets into his open backpack, then freezes and turns his head toward the shop counter in the background, eyes wide, alarmed.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s08",
+   "say": "Você levanta o taco... e é um cachorro. Um vira-lata caramelo, preso numa coleira, tremendo de medo.",
+   "motion": "pushin",
+   "fx": [],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "focus": [
+    0.5,
+    0.62
+   ],
+   "prompt": "Behind the counter of the dark grocery store: the scared caramel Brazilian mutt dog from the reference sheet (caramel fur, cream muzzle, worn red collar) is tied with a short leash to the counter leg, trembling, ears down, big sad eyes. In the foreground, seen from behind, the stick figure character with the mustard-yellow bucket hat holds the pool cue raised over his head, then hesitating.",
+   "refs": [
+    "voce",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s09",
+   "say": "Você solta ele, e ele lambe sua mão. Aí, do nada, ele começa a latir pra porta.",
+   "motion": "slowpush",
+   "fx": [],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "prompt": "Warm touching moment inside the dark grocery store: the stick figure character with the mustard-yellow bucket hat kneels, smiling, while the happy caramel Brazilian mutt dog from the reference sheet (red collar) licks his hand, tail wagging, a little heart above them. The untied leash lies on the floor.",
+   "refs": [
+    "voce",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s10",
+   "say": "Porque lá fora, alguém tá forçando a porta de aço.",
+   "motion": "video",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "prompt": "Inside the dark grocery store looking at the closed rusty steel roll-up door from inside: the steel door is bulging and dented inward as something pushes it from outside; several pale green zombie hands reach in through the gap at the bottom. In the foreground, the caramel mutt dog with the red collar barks at the door and the stick figure character with the mustard-yellow bucket hat backs away in terror holding the pool cue. Thin light beams through the dents.",
+   "refs": [
+    "voce",
+    "caramelo",
+    "zumbis"
+   ],
+   "video_prompt": "Animate this flat 2D cartoon illustration: the steel roll-up door shakes and rattles violently as it is pushed from outside, the green zombie hands under the door grab and claw, dust falls from the ceiling, the dog barks, the character steps back in fear, quick camera shake. Keep the exact flat 2D cartoon style, bold outlines and colors. No morphing, no blood, no text."
+  },
+  {
+   "id": "s11",
+   "say": "Comenta: você teria levado o cachorro?",
+   "motion": "end",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "reuse": "s09",
+   "blur": 6
+  }
+ ],
+ "cold_open": {
+  "src": "s10",
+  "dur": 2.4
+ }
+}

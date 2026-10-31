@@ -1,0 +1,299 @@
+{
+ "day": 4,
+ "title": "A NOITE NO MERCADINHO",
+ "replace": {
+  "trinta": "30",
+  "quatro": "4"
+ },
+ "hook_hi": [
+  "você",
+  "cachorro"
+ ],
+ "end_lines": [
+  "VOCÊ",
+  "ENTRARIA?"
+ ],
+ "cta_from": {
+  "scene": "s06",
+  "word": "se"
+ },
+ "cta_to": {
+  "scene": "s06",
+  "word": "perfil"
+ },
+ "cold_open": {
+  "src": "s07",
+  "dur": 2.4
+ },
+ "tags": {
+  "Você tapa": "[whispering]",
+  "Se você quer ver": "[conversational]",
+  "Você pula": "[building tension]",
+  "Mas quando chega": "[ominous, hushed]",
+  "Comenta:": "[conversational]"
+ },
+ "events": [
+  {
+   "scene": "s01",
+   "word": "empurravam",
+   "type": "rattle",
+   "v": 0.6
+  },
+  {
+   "scene": "s03",
+   "word": "arranham",
+   "type": "scratch",
+   "v": 0.6
+  },
+  {
+   "scene": "s03",
+   "word": "gemem",
+   "type": "groan",
+   "v": 0.6
+  },
+  {
+   "scene": "s07",
+   "word": "telha",
+   "type": "crash",
+   "v": 0.7
+  },
+  {
+   "scene": "s07",
+   "word": "olham",
+   "type": "groan",
+   "v": 0.7
+  },
+  {
+   "scene": "s09",
+   "word": "aberta",
+   "type": "creak",
+   "v": 0.8
+  },
+  {
+   "scene": "s09",
+   "word": "luz",
+   "type": "impact",
+   "v": 0.5
+  }
+ ],
+ "cover": {
+  "img": "s09",
+  "focus": [
+   0.5,
+   0.4
+  ],
+  "zoom": 1.15,
+  "bright": 1.3,
+  "lines": [
+   "TEM ALGUÉM",
+   "NA SUA CASA"
+  ],
+  "hi": 1
+ },
+ "scenes": [
+  {
+   "id": "s01",
+   "say": "Do lado de fora, eles empurravam a porta de aço. Do lado de dentro... só você e um cachorro. Dia quatro.",
+   "motion": "slowpush",
+   "fx": [
+    "dark",
+    "shake_soft"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "focus": [
+    0.5,
+    0.6
+   ],
+   "prompt": "Night inside a small dark Brazilian grocery store. In the background the closed steel roll-up door is dented inward, pale green zombie hands reach under the gap, and moonlight leaks through the dents. In the foreground the stick figure character with the mustard-yellow bucket hat crouches behind a chest freezer, hugging the scared caramel mutt dog with the red collar. Deep blue night tones.",
+   "refs": [
+    "voce",
+    "caramelo",
+    "zumbis"
+   ]
+  },
+  {
+   "id": "s02",
+   "say": "Você tapa o focinho do Caramelo e se esconde atrás do freezer. Ele treme. Você também.",
+   "motion": "pushin",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "prompt": "Close-up at night behind a chest freezer: the stick figure character with the mustard-yellow bucket hat gently holds the caramel mutt dog's muzzle closed with one hand, the other finger on his own lips, both trembling with fear (small tremble lines), sweat drops, big scared eyes. Dim blue moonlight.",
+   "refs": [
+    "voce",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s03",
+   "say": "A porta aguenta. A noite inteira, eles arranham, gemem... e não vão embora.",
+   "motion": "slowpush",
+   "fx": [
+    "dark",
+    "flicker"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "prompt": "Inside the dark grocery store at night, view of the closed steel roll-up door from inside: deep scratch marks on the metal, many shadows of shuffling feet visible through the gap under the door, a few green fingers poking under it. A wall clock above the door shows 3 o'clock. Eerie and tense.",
+   "refs": [
+    "zumbis"
+   ]
+  },
+  {
+   "id": "s04",
+   "say": "De madrugada, você acha uma porta no fundo: o depósito. E no depósito, uma escada pra laje.",
+   "motion": "panup",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "prompt": "A cramped storage room at the back of a Brazilian grocery store, stacked boxes and crates. The stick figure character with the mustard-yellow bucket hat and the caramel mutt dog with the red collar stand at the bottom of a vertical metal ladder that leads up to an open hatch in the ceiling with the night sky and moon visible. He lights the way with his smartphone flashlight.",
+   "refs": [
+    "voce",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s05",
+   "say": "Você sobe com o Caramelo no colo. Lá de cima, a cidade inteira escura... e cheia deles.",
+   "motion": "pullback",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "prompt": "Night on a flat Brazilian concrete rooftop (laje) with blue water tanks, a clothesline and TV antennas. The stick figure character with the mustard-yellow bucket hat stands holding the caramel mutt dog in his arms, seen from behind, looking at a huge dark city under the moon. In the streets below, hundreds of tiny green-headed zombie silhouettes wander between dark houses.",
+   "refs": [
+    "voce",
+    "caramelo",
+    "zumbis"
+   ]
+  },
+  {
+   "id": "s06",
+   "say": "Se você quer ver o Caramelo chegar vivo no dia trinta, segue o perfil.",
+   "motion": "pushin",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 45,
+    "agua": 80
+   },
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "prompt": "Close shot on a Brazilian rooftop at night under a big moon: the stick figure character with the mustard-yellow bucket hat sits next to the caramel mutt dog with the red collar; the dog looks up at him with loyal eyes and he smiles slightly, determined. Blue water tank behind them.",
+   "refs": [
+    "voce",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s07",
+   "say": "Você pula de laje em laje até o seu prédio. Uma telha quebra... e vários olham pra cima.",
+   "motion": "video",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 90,
+    "comida": 45,
+    "agua": 80
+   },
+   "prompt": "Dynamic night action shot: the stick figure character with the mustard-yellow bucket hat leaps across the gap between two Brazilian rooftops with the caramel mutt dog held tight in his arms. Under his back foot a clay roof tile breaks and pieces fall. In the narrow dark alley far below, several green-headed zombie stick figures look up and reach toward him. Moonlight, motion lines.",
+   "refs": [
+    "voce",
+    "caramelo",
+    "zumbis"
+   ],
+   "video_prompt": "Animate this flat 2D cartoon illustration: the stick figure character with the yellow bucket hat leaps across the gap between the rooftops holding the dog and lands on the other side, the broken roof tile pieces fall into the alley, the zombies below look up and reach their arms up, slight camera follow. Keep the exact flat 2D cartoon style, bold outlines and colors. No morphing, no text."
+  },
+  {
+   "id": "s08",
+   "say": "Você se joga pela janela da escada e sobe correndo até o terceiro andar.",
+   "motion": "panup",
+   "fx": [
+    "dark",
+    "shake_soft"
+   ],
+   "hud": {
+    "vida": 90,
+    "comida": 45,
+    "agua": 80
+   },
+   "prompt": "Dark apartment building stairwell at night: the stick figure character with the mustard-yellow bucket hat runs up the stairs two steps at a time, the caramel mutt dog with the red collar running beside him, an open stairwell window behind them with the moon. Motion lines, urgency.",
+   "refs": [
+    "voce",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s09",
+   "say": "Mas quando chega... a porta do seu apartamento tá aberta. E tem luz lá dentro.",
+   "motion": "slowpush",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 90,
+    "comida": 45,
+    "agua": 80
+   },
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "prompt": "Dark apartment building hallway at night. An apartment front door stands half open, and warm flickering candle light spills out from inside onto the hallway floor, with a long unknown shadow cast on the inside wall. The stick figure character with the mustard-yellow bucket hat and the caramel mutt dog stand frozen in the foreground, seen from behind, staring at the door.",
+   "refs": [
+    "voce",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s10",
+   "say": "Comenta: você entraria?",
+   "motion": "end",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 90,
+    "comida": 45,
+    "agua": 80
+   },
+   "reuse": "s09",
+   "blur": 6
+  }
+ ],
+ "tail": 3.2
+}

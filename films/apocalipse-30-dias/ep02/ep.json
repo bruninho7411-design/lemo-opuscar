@@ -1,0 +1,258 @@
+{
+ "day": 2,
+ "title": "SILÊNCIO",
+ "replace": {
+  "vinte e oito": "28",
+  "doze por cento": "12%",
+  "número um": "Nº 1",
+  "dois": "2"
+ },
+ "hook_hi": [
+  "arranhado",
+  "parou"
+ ],
+ "end_lines": [
+  "VOCÊ IRIA",
+  "SOZINHO?"
+ ],
+ "cta_from": {
+  "scene": "s06",
+  "word": "se"
+ },
+ "cta_to": {
+  "scene": "s06",
+  "word": "dias"
+ },
+ "events": [
+  {
+   "scene": "s05",
+   "word": "alarme",
+   "type": "alarm"
+  },
+  {
+   "scene": "s05",
+   "word": "correndo",
+   "type": "groan",
+   "v": 0.7
+  },
+  {
+   "scene": "s09",
+   "word": "sozinho",
+   "type": "impact",
+   "v": 0.7
+  }
+ ],
+ "cover": {
+  "img": "s09",
+  "focus": [
+   0.5,
+   0.42
+  ],
+  "zoom": 1.15,
+  "bright": 1.25,
+  "lines": [
+   "VOCÊ IRIA?"
+  ],
+  "hi": 0
+ },
+ "scenes": [
+  {
+   "id": "s01",
+   "say": "O arranhado na sua porta durou a noite inteira... e de manhã, parou. Dia dois.",
+   "motion": "slowpush",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "prompt": "Early morning inside a small dim Brazilian apartment entrance. The stick figure character with the mustard-yellow bucket hat sleeps sitting on the floor with his back against the front door, which is barricaded with a sofa standing upright. A burned-out candle stub on the floor beside him. Pale morning light beams through the window with floating dust. Deep scratch marks are visible on the inside edge of the door frame.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s02",
+   "say": "Sem luz, sem internet, sem sinal. O celular tá com doze por cento.",
+   "motion": "pushin",
+   "fx": [],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "prompt": "Close shot: the stick figure character with the mustard-yellow bucket hat holds up a smartphone near his worried face; the phone screen shows a red low battery icon with '12%' and a crossed-out signal icon. Dark apartment behind him, light switch on the wall.",
+   "refs": [
+    "voce"
+   ],
+   "text_ok": true
+  },
+  {
+   "id": "s03",
+   "say": "Você faz o inventário: dois miojos, meia garrafa d'água, uma vela e o taco de sinuca do seu tio.",
+   "motion": "pandown",
+   "fx": [],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "prompt": "Top-down flat-lay on a wooden floor of a survival inventory neatly laid out: exactly two packets of instant noodles, one plastic water bottle half full, one white candle, and a long wooden pool cue (snooker cue) lying diagonally. The stick figure character with the mustard-yellow bucket hat kneels at the top of the frame looking down at the items, thinking.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s04",
+   "say": "Pela fresta da cortina, a rua parece vazia. Vazia demais.",
+   "motion": "pushin",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "prompt": "View through a narrow gap between two curtains from a third-floor window down onto an empty Brazilian street: abandoned cars with open doors, a toppled street vendor cart, papers blowing, a pharmacy and a bakery (padaria) with broken windows, no people. Eerie overcast light. The curtain edges frame the shot on both sides.",
+   "refs": [],
+   "focus": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "id": "s05",
+   "say": "De repente, um alarme de carro dispara. E de todo canto eles aparecem: dos prédios, dos becos, debaixo dos carros... correndo pro barulho.",
+   "motion": "video",
+   "fx": [],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "prompt": "High angle view of the same empty Brazilian street: a parked red car's alarm is going off with its orange lights flashing, and dozens of green-headed zombie stick figures pour out from buildings, alleys and from under cars, all running toward the car. Dynamic, chaotic, dust. Cartoonish, no blood, no gore.",
+   "refs": [
+    "zumbis"
+   ],
+   "video_prompt": "Animate this flat 2D cartoon illustration: the red car's orange hazard lights flash, many green-headed zombie stick figures run from the buildings and alleys toward the car, dust kicks up, slight camera shake. Keep the exact flat 2D cartoon style, bold outlines and colors. No morphing, no text."
+  },
+  {
+   "id": "s06",
+   "say": "Regra número um: barulho atrai eles. Anota isso. E se você quer saber se sobrevive, segue o perfil: faltam vinte e oito dias.",
+   "motion": "pushin",
+   "fx": [],
+   "hud": {
+    "vida": 100,
+    "comida": 25,
+    "agua": 20
+   },
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "prompt": "The stick figure character with the mustard-yellow bucket hat sits at a small table by the window writing in an open notebook with a pencil; on the notebook page, handwritten in big letters: 'REGRA 1: BARULHO ATRAI ELES'. He holds a finger to his lips in a 'shh' gesture. Soft daylight through the window.",
+   "refs": [
+    "voce"
+   ],
+   "text_ok": true
+  },
+  {
+   "id": "s07",
+   "say": "À tarde, a sede aperta. Você divide a água em goles. Três por dia.",
+   "motion": "slowpush",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 20,
+    "agua": 10
+   },
+   "hud_at": "goles",
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "prompt": "Hot Brazilian afternoon inside the apartment, harsh orange sunlight through the window, heat haze. The stick figure character with the mustard-yellow bucket hat, sweating heavily with his tongue slightly out, carefully pours a tiny sip of water into the bottle cap. The water bottle is almost empty.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s08",
+   "say": "Aí você vê: no prédio da frente, alguém acena da janela, segurando um cartaz.",
+   "motion": "zoomtv",
+   "fx": [],
+   "hud": {
+    "vida": 95,
+    "comida": 20,
+    "agua": 10
+   },
+   "focus": [
+    0.62,
+    0.38
+   ],
+   "prompt": "Over-the-shoulder view from behind the stick figure character with the mustard-yellow bucket hat looking out of his window across the street at another old apartment building at sunset. In one window of the building across, a small dark silhouette waves one arm and holds up a piece of cardboard (too far to read). Orange dusk sky.",
+   "refs": [
+    "voce"
+   ]
+  },
+  {
+   "id": "s09",
+   "say": "Escrito: temos comida. E embaixo, bem menor: venha sozinho.",
+   "motion": "slowpush",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 20,
+    "agua": 10
+   },
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "prompt": "Close-up of a window in an old apartment building at dusk: two stick figure hands hold up a piece of brown cardboard with handwritten black marker text: big letters 'TEMOS COMIDA' and below in much smaller letters 'VENHA SOZINHO'. The person holding it is hidden in the dark room behind, only a faint silhouette. Creepy, ominous.",
+   "refs": [],
+   "text_ok": true
+  },
+  {
+   "id": "s10",
+   "say": "Comenta: você iria?",
+   "motion": "end",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 95,
+    "comida": 20,
+    "agua": 10
+   },
+   "reuse": "s09",
+   "blur": 6
+  }
+ ],
+ "tags": {
+  "Regra número um": "[leaning in]",
+  "E se você quer saber": "[conversational]",
+  "Escrito:": "[whispering]",
+  "Comenta:": "[conversational]",
+  "De repente,": "[building tension]"
+ },
+ "cold_open": {
+  "src": "s05",
+  "dur": 2.4
+ }
+}
