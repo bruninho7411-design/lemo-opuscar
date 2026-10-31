@@ -2,6 +2,8 @@
 
 Perfil: @o_que_aconteceria_se · Instagram Reels 1080×1920 · 30 episódios de 50–60 s · narração em português (pt-BR).
 
+**Onde vai:** Instagram Reels e YouTube Shorts todo dia; depois do Dia 30, os 30 episódios viram um vídeo longo no YouTube (plano em [`youtube/YOUTUBE.md`](youtube/YOUTUBE.md)).
+
 **Premissa (o "e se" do perfil):** *E se um apocalipse zumbi começasse hoje no Brasil… você sobreviveria 30 dias?*
 Cada episódio é um dia. A narração fala com **você** ("você acorda…"), no mesmo tom dos seus outros vídeos. No Dia 5 o rádio anuncia um **resgate no estádio daqui a 25 dias**: a série inteira vira uma contagem regressiva até o Dia 30.
 
