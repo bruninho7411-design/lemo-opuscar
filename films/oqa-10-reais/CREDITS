@@ -1,0 +1,13 @@
+E se seu pai guardasse R$10 toda noite enquanto você dormia? — for the profile "O que aconteceria se"
+
+Music        "Gymnopédie No. 1" (Erik Satie), performed by Kevin MacLeod (incompetech.com),
+             licensed under Creative Commons: By Attribution 4.0 — https://creativecommons.org/licenses/by/4.0/
+             Credit line for the post: Música: "Gymnopedie No 1" — Kevin MacLeod (incompetech.com), CC BY 4.0
+Images       AI-generated with Higgsfield: seven keyframes of one fictional family (GPT Image 2.5, ai/k*.png), animated with Wan 2.7
+             (ai/v_c*.mp4, 3 s each). The look follows the stylized-3D life-montage format the user referenced; characters, story,
+             type and edit are this film's own.
+Voices       VoiceStudio / OmniVoice (k2-fsa/OmniVoice model, Apache-2.0; VoiceStudio app AGPL-3.0), run locally on CPU:
+             the father (designed voice, "male, middle-aged, low pitch"), the son (the series' "você" voice).
+Type         Cormorant Garamond and Inter (fonts/), Google Fonts, SIL Open Font License 1.1
+Sound FX     Synthesized in code (mix.py + core/audio/sfx.py). No samples.
+The numbers  R$10 a night × 365 nights × 18 years = R$ 65.700 (the film counts 365 nights a year; no interest).

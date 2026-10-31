@@ -1,0 +1,50 @@
+{
+ "p1": {
+  "take": "p1_s1.wav",
+  "dur": 2.107,
+  "wer": 0.0,
+  "asr": "Boa noite meu amor, esse é o primeiro."
+ },
+ "p2": {
+  "take": "p2_s1.wav",
+  "dur": 1.763,
+  "wer": 0.0,
+  "asr": "Dorme bem, amanhã tem mais um."
+ },
+ "p3": {
+  "take": "p3_s1.wav",
+  "dur": 1.646,
+  "wer": 0.0,
+  "asr": "Obrigado pelo desenho, filho."
+ },
+ "p4": {
+  "take": "p4_s1.wav",
+  "dur": 2.535,
+  "wer": 0.0,
+  "asr": "Esse mês está apertado, mas o seu eu não tiro."
+ },
+ "p5": {
+  "take": "p5_s1.wav",
+  "dur": 2.254,
+  "wer": 0.0,
+  "asr": "Você nem me abraça mais na escola, tudo bem."
+ },
+ "p6": {
+  "take": "p6_s1.wav",
+  "dur": 1.828,
+  "wer": 0.0,
+  "asr": "Chegou tarde de novo, eu esperei."
+ },
+ "p7": {
+  "take": "p7_s1.wav",
+  "dur": 1.892,
+  "wer": 0.0,
+  "asr": "18 anos, toda noite é seu."
+ },
+ "y1": {
+  "take": "y1_s1.wav",
+  "dur": 1.827,
+  "wer": 0.0,
+  "asr": "Pai, você guardou isso tudo?"
+ }
+}
