@@ -1,0 +1,86 @@
+{
+ "n1": {
+  "take": "n1_s1.wav",
+  "dur": 3.315,
+  "wer": 0.0,
+  "asr": "Depois do prédio, sobraram 41 mil na sua conta."
+ },
+ "c1": {
+  "take": "c1_s1.wav",
+  "dur": 1.416,
+  "wer": 0.0,
+  "asr": "41 mil, mano!"
+ },
+ "n2": {
+  "take": "n2_s1.wav",
+  "dur": 4.255,
+  "wer": 0.3,
+  "asr": "Na mesma semana, quatro máquinas quebraram, com certo 32 mil."
+ },
+ "n3": {
+  "take": "n3_s1.wav",
+  "dur": 3.197,
+  "wer": 0.2,
+  "asr": "Sobraram 9 mil para pagar as contas de três lavanderias."
+ },
+ "y1": {
+  "take": "y1_s1.wav",
+  "dur": 1.635,
+  "wer": 0.0,
+  "asr": "Era isso que ele queria, Caio."
+ },
+ "n4": {
+  "take": "n4_s1.wav",
+  "dur": 3.516,
+  "wer": 0.0,
+  "asr": "Muita empresa que dá lucro quebra assim, sem dinheiro no caixa."
+ },
+ "n5": {
+  "take": "n5_s1.wav",
+  "dur": 5.755,
+  "wer": 0.0,
+  "asr": "Mas o prédio tinha uma coisa que ninguém tinha olhado. Dois andares vazios, em cima da lavanderia."
+ },
+ "n6": {
+  "take": "n6_s1.wav",
+  "dur": 3.439,
+  "wer": 0.0,
+  "asr": "Se você tem algum espaço parado, salva esse vídeo e segue."
+ },
+ "n7": {
+  "take": "n7_s1.wav",
+  "dur": 5.555,
+  "wer": 0.05,
+  "asr": "Você alugou os dois andares, 6 mil por mês, e parcelou o concerto em 8 vezes de 4 mil."
+ },
+ "n8": {
+  "take": "n8_s1.wav",
+  "dur": 3.303,
+  "wer": 0.08,
+  "asr": "O prédio paga o conserto e ainda sobram dois mil por mês."
+ },
+ "n9": {
+  "take": "n9_s1.wav",
+  "dur": 4.007,
+  "wer": 0.0,
+  "asr": "Só que um dos inquilinos assinou o contrato com uma caneta dourada."
+ },
+ "n10": {
+  "take": "n10_s1.wav",
+  "dur": 2.229,
+  "wer": 0.0,
+  "asr": "O novo vizinho de cima era o seu Arlindo."
+ },
+ "n11": {
+  "take": "n11_s1.wav",
+  "dur": 3.019,
+  "wer": 0.0,
+  "asr": "No próximo episódio, o Inquilino. Segue pra não perder."
+ },
+ "a1": {
+  "take": "a1_s1.wav",
+  "dur": 0.905,
+  "wer": 0.0,
+  "asr": "Bom dia, vizinho."
+ }
+}

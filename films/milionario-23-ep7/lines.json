@@ -1,0 +1,16 @@
+[
+ {"id": "n1", "who": "n", "text": "Depois do prédio, sobraram quarenta e um mil na sua conta.", "sub": "Depois do prédio, sobraram R$ 41 mil na sua conta.", "asr": "Depois do prédio, sobraram 41 mil na sua conta.", "hi": ["R$ 41 mil"]},
+ {"id": "c1", "who": "c", "text": "Quarenta e um mil, mano?!", "sub": "41 mil, mano?!", "asr": "41 mil, mano?", "hi": ["41 mil,"]},
+ {"id": "n2", "who": "n", "text": "Na mesma semana, quatro máquinas quebraram. Conserto: trinta e dois mil.", "sub": "Na mesma semana, 4 máquinas quebraram. Conserto: R$ 32 mil.", "asr": "Na mesma semana, 4 máquinas quebraram. Conserto: 32 mil.", "hi": ["R$ 32 mil."]},
+ {"id": "n3", "who": "n", "text": "Sobraram nove mil. Pra pagar as contas de três lavanderias.", "sub": "Sobraram R$ 9 mil. Pra pagar as contas de 3 lavanderias.", "asr": "Sobraram 9 mil. Pra pagar as contas de 3 lavanderias.", "hi": ["R$ 9 mil."]},
+ {"id": "y1", "who": "y", "text": "Era isso que ele queria, Caio.", "sub": "Era isso que ele queria, Caio.", "hi": ["ele queria,"]},
+ {"id": "n4", "who": "n", "text": "Muita empresa que dá lucro quebra assim: sem dinheiro no caixa.", "sub": "Muita empresa que dá lucro quebra assim: sem dinheiro no caixa.", "hi": ["sem dinheiro no caixa."]},
+ {"id": "n5", "who": "n", "text": "Mas o prédio tinha uma coisa que ninguém tinha olhado. Dois andares vazios, em cima da lavanderia.", "sub": "Mas o prédio tinha uma coisa que ninguém tinha olhado. 2 andares vazios, em cima da lavanderia.", "asr": "Mas o prédio tinha uma coisa que ninguém tinha olhado. Dois andares vazios em cima da lavanderia.", "hi": ["2 andares vazios,"]},
+ {"id": "n6", "who": "n", "text": "Se você tem algum espaço parado, salva esse vídeo. E segue.", "sub": "Se você tem algum espaço parado, salva esse vídeo. E segue.", "hi": ["salva", "segue."]},
+ {"id": "n7", "who": "n", "text": "Você alugou os dois andares: seis mil por mês. E parcelou o conserto em oito vezes de quatro mil.", "sub": "Você alugou os 2 andares: R$ 6 mil por mês. E parcelou o conserto em 8x de R$ 4 mil.", "asr": "Você alugou os dois andares, 6 mil por mês, e parcelou o conserto em 8 vezes de 4 mil.", "hi": ["R$ 6 mil por mês.", "8x de R$ 4 mil."]},
+ {"id": "n8", "who": "n", "text": "O prédio paga o conserto. E ainda sobram dois mil por mês.", "sub": "O prédio paga o conserto. E ainda sobram R$ 2 mil por mês.", "asr": "O prédio paga o conserto e ainda sobram 2 mil por mês.", "hi": ["R$ 2 mil por mês."]},
+ {"id": "n9", "who": "n", "text": "Só que um dos inquilinos assinou o contrato com uma caneta dourada.", "sub": "Só que um dos inquilinos assinou o contrato com uma caneta dourada.", "hi": ["caneta dourada."]},
+ {"id": "n10", "who": "n", "text": "O novo vizinho de cima... era o Seu Arlindo.", "sub": "O novo vizinho de cima... era o Seu Arlindo.", "hi": ["Seu Arlindo."]},
+ {"id": "a1", "who": "a", "text": "Bom dia, vizinho.", "sub": "Bom dia, vizinho.", "hi": ["vizinho."]},
+ {"id": "n11", "who": "n", "text": "No próximo episódio: o inquilino. Segue pra não perder.", "sub": "No próximo episódio: o inquilino. Segue pra não perder.", "hi": ["o inquilino."]}
+]
