@@ -142,7 +142,7 @@ n = int(DUR * SR) + SR
 voice = load(f'{HERE}/src/voice.mp3')
 from sound import bp as _bp
 for vf in ep.get('voice_fx', []):   # e.g. a radio transmission: band-limited, crunchy, with static
-    a = int((find(vf['from']['scene'], vf['from']['word'])['t0'] - .05) * SR); b = int((find(vf['to']['scene'], vf['to']['word'])['t1'] + .1) * SR)
+    a = int((find(vf['from']['scene'], vf['from']['word'])['t0'] - .05) * SR); b = int((find(vf['to']['scene'], vf['to']['word'], vf['to'].get('nth', 1))['t1'] + .1) * SR)
     seg_ = voice[a:b]; r = np.tanh(_bp(seg_, 450, 2800) * 4) * .35 + _bp(np.random.default_rng(3).standard_normal(len(seg_)), 1500, 6000) * .02
     fade = np.minimum(1, np.minimum(np.arange(len(seg_)), np.arange(len(seg_))[::-1]) / (.02 * SR)); voice[a:b] = seg_ * (1 - fade) + r * fade
 # gentle compression on the voice: RMS follower

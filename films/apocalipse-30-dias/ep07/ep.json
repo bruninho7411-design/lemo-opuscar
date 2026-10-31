@@ -1,0 +1,293 @@
+{
+ "day": 7,
+ "title": "FOGO",
+ "replace": {
+  "vinte e três": "23",
+  "três zero dois": "302",
+  "sete": "7",
+  "dois metros": "2 metros",
+  "número um": "Nº 1"
+ },
+ "hook_hi": [
+  "jorge",
+  "elevador"
+ ],
+ "end_lines": [
+  "AMIGOS OU",
+  "INIMIGOS?"
+ ],
+ "cta_from": {
+  "scene": "s06",
+  "word": "curte"
+ },
+ "cta_to": {
+  "scene": "s06",
+  "word": "dias"
+ },
+ "cold_open": {
+  "src": "s04",
+  "dur": 2.3
+ },
+ "tags": {
+  "Pela fresta": "[whispering]",
+  "A cortina pega fogo": "[urgent]",
+  "Curte se você": "[conversational]",
+  "No terraço": "[building tension]",
+  "Vocês caem": "[relieved, then ominous]",
+  "Comenta:": "[conversational]"
+ },
+ "events": [
+  {
+   "scene": "s02",
+   "word": "verde",
+   "type": "groan",
+   "v": 0.7
+  },
+  {
+   "scene": "s04",
+   "word": "fogo",
+   "type": "fire",
+   "v": 0.8
+  },
+  {
+   "scene": "s07",
+   "word": "pula",
+   "type": "whoosh",
+   "v": 0.6
+  },
+  {
+   "scene": "s08",
+   "word": "escorrega",
+   "type": "crash",
+   "v": 0.5
+  },
+  {
+   "scene": "s08",
+   "word": "puxa",
+   "type": "impact",
+   "v": 0.5
+  },
+  {
+   "scene": "s09",
+   "word": "engatilhadas",
+   "type": "cock",
+   "v": 0.9
+  }
+ ],
+ "cover": {
+  "img": "s09",
+  "focus": [
+   0.5,
+   0.42
+  ],
+  "zoom": 1.15,
+  "bright": 1.25,
+  "lines": [
+   "AMIGOS OU",
+   "INIMIGOS?"
+  ],
+  "hi": 1
+ },
+ "scenes": [
+  {
+   "id": "s01",
+   "say": "Lembra do seu Jorge, do três zero dois? Ele tava no elevador esse tempo todo. Dia sete.",
+   "motion": "slowpush",
+   "fx": [
+    "dark",
+    "flicker"
+   ],
+   "hud": {
+    "vida": 75,
+    "comida": 50,
+    "agua": 70
+   },
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "prompt": "Night in a dark apartment corridor: the old metal elevator doors are pried open a few centimeters with the tip of a makeshift broom-and-knife spear. Through the narrow gap, in the dark elevator, we glimpse the neighbor from the reference image now turned into a zombie: pale green round head, grey mustache, dirty white tank top, glowing white eye. Flashlight beam on the gap. Cartoonish, no blood.",
+   "refs": [
+    "jorge"
+   ]
+  },
+  {
+   "id": "s02",
+   "say": "Pela fresta, você vê a regata dele... e a pele verde. Ele não é mais o seu Jorge.",
+   "motion": "pushin",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 75,
+    "comida": 50,
+    "agua": 70
+   },
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "prompt": "Extreme close-up through the narrow gap of elevator doors: the zombie version of the neighbor from the reference image (bald pale green round head, thick grey mustache, dirty white tank top) presses his face against the gap, mouth open, empty white eyes. Flashlight light, dark edges. Creepy but cartoonish, no blood.",
+   "refs": [
+    "jorge",
+    "zumbis"
+   ]
+  },
+  {
+   "id": "s03",
+   "say": "Vocês decidem deixar a porta fechada. Erro número um: ninguém viu a vela tombar no quarto.",
+   "motion": "pushin",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 75,
+    "comida": 50,
+    "agua": 70
+   },
+   "focus": [
+    0.4,
+    0.55
+   ],
+   "prompt": "An empty dark Brazilian bedroom at night: a lit candle has tipped over on the bedside table and its small flame is touching the bottom of a thin curtain, which is just starting to catch fire with a small orange flame. Nobody in the room. Ominous quiet.",
+   "refs": []
+  },
+  {
+   "id": "s04",
+   "say": "A cortina pega fogo. A fumaça toma o corredor. E a barricada vira uma armadilha.",
+   "motion": "video",
+   "fx": [],
+   "hud": {
+    "vida": 65,
+    "comida": 50,
+    "agua": 70
+   },
+   "hud_at": "fumaça",
+   "prompt": "The apartment on fire at night: tall orange flames climb the curtains and walls, thick black smoke pours out of the bedroom door into the corridor. In the corridor, the stick figure character with the mustard-yellow bucket hat, the stick figure girl Bia with the red bandana and the caramel mutt dog with the red collar run away from the fire, coughing, the furniture barricade blocking the stairs down behind them.",
+   "refs": [
+    "voce",
+    "bia",
+    "caramelo"
+   ],
+   "video_prompt": "Animate this flat 2D cartoon illustration: the flames grow and flicker up the walls and curtains, thick black smoke rolls and billows along the ceiling of the corridor, embers fly, the stick figure, the girl and the dog run away from the fire, coughing. Keep the exact flat 2D cartoon style, bold outlines and colors. No morphing, no text."
+  },
+  {
+   "id": "s05",
+   "say": "Lá embaixo, eles. Aqui dentro, o fogo. Só sobra um caminho: pra cima.",
+   "motion": "panup",
+   "fx": [
+    "ash"
+   ],
+   "hud": {
+    "vida": 65,
+    "comida": 30,
+    "agua": 40
+   },
+   "hud_at": "caminho",
+   "prompt": "Smoky apartment building stairwell at night lit by orange firelight: on the stairs going down, green zombie arms reach through the furniture barricade; the stick figure character with the mustard-yellow bucket hat, the stick figure girl Bia with the red bandana and the caramel mutt dog run UP the stairs toward a metal door marked with a small sign reading 'TERRAÇO' at the top. Smoke swirls.",
+   "refs": [
+    "voce",
+    "bia",
+    "caramelo",
+    "zumbis"
+   ],
+   "text_ok": true
+  },
+  {
+   "id": "s06",
+   "say": "Curte se você também subiria. E segue pra não perder: faltam vinte e três dias.",
+   "motion": "pushin",
+   "fx": [
+    "ash"
+   ],
+   "hud": {
+    "vida": 65,
+    "comida": 30,
+    "agua": 40
+   },
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "prompt": "Night on the flat rooftop terrace of the burning apartment building: thick smoke rises from below, orange glow. The stick figure character with the mustard-yellow bucket hat, the stick figure girl Bia with the red bandana and the caramel mutt dog stand at the rooftop edge, catching their breath, looking at the neighboring building across a gap. Moon and dark city behind.",
+   "refs": [
+    "voce",
+    "bia",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s07",
+   "say": "No terraço, o prédio vizinho fica a dois metros. A Bia pula. O Caramelo pula.",
+   "motion": "panright",
+   "fx": [
+    "ash"
+   ],
+   "hud": {
+    "vida": 65,
+    "comida": 30,
+    "agua": 40
+   },
+   "prompt": "Dynamic night shot from the side: the stick figure girl Bia with the red bandana is mid-air leaping across a two-meter gap between two Brazilian apartment building rooftops, the caramel mutt dog with the red collar leaping right behind her; the stick figure character with the mustard-yellow bucket hat waits his turn on the burning building's edge. Smoke and orange glow, dark alley far below.",
+   "refs": [
+    "voce",
+    "bia",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s08",
+   "say": "Você corre... e pula. Seu pé escorrega na borda... e a Bia te puxa pelo braço.",
+   "motion": "punch",
+   "fx": [
+    "shake",
+    "ash"
+   ],
+   "hud": {
+    "vida": 60,
+    "comida": 30,
+    "agua": 40
+   },
+   "prompt": "Dramatic close action shot at night: the stick figure character with the mustard-yellow bucket hat has just landed badly, his foot slipping off the edge of the rooftop, pieces of concrete falling into the dark alley below; the stick figure girl Bia with the red bandana grabs his arm with both hands and pulls him up. Motion lines, smoke behind.",
+   "refs": [
+    "voce",
+    "bia"
+   ]
+  },
+  {
+   "id": "s09",
+   "say": "Vocês caem no outro terraço, rindo de alívio. Até ouvir o barulho de armas sendo engatilhadas.",
+   "motion": "pullback",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 60,
+    "comida": 30,
+    "agua": 40
+   },
+   "prompt": "Night on a rooftop terrace with water tanks: the stick figure character with the mustard-yellow bucket hat, the stick figure girl Bia with the red bandana and the caramel mutt dog lie on the floor, suddenly frozen, because they are surrounded by five stick figure men in dark tactical vests and caps pointing shotguns and rifles at them, with bright flashlights shining in their faces. Tense standoff, no blood.",
+   "refs": [
+    "voce",
+    "bia",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s10",
+   "say": "Comenta: amigos ou inimigos?",
+   "motion": "end",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 60,
+    "comida": 30,
+    "agua": 40
+   },
+   "reuse": "s09",
+   "blur": 6
+  }
+ ],
+ "tail": 2.8
+}

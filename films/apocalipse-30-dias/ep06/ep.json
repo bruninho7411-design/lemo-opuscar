@@ -1,0 +1,302 @@
+{
+ "day": 6,
+ "title": "A NOITE É DELES",
+ "replace": {
+  "vinte e quatro": "24",
+  "número dois": "Nº 2",
+  "seis": "6",
+  "nove": "9"
+ },
+ "hook_hi": [
+  "noite",
+  "correm"
+ ],
+ "end_lines": [
+  "VOCÊ ABRIRIA",
+  "O ELEVADOR?"
+ ],
+ "cta_from": {
+  "scene": "s06",
+  "word": "se"
+ },
+ "cta_to": {
+  "scene": "s06",
+  "word": "dias"
+ },
+ "cold_open": {
+  "src": "s07",
+  "dur": 2.3
+ },
+ "tags": {
+  "Regra número dois": "[leaning in]",
+  "Às nove da noite": "[building tension]",
+  "Se você chegou": "[conversational]",
+  "Silêncio.": "[whispering]",
+  "O elevador tá parado": "[ominous, hushed]",
+  "Comenta:": "[conversational]",
+  "Eles se jogam": "[urgent]"
+ },
+ "events": [
+  {
+   "scene": "s05",
+   "word": "grito",
+   "type": "groan",
+   "v": 0.8
+  },
+  {
+   "scene": "s05",
+   "word": "rápidos",
+   "type": "steps",
+   "v": 0.8
+  },
+  {
+   "scene": "s07",
+   "word": "jogam",
+   "type": "bang",
+   "v": 0.9
+  },
+  {
+   "scene": "s07",
+   "word": "treme",
+   "type": "rattle",
+   "v": 0.7
+  },
+  {
+   "scene": "s08",
+   "word": "rosnar",
+   "type": "groan",
+   "v": 0.4
+  },
+  {
+   "scene": "s09",
+   "word": "batendo",
+   "type": "rattle",
+   "v": 0.8
+  },
+  {
+   "scene": "s09",
+   "word": "dentro",
+   "type": "bang",
+   "v": 0.6
+  }
+ ],
+ "cover": {
+  "img": "s09",
+  "focus": [
+   0.5,
+   0.42
+  ],
+  "zoom": 1.15,
+  "bright": 1.3,
+  "lines": [
+   "O QUE TEM",
+   "NO ELEVADOR?"
+  ],
+  "hi": 1
+ },
+ "scenes": [
+  {
+   "id": "s01",
+   "say": "Se de dia eles andam... de noite, eles correm. Dia seis.",
+   "motion": "pushin",
+   "fx": [
+    "dark",
+    "shake_soft"
+   ],
+   "hud": {
+    "vida": 80,
+    "comida": 60,
+    "agua": 80
+   },
+   "focus": [
+    0.5,
+    0.55
+   ],
+   "prompt": "Night on a Brazilian street under a full moon: a pack of green-headed zombie stick figures sprinting toward the camera at full speed, arms pumping, strong motion lines and dust, glowing white eyes, mouths open. Street lamps are dead, only moonlight. Terrifying speed, cartoonish, no blood.",
+   "refs": [
+    "zumbis"
+   ]
+  },
+  {
+   "id": "s02",
+   "say": "Você e a Bia passam a manhã inteira fazendo barricada: sofá, geladeira e a máquina de lavar do vizinho.",
+   "motion": "panright",
+   "fx": [
+    "dust"
+   ],
+   "hud": {
+    "vida": 80,
+    "comida": 50,
+    "agua": 70
+   },
+   "hud_at": "manhã",
+   "prompt": "Daytime in the second-floor landing of an old Brazilian apartment building stairwell: the stick figure character with the mustard-yellow bucket hat and the stick figure girl Bia with the red bandana, both sweating, push an old white refrigerator against a pile already made of a sofa and a washing machine to block the stairs. The caramel mutt dog with the red collar watches, tilting its head.",
+   "refs": [
+    "voce",
+    "bia",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s03",
+   "say": "Ela te ensina a fazer uma lança com cabo de vassoura e faca.",
+   "motion": "slowpush",
+   "fx": [],
+   "hud": {
+    "vida": 80,
+    "comida": 50,
+    "agua": 70
+   },
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "prompt": "Inside the apartment by the window in daylight: the stick figure girl Bia with the red bandana shows the stick figure character with the mustard-yellow bucket hat how to tie a kitchen knife to the end of a broom handle with grey duct tape, making a makeshift spear. He watches impressed. Tools and tape on the table.",
+   "refs": [
+    "voce",
+    "bia"
+   ]
+  },
+  {
+   "id": "s04",
+   "say": "Regra número dois: quando o sol se põe, eles ficam rápidos. Muito rápidos.",
+   "motion": "pushin",
+   "fx": [],
+   "hud": {
+    "vida": 80,
+    "comida": 50,
+    "agua": 70
+   },
+   "focus": [
+    0.45,
+    0.6
+   ],
+   "prompt": "Close-up of an open notebook on a windowsill at sunset, orange light. Handwritten in big black letters on the page: 'REGRA 2: À NOITE ELES CORREM', below the older line 'REGRA 1: BARULHO ATRAI ELES'. A pencil lies on it. Through the window behind, the sun sets over the dark city skyline.",
+   "refs": [],
+   "text_ok": true
+  },
+  {
+   "id": "s05",
+   "say": "Às nove da noite, um grito lá embaixo, no térreo. E depois, passos. Rápidos. Subindo a escada.",
+   "motion": "pandown",
+   "fx": [
+    "dark",
+    "flicker"
+   ],
+   "hud": {
+    "vida": 80,
+    "comida": 50,
+    "agua": 70
+   },
+   "prompt": "Looking straight down the spiral of a dark apartment building stairwell at night from the top floor: far below, many green-headed zombie stick figures are running up the stairs at high speed, motion lines, one of them screaming upward, glowing white eyes. Only faint moonlight from small windows.",
+   "refs": [
+    "zumbis"
+   ]
+  },
+  {
+   "id": "s06",
+   "say": "Se você chegou até aqui, segue o perfil e curte: faltam vinte e quatro dias.",
+   "motion": "pushin",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 80,
+    "comida": 50,
+    "agua": 70
+   },
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "prompt": "Night, a dark apartment building corridor lit by a single flashlight beam: the stick figure character with the mustard-yellow bucket hat holds the makeshift broom-and-knife spear and the stick figure girl Bia with the red bandana holds her black frying pan; both crouch behind a barricade of furniture, tense, listening. The caramel mutt dog with the red collar crouches beside them, ears up.",
+   "refs": [
+    "voce",
+    "bia",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s07",
+   "say": "Eles se jogam contra a barricada do segundo andar. A geladeira treme, a Bia segura com o ombro... e aguenta.",
+   "motion": "video",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 75,
+    "comida": 50,
+    "agua": 70
+   },
+   "prompt": "Night action shot on the second-floor stairwell landing: a crowd of green-headed zombie stick figures slams against the barricade made of an old refrigerator, a sofa and a washing machine; green arms reach over and between the furniture. On the near side, the stick figure girl Bia with the red bandana pushes back against the fridge with her shoulder, and the stick figure character with the mustard-yellow bucket hat braces the sofa, holding the spear. Flashlight on the floor lights the scene. Cartoonish, no blood.",
+   "refs": [
+    "voce",
+    "bia",
+    "zumbis"
+   ],
+   "video_prompt": "Animate this flat 2D cartoon illustration: the zombies slam again and again against the barricade, the refrigerator and sofa shake and slide a little, green arms grab over the top, the girl pushes back with her shoulder and the stick figure braces with all his strength, dust falls, camera shakes with each impact. Keep the exact flat 2D cartoon style, bold outlines and colors. No morphing, no blood, no text."
+  },
+  {
+   "id": "s08",
+   "say": "Silêncio. Vocês respiram. E aí o Caramelo começa a rosnar... olhando pro elevador.",
+   "motion": "slowpush",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 75,
+    "comida": 50,
+    "agua": 70
+   },
+   "focus": [
+    0.55,
+    0.5
+   ],
+   "prompt": "After the attack, dark apartment corridor at night: the stick figure character with the mustard-yellow bucket hat and the stick figure girl Bia with the red bandana sit exhausted on the floor against the wall, breathing hard. In front of them, the caramel mutt dog with the red collar stands stiff, growling with bared teeth at the closed metal elevator doors at the end of the corridor.",
+   "refs": [
+    "voce",
+    "bia",
+    "caramelo"
+   ]
+  },
+  {
+   "id": "s09",
+   "say": "O elevador tá parado há seis dias. Mas alguma coisa... tá batendo lá de dentro.",
+   "motion": "slowpush",
+   "fx": [
+    "dark",
+    "flicker"
+   ],
+   "hud": {
+    "vida": 75,
+    "comida": 50,
+    "agua": 70
+   },
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "prompt": "Close-up of closed old metal elevator doors in a dark apartment building corridor at night, the doors dented and bulging outward from impacts inside, a paper sign taped on them handwritten 'ELEVADOR QUEBRADO'. A thin line of darkness between the doors. The caramel mutt dog with the red collar growls in the foreground. Ominous flashlight light.",
+   "refs": [
+    "caramelo"
+   ],
+   "text_ok": true
+  },
+  {
+   "id": "s10",
+   "say": "Comenta: você abriria o elevador?",
+   "motion": "end",
+   "fx": [
+    "dark"
+   ],
+   "hud": {
+    "vida": 75,
+    "comida": 50,
+    "agua": 70
+   },
+   "reuse": "s09",
+   "blur": 6
+  }
+ ],
+ "tail": 2.6
+}

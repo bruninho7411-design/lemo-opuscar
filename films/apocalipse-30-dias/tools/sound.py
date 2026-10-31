@@ -132,7 +132,35 @@ def bark(v=1.0):
     return norm(out) * v
 
 
-SFX = dict(crash=crash, creak=lambda v=1: np.concatenate([creak(v) for _ in range(4)]), alarm=alarm, rattle=rattle, bark=bark, whoosh=lambda v=1: whoosh(.4, v), impact=impact, knock=lambda v=1: knocks(3, .2, v), siren=siren, notif=notif,
+def steps(d=2.0, v=1.0):
+    """fast running footsteps on concrete stairs"""
+    out = np.zeros(int(d * SR)); k = 0; t = 0.0
+    while t < d - .1:
+        dd = .07; th = (lp(noise(dd), 900) + sweep(140, 60, dd, .8)) * env_exp(dd, .015) * (.7 + .3 * rng.random())
+        s0 = int(t * SR); out[s0:s0 + len(th)] += th[:len(out) - s0]; t += .14 + rng.random() * .05; k += 1
+    return norm(out * np.minimum(1, t_(d) / .5)) * v
+
+
+def fire(d=5.0, v=1.0):
+    """fire: low roar + random crackles"""
+    roar = lp(brown(d), 500) * .6
+    out = roar.copy()
+    for _ in range(int(d * 18)):
+        dd = .02; c = hp(noise(dd), 2000) * env_exp(dd, .003) * rng.random(); s0 = int(rng.random() * (d - .05) * SR); out[s0:s0 + len(c)] += c
+    tt = t_(d); return norm(out * np.minimum(1, tt / .8) * np.minimum(1, (d - tt) / .8)) * v
+
+
+def cock(v=1.0):
+    """several guns being cocked: pairs of metallic clacks"""
+    out = np.zeros(int(1.4 * SR))
+    for k in range(4):
+        for off in (0, .09):
+            dd = .05; c = bp(noise(dd), 1500, 7000) * env_exp(dd, .006) + tone(2400 + 300 * k, dd, .3) * env_exp(dd, .01)
+            s0 = int((k * .27 + off + rng.random() * .03) * SR); out[s0:s0 + len(c)] += c
+    return norm(out) * v
+
+
+SFX = dict(fire=fire, cock=cock, steps=steps, crash=crash, creak=lambda v=1: np.concatenate([creak(v) for _ in range(4)]), alarm=alarm, rattle=rattle, bark=bark, whoosh=lambda v=1: whoosh(.4, v), impact=impact, knock=lambda v=1: knocks(3, .2, v), siren=siren, notif=notif,
            static=static, scratch=scratch, blackout=blackout, heartbeat=heartbeat, riser=riser, stamp=stamp, pop=pop, tap=tap,
            groan=groan, bang=impact)
 
