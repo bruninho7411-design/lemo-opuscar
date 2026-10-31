@@ -1,0 +1,17 @@
+[
+ {"id": "n1", "who": "n", "text": "O dono do Grupo Ômega... era o Seu Arlindo.", "sub": "O dono do Grupo Ômega... era o Seu Arlindo.", "hi": ["Seu Arlindo."]},
+ {"id": "a1", "who": "a", "text": "Sentiu saudade, garoto?", "sub": "Sentiu saudade, garoto?", "hi": []},
+ {"id": "c1", "who": "c", "text": "O véio das moedas?!", "sub": "O véio das moedas?!", "hi": ["moedas?!"]},
+ {"id": "n2", "who": "n", "text": "O mesmo homem que te vendeu a primeira lavanderia. Parcelado... com ele mesmo.", "sub": "O mesmo homem que te vendeu a primeira lavanderia. Parcelado... com ele mesmo.", "hi": ["Parcelado..."]},
+ {"id": "n3", "who": "n", "text": "Só que no contrato tinha uma linha que você nunca leu.", "sub": "Só que no contrato tinha uma linha que você nunca leu.", "hi": ["nunca leu."]},
+ {"id": "a2", "who": "a", "text": "Atrasou uma parcela... a lavanderia volta pra mim.", "sub": "Atrasou 1 parcela... a lavanderia volta pra mim.", "hi": ["volta pra mim."]},
+ {"id": "n4", "who": "n", "text": "A guerra de preço nunca foi pra te vencer. Era pra você atrasar uma parcela.", "sub": "A guerra de preço nunca foi pra te vencer. Era pra você atrasar 1 parcela.", "hi": ["atrasar 1 parcela."]},
+ {"id": "y1", "who": "y", "text": "Ele queria que eu quebrasse.", "sub": "Ele queria que eu quebrasse.", "hi": ["quebrasse."]},
+ {"id": "n5", "who": "n", "text": "Se você sempre lê as letras miúdas, segue.", "sub": "Se você sempre lê as letras miúdas, segue.", "asr": "Se você sempre lê as letras miúdas, segue.", "hi": ["segue."]},
+ {"id": "n6", "who": "n", "text": "Mas as entregas salvaram seu caixa. Todas as parcelas, pagas em dia.", "sub": "Mas as entregas salvaram seu caixa. Todas as parcelas, pagas em dia.", "hi": ["pagas em dia."]},
+ {"id": "y2", "who": "y", "text": "Última parcela. Paga.", "sub": "Última parcela. Paga.", "hi": ["Paga."]},
+ {"id": "a3", "who": "a", "text": "Então eu comprei o prédio.", "sub": "Então eu comprei o prédio.", "hi": ["o prédio."]},
+ {"id": "n7", "who": "n", "text": "No dia seguinte, chegou uma carta.", "sub": "No dia seguinte, chegou uma carta.", "hi": []},
+ {"id": "c2", "who": "c", "text": "Mano... a gente vai ser despejado?!", "sub": "Mano... a gente vai ser despejado?!", "hi": ["despejado?!"]},
+ {"id": "n8", "who": "n", "text": "No próximo episódio: o despejo. Segue pra não perder.", "sub": "No próximo episódio: o despejo. Segue pra não perder.", "hi": ["o despejo."]}
+]

@@ -1,0 +1,18 @@
+POV: você ficou milionário aos 23 — EP 6 · O despejo
+
+Music        Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0
+             https://creativecommons.org/licenses/by/4.0/
+             "Hitman" and "Investigations", edited to the picture by mix.py
+             Credit line for the post: Música: "Hitman" e "Investigations" — Kevin MacLeod (incompetech.com), CC BY 4.0
+Voices       VoiceStudio / OmniVoice (k2-fsa/OmniVoice model, Apache-2.0; VoiceStudio app AGPL-3.0), run locally on CPU.
+             The series voices of EP 5 (narrator, você, Caio, Seu Arlindo). Every line checked with faster-whisper (MIT).
+Characters   AI-generated: keyframes made with GPT Image 2.5 on Higgsfield in the series' EP 1 designs (ai/k_*.png; k_caio_st and
+             k_arl_cu2 from EP 5), animated with Wan 2.7 on Higgsfield: Arlindo's furious line (ai/v_a1.mp4) was made for this
+             episode; four clips are EP 5's, reused (ai/v_*x.mp4) under lines written to their rhythm; the rest are keyframe stills
+             under the narrator. Seu Arlindo, Caio and "você" are fictional characters of this series.
+Backgrounds  The shop front and the office: the EP 5 plates (GPT Image 2.5 on Higgsfield), boiled by bg/boil.py.
+Animation    Inserts (the letter, the law cards, the lease, the court deposit, the building), graphics, captions, camera moves drawn
+             in code (toon.js, from EP 1 / the Sci-Fi Sitcom Toon style).
+The law      Lei 8.245/1991 (Lei do Inquilinato), arts. 8, 27 and 33, simplified in the narration. Not legal advice.
+Sound FX     Synthesized in code (mix.py + core/audio/sfx.py). No samples.
+Fonts        Baloo 2, Bungee, VT323 (fonts/), Google Fonts, SIL Open Font License 1.1

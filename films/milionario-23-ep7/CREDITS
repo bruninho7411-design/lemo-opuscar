@@ -1,0 +1,17 @@
+POV: você ficou milionário aos 23 — EP 7 · O caixa
+
+Music        Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0
+             https://creativecommons.org/licenses/by/4.0/
+             "Hitman" and "Investigations", edited to the picture by mix.py
+             Credit line for the post: Música: "Hitman" e "Investigations" — Kevin MacLeod (incompetech.com), CC BY 4.0
+Voices       VoiceStudio / OmniVoice (k2-fsa/OmniVoice model, Apache-2.0; VoiceStudio app AGPL-3.0), run locally on CPU.
+             The series voices (narrator, você, Caio). Every line checked with faster-whisper (MIT).
+Characters   AI-generated with Higgsfield: GPT Image 2.5 keyframes in the series' EP 1 designs, animated with Wan 2.7. New for this
+             episode (11 credits): the washers breaking down (ai/v_chaos.mp4 from ai/k_chaos.png) and Seu Arlindo at the window,
+             lip-synced to his VoiceStudio line (ai/v_window.mp4 from ai/k_arl_window.png). Reused from EP 5 (ai/v_*x.mp4): the phone,
+             Caio's panic, your close-up, with lines written to the rhythm each was animated to; stills from EP 5–6 (ai/k_*.png).
+             Seu Arlindo, Caio and "você" are fictional characters of this series.
+Animation    Inserts (the bank app, the washers, the bill, profit ≠ cash, the building, the sum, the gold pen), graphics, captions
+             and camera moves drawn in code (toon.js, from EP 1 / the Sci-Fi Sitcom Toon style). "MEU BANCO" is a generic, made-up app.
+Sound FX     Synthesized in code (mix.py + core/audio/sfx.py). No samples.
+Fonts        Baloo 2, Bungee, VT323 (fonts/), Google Fonts, SIL Open Font License 1.1

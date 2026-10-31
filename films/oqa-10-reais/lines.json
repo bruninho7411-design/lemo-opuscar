@@ -1,0 +1,10 @@
+[
+ {"id": "p1", "who": "p", "text": "Boa noite, meu amor. Esse é o primeiro.", "sub": "Boa noite, meu amor. Esse é o primeiro."},
+ {"id": "p2", "who": "p", "text": "Dorme bem. Amanhã tem mais um.", "sub": "Dorme bem. Amanhã tem mais um."},
+ {"id": "p3", "who": "p", "text": "Obrigado pelo desenho, filho.", "sub": "Obrigado pelo desenho, filho."},
+ {"id": "p4", "who": "p", "text": "Esse mês está apertado... mas o seu eu não tiro.", "sub": "Esse mês está apertado... mas o seu eu não tiro.", "asr": "Esse mês está apertado, mas o seu eu não tiro."},
+ {"id": "p5", "who": "p", "text": "Você nem me abraça mais na escola... tudo bem.", "sub": "Você nem me abraça mais na escola... tudo bem.", "asr": "Você nem me abraça mais na escola, tudo bem."},
+ {"id": "p6", "who": "p", "text": "Chegou tarde de novo. Eu esperei.", "sub": "Chegou tarde de novo. Eu esperei."},
+ {"id": "p7", "who": "p", "text": "Dezoito anos. Toda noite. É seu.", "sub": "18 anos. Toda noite. É seu.", "asr": "18 anos. Toda noite. É seu."},
+ {"id": "y1", "who": "y", "text": "Pai... você guardou isso tudo?", "sub": "Pai... você guardou isso tudo?", "asr": "Pai, você guardou isso tudo?"}
+]

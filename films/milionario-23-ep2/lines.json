@@ -1,0 +1,20 @@
+[
+ {"id": "n1", "who": "n", "text": "Seu melhor amigo descobriu que você é milionário.", "sub": "Seu melhor amigo descobriu que você é milionário."},
+ {"id": "n2", "who": "n", "text": "E postou.", "sub": "E postou."},
+ {"id": "n3", "who": "n", "text": "Doze horas antes.", "sub": "12 horas antes."},
+ {"id": "n4", "who": "n", "text": "Se você chegou agora: vinte e três anos, três lavanderias, um milhão na conta. E ninguém sabia.", "sub": "Se você chegou agora: 23 anos, 3 lavanderias, 1 milhão na conta. E ninguém sabia."},
+ {"id": "c1", "who": "c", "text": "Vinte e sete mil? Mano... de onde vem isso?", "sub": "27 mil? Mano... de onde vem isso?"},
+ {"id": "n5", "who": "n", "text": "Você tinha duas opções: mentir... ou mostrar.", "sub": "Você tinha duas opções: mentir... ou mostrar."},
+ {"id": "n6", "who": "n", "text": "Onze da noite. Lavanderia um.", "sub": "11 da noite. Lavanderia 1."},
+ {"id": "n7", "who": "n", "text": "Cada máquina gira umas oito vezes por dia. Doze máquinas. Três lojas.", "sub": "Cada máquina gira umas 8 vezes por dia. 12 máquinas. 3 lojas."},
+ {"id": "n8", "who": "n", "text": "Tirando aluguel, água e luz... sobram nove mil por mês. Em cada uma.", "sub": "Tirando aluguel, água e luz... sobram R$ 9 mil por mês. Em cada uma."},
+ {"id": "c2", "who": "c", "text": "Mano... me ensina.", "sub": "Mano... me ensina."},
+ {"id": "n9", "who": "n", "text": "Se você também quer aprender, segue. A série tem trinta episódios.", "sub": "Se você também quer aprender, segue. A série tem 30 episódios."},
+ {"id": "y1", "who": "y", "text": "Te ensino. Mas ninguém pode saber.", "sub": "Te ensino. Mas ninguém pode saber."},
+ {"id": "c3", "who": "c", "text": "Juro.", "sub": "Juro."},
+ {"id": "n10", "who": "n", "text": "Ele jurou... de dedos cruzados.", "sub": "Ele jurou... de dedos cruzados."},
+ {"id": "n11", "who": "n", "text": "Sete da manhã. Um milhão de visualizações.", "sub": "7 da manhã. 1 milhão de visualizações."},
+ {"id": "n12", "who": "n", "text": "E às oito... tinha um homem de terno na porta da sua lavanderia.", "sub": "E às 8... tinha um homem de terno na porta da sua lavanderia."},
+ {"id": "s1", "who": "s", "text": "Você é o garoto das lavanderias? Precisamos conversar.", "sub": "Você é o garoto das lavanderias? Precisamos conversar."},
+ {"id": "n13", "who": "n", "text": "No próximo episódio: a proposta. Segue pra não perder.", "sub": "No próximo episódio: a proposta. Segue pra não perder."}
+]

@@ -1,0 +1,56 @@
+[
+ {
+  "file": "/home/user/lemo-opuscar/films/milionario-23-ep2/voicestudio/takes/narr_malemiddleagedlowpitch_1.wav",
+  "instruct": "male, middle-aged, low pitch",
+  "seed": 1,
+  "ok": true,
+  "f0": 163.3,
+  "dur": 5.2,
+  "asr": "Ninguém sabia, nem a família nem os amigos, e foi exatamente assim que tudo começou."
+ },
+ {
+  "file": "/home/user/lemo-opuscar/films/milionario-23-ep2/voicestudio/takes/narr_malemiddleagedlowpitch_2.wav",
+  "instruct": "male, middle-aged, low pitch",
+  "seed": 2,
+  "ok": true,
+  "f0": 161.1,
+  "dur": 5.28,
+  "asr": "Ninguém sabia nem a família nem os amigos e foi exatamente assim que tudo começou"
+ },
+ {
+  "file": "/home/user/lemo-opuscar/films/milionario-23-ep2/voicestudio/takes/narr_maleyoungadultlowpitch_1.wav",
+  "instruct": "male, young adult, low pitch",
+  "seed": 1,
+  "ok": true,
+  "f0": 159.5,
+  "dur": 5.28,
+  "asr": "Ninguém sabia, nem a família nem os amigos, e foi exatamente assim que tudo começou."
+ },
+ {
+  "file": "/home/user/lemo-opuscar/films/milionario-23-ep2/voicestudio/takes/narr_maleyoungadultlowpitch_2.wav",
+  "instruct": "male, young adult, low pitch",
+  "seed": 2,
+  "ok": true,
+  "f0": 153.8,
+  "dur": 5.13,
+  "asr": "Ninguém sabia, nem a família, nem os amigos, e foi exatamente assim que tudo começou."
+ },
+ {
+  "file": "/home/user/lemo-opuscar/films/milionario-23-ep2/voicestudio/takes/narr_malemiddleagedverylowpitch_1.wav",
+  "instruct": "male, middle-aged, very low pitch",
+  "seed": 1,
+  "ok": true,
+  "f0": 125.7,
+  "dur": 5.2,
+  "asr": "Ninguém sabia. Nem a família, nem os amigos. E foi exatamente assim que tudo começou."
+ },
+ {
+  "file": "/home/user/lemo-opuscar/films/milionario-23-ep2/voicestudio/takes/narr_malemiddleagedverylowpitch_2.wav",
+  "instruct": "male, middle-aged, very low pitch",
+  "seed": 2,
+  "ok": true,
+  "f0": 111.6,
+  "dur": 5.23,
+  "asr": "Ninguém sabia, nem a família, nem os amigos, e foi exatamente assim que tudo começou."
+ }
+]
