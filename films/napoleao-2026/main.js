@@ -60,7 +60,9 @@ function cam(t) {
   let az = lerp(A.az, B.az, e), el = lerp(A.el, B.el, e), dist = lerp(A.dist, B.dist, e);
   // cut punch: every new shot lands 8% tighter and settles
   dist *= 1 - .08 * (1 - eo(seg(t, s.t0, s.t0 + .35)));
-  if (s.name === 'face') { const k = eo(seg(t, at('h1', K.eyes), at('h1', K.eyes) + .25)); dist *= lerp(1, .72, k); }   // crash-in when the eyes open
+  if (s.i > 0) { const w = 1 - eo(seg(t, s.t0, s.t0 + .2)); az += (s.i % 2 ? 1 : -1) * 32 * w; }   // whip-in on every cut
+  for (const c of CAPS) if (c.big && t >= c.t0 && t < c.t0 + .6) dist *= 1 - .09 * Math.exp(-(t - c.t0) * 7);   // punch on the numbers
+  if (s.name === 'face') { const k = eo(seg(t, at('h1', K.eyes), at('h1', K.eyes) + .25)); dist *= lerp(1, .72, k) * lerp(2.0, 1, eo(seg(t, 0, .5))); }   // frame 0 already rushing in   // crash-in when the eyes open
   if (s.name === 'sad') { const k = eo(seg(t, at('v7', 'baixinho'), at('v7', 'baixinho') + .2)); dist *= lerp(1, .78, k); }
   const [sx, sy, sa] = shake(t);
   const ce = Math.cos(el * DEG);
@@ -70,6 +72,7 @@ function cam(t) {
   camera.translateX(sx * .03 * dist); camera.translateY(sy * .03 * dist);
   camera.near = A.clip ? Math.max(.1, dist - A.clip) : .1; camera.far = 400; camera.fov = 30; camera.updateProjectionMatrix();
   post.tilt.fy.value = .5; post.tilt.band.value = s.loc === 'street' ? .22 : .26; post.tilt.maxR.value = (s.name === 'viral' ? 9 : 4) * SSAA;
+  { const w = s.i > 0 ? 1 - seg(t, s.t0, s.t0 + .2) : 1 - seg(t, 0, .35); if (w > 0) { post.tilt.band.value *= 1 - w; post.tilt.maxR.value += 22 * w * SSAA; } }   // motion blur on the whip
   CAM = { s, tg, dist };
 }
 
@@ -93,8 +96,8 @@ function hook(t) {   // the title card of the channel: on frame 0, gone when the
   const a = 1 - seg(t, t1, t1 + .2), y0 = 1060 * S;
   g.save(); g.globalAlpha = a;
   const L1 = ['E SE NAPOLEÃO', 'ACORDASSE...'];
-  L1.forEach((l, i) => { const p = back(seg(t, i * .05, i * .05 + .2), 2.2); g.save(); g.translate(W / 2, y0 + i * 92 * S); g.scale(p, p); txt(l, 0, 0, 86 * S, '#fff', { max: 980 * S }); g.restore(); });
-  const p2 = back(seg(t, .12, .36), 2.4);
+  L1.forEach((l, i) => { const p = lerp(.75, 1, back(seg(t, i * .04, i * .04 + .2), 2.2)); g.save(); g.translate(W / 2, y0 + i * 92 * S); g.scale(p, p); txt(l, 0, 0, 86 * S, '#fff', { max: 980 * S }); g.restore(); });
+  const p2 = lerp(.7, 1, back(seg(t, .06, .3), 2.4));
   g.save(); g.translate(W / 2, y0 + 245 * S); g.scale(p2, p2);
   g.font = `900 ${150 * S}px Overpass`; const wa = g.measureText('EM ').width, wb = g.measureText('2026?').width, x = -(wa + wb) / 2;
   txt('EM ', x, 0, 150 * S, '#fff', { align: 'left' }); txt('2026?', x + wa, 0, 150 * S, GOLD, { align: 'left' });
@@ -197,7 +200,7 @@ function ctaCard(t) {   // c1: like + follow
     g.save(); g.globalAlpha = a; g.translate(W / 2, 560 * S); g.scale(p * 1.0, p * 1.0); g.font = `${300 * S}px "Noto Color Emoji"`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('❤️', 0, 0); g.restore();
     for (let i = 0; i < 10; i++) { const k = seg(t, tl + .05, tl + .9), ang = i / 10 * TAU; g.save(); g.globalAlpha = a * (1 - k); g.font = `${60 * S}px "Noto Color Emoji"`; g.textAlign = 'center'; g.fillText('❤️', W / 2 + Math.cos(ang) * k * 330 * S, 560 * S + Math.sin(ang) * k * 330 * S); g.restore(); } }
   // follow card slides in, the finger taps "Seguir" on "segue"
-  const inn = back(seg(t, tl + .6, tl + 1.0), 1.8), out = 1 - seg(t, t1, t1 + .3), tap = tf + .1, tapped = t >= tap;
+  const inn = back(seg(t, tl + .6, tl + 1.0), 1.8), out = 1 - seg(t, t1 - .35, t1 - .1), tap = tf + .1, tapped = t >= tap;
   if (t < tl + .6) return;
   const cw = 900 * S, ch = 160 * S, x = (W - cw) / 2, y = 930 * S;
   g.save(); g.globalAlpha = out; g.translate(W / 2, y + ch / 2); g.scale(inn, inn); g.translate(-W / 2, -(y + ch / 2));
@@ -233,20 +236,58 @@ function endCard(t) {
   if (t >= at('v11', 'segue') - .05) { g.save(); g.translate(W / 2, 1480 * S); g.scale(pf, pf); g.fillStyle = '#4f5bf7'; rr(-330 * S, -50 * S, 660 * S, 100 * S, 50 * S); g.fill(); txt('➕ SEGUE PRO PRÓXIMO', 0, 5 * S, 48 * S, '#fff', { sw: 0 }); g.restore(); }
   TXT.push({ id: 'end', text: 'QUEM A GENTE ACORDA NO PRÓXIMO?', x0: 60, y0: 560, x1: W - 60, y1: 1400 });
 }
+function progress(t) { g.fillStyle = 'rgba(0,0,0,.35)'; g.fillRect(0, 0, W, 12 * S); g.fillStyle = GOLD; g.fillRect(0, 0, W * t / DUR, 12 * S); }
+function ecg(t) {   // flatline -> heartbeat when the eyes open (cold open only)
+  const t1 = end('h1') + .15; if (t > t1 + .2) return;
+  const te = at('h1', K.eyes), a = 1 - seg(t, t1, t1 + .2), y0 = 1590 * S, x0 = 90 * S, w = 900 * S;
+  g.save(); g.globalAlpha = a; g.fillStyle = 'rgba(0,10,4,.55)'; rr(x0 - 20 * S, y0 - 95 * S, w + 40 * S, 190 * S, 24 * S); g.fill();
+  g.strokeStyle = '#3dff7a'; g.lineWidth = 6 * S; g.shadowColor = '#3dff7a'; g.shadowBlur = 18 * S; g.beginPath();
+  const head = (t * 520 * S) % w;   // the sweep
+  for (let px = 0; px <= head; px += 4 * S) {
+    const tp = t - (head - px) / (520 * S); let y = 0;
+    if (tp > te) { const ph = ((tp - te) / .5) % 1; y = ph < .06 ? -Math.sin(ph / .06 * Math.PI) * 70 * S : ph < .1 ? Math.sin((ph - .06) / .04 * Math.PI) * 30 * S : 0; }
+    px ? g.lineTo(x0 + px, y0 + y) : g.moveTo(x0 + px, y0 + y);
+  }
+  g.stroke(); g.shadowBlur = 0;
+  const alive = t > te; txt(alive ? '♥ ' + Math.round(lerp(40, 128, seg(t, te, te + 1))) + ' BPM' : '♥ 0 BPM', x0 + w - 10 * S, y0 - 58 * S, 40 * S, alive ? '#3dff7a' : '#ff4d4d', { align: 'right', f: '"Overpass Mono"', w: 700, sw: 0 });
+  txt(alive ? 'SINAIS VITAIS: DE VOLTA' : 'MORTO HÁ 205 ANOS', x0 + 10 * S, y0 - 58 * S, 32 * S, '#fff', { align: 'left', f: '"Overpass Mono"', w: 700, sw: 0 });
+  g.restore();
+}
+function sticker(t, text, t0, t1, y, color = GOLD) {   // open-loop sticker
+  if (t < t0 || t > t1) return;
+  const p = back(seg(t, t0, t0 + .3), 2.4), a = 1 - seg(t, t1 - .2, t1), wob = Math.sin(t * 6) * .025;
+  g.save(); g.globalAlpha = a; g.translate(W / 2, y * S); g.rotate(-.05 + wob); g.scale(p, p);
+  g.font = `900 ${56 * S}px Overpass`; const tw = g.measureText(text).width + 70 * S;
+  g.fillStyle = color; rr(-tw / 2, -50 * S, tw, 100 * S, 50 * S); g.fill(); g.lineWidth = 6 * S; g.strokeStyle = '#14110f'; g.stroke();
+  txt(text, 0, 5 * S, 56 * S, '#14110f', { sw: 0 }); g.restore();
+}
+function freezeStamp(t) {
+  const [f0, f1] = FRZ(); if (t < f0 || t > f1 + .1) return;
+  const sl = eo(seg(t, f0, f0 + .12)), sc = lerp(2.6, 1, sl);
+  g.save(); g.globalAlpha = Math.min(1, sl * 1.5) * (1 - seg(t, f1 - .05, f1 + .1)); g.translate(W / 2, 760 * S); g.rotate(-.14); g.scale(sc, sc);
+  g.lineWidth = 14 * S; g.strokeStyle = '#e8262e'; rr(-330 * S, -95 * S, 660 * S, 190 * S, 18 * S); g.stroke();
+  txt('BAIXINHO ✔', 0, 8 * S, 120 * S, '#e8262e', { sw: 0 }); g.restore();
+  TXT.push({ id: 'frz', text: 'BAIXINHO', x0: 200, y0: 660, x1: 880, y1: 860 });
+}
 function hud(t) {
   g.clearRect(0, 0, W, H); TXT.length = 0;
   flashes(t);
   counter(t, 'ANOS DESDE A MORTE', 0, 205, at('v1', 0), at('v1', 'depois'), at('v2', 0) - .1);
   counter(t, 'CELULARES APONTADOS', 0, 50, at('v2', K.phonesUp), at('v2', K.phonesUp) + .9, at('v3', 0) - .1, GOLD);
   phoneUI(t); ruler(t); euStars(t); live(t); ctaCard(t);
-  captions(t); hook(t); endCard(t);
+  captions(t); hook(t); ecg(t); freezeStamp(t);
+  sticker(t, '👀 ESPERA O FINAL', end('h1') + .3, at('v2', 0) - .1, 470);
+  sticker(t, 'MAS O PIOR AINDA VEM...', at('v8', 0) - .15, at('v8', 0) + 2.2, 470, '#ff6b4a');
+  endCard(t); progress(t);
 }
 
 // —— render ——
 const SKY = { zen: new THREE.Color('#6fa8e8'), hor: new THREE.Color('#f3dcc0') };
+const FRZ = () => [at('v7', 'baixinho') + .25, at('v7', 'baixinho') + 1.15];
 function render(t) {
-  cam(t);
-  world.update(t, CAM.s);
+  const [f0, f1] = FRZ(), t3 = t >= f0 && t < f1 ? f0 : t;   // the 3D world freezes, the overlay keeps going
+  cam(t3);
+  world.update(t3, CAM.s);
   const street = CAM.s.loc === 'street';
   hemi.intensity = street ? 1.5 : 1.25; hemi.color.set(street ? '#dfeeff' : '#ffe2bf');
   sun.intensity = street ? 2.6 : 1.7; spot.intensity = street ? 0 : CAM.s.name === 'face' ? 14 : 120;
@@ -257,6 +298,7 @@ function render(t) {
   // hook: the first frame is darker, the eyes open with a light hit
   if (CAM.s.name === 'face') gd.fade.value = t < at('h1', K.eyes) ? .82 : 1 + .3 * Math.exp(-(t - at('h1', K.eyes)) * 8);
   post.bloom.strength = .45;
+  if (t >= f0 && t < f1) { gd.sat.value = .15; gd.contrast.value = .35; }
   post.composer.render();
   hud(t);
 }
@@ -265,6 +307,9 @@ function events() {
   VO.forEach(v => ev.push({ t: v.t, type: 'vo', id: v.id }));
   SHOTS.slice(1).forEach(s => ev.push({ t: s[0], type: 'cut', name: s[1] }));
   PUNCH().forEach(([t, v]) => ev.push({ t, type: 'punch', v }));
+  ev.push({ t: 0, type: 'flat', d: at('h1', K.eyes) }, { t: FRZ()[0], type: 'freeze' }, { t: end('h1') + .3, type: 'stick' }, { t: at('v8', 0) - .15, type: 'stick' });
+  for (let k = 0; at('h1', K.eyes) + k * .5 < end('h1') + .2; k++) ev.push({ t: at('h1', K.eyes) + k * .5, type: 'beep' });
+  CAPS.filter(c => c.big).forEach(c => ev.push({ t: c.t0, type: 'numpunch' }));
   ev.push({ t: at('v7', 'baixinho'), type: 'sting' }, { t: at('v9', K.border), type: 'stars' }, { t: at('v10', K.live), type: 'live' }, { t: at('v11', 0), type: 'end' },
     { t: at('v4', 0), type: 'phone' }, { t: at('c1', 'curte'), type: 'like' }, { t: at('c1', 'segue') + .1, type: 'follow' }, { t: at('v11', 'segue'), type: 'follow' }, { t: at('v5', 'metro'), type: 'ruler' }, { t: at('v6', 'setenta'), type: 'ruler' });
   return ev.sort((a, b) => a.t - b.t);
