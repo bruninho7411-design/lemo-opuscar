@@ -267,6 +267,7 @@ function freezeStamp(t) {
 }
 function hud(t) {
   g.clearRect(0, 0, W, H); TXT.length = 0;
+  if (QS.has('cover')) { g.save(); g.translate(0, 270 * S); hook(.8); g.restore(); return; }
   flashes(t);
   counter(t, 'ANOS DESDE A MORTE', 0, 71, at('v1', 0), at('v1', 'depois'), at('v2', 0) - .1);
   counter(t, 'ANOS NUM POTE', 0, 40, at('v2', 'potes'), at('v2', 'quarenta') + .3, at('v3', 0) - .1, GOLD);
@@ -281,6 +282,7 @@ function hud(t) {
 const SKY = { zen: new THREE.Color('#6fa8e8'), hor: new THREE.Color('#f3dcc0') };
 const FRZ = () => [at('v5', 'disse') + .2, at('v5', 'disse') + 1.1];
 function render(t) {
+  if (QS.has('cover')) t = +QS.get('cover');
   const [f0, f1] = FRZ(), t3 = t >= f0 && t < f1 ? f0 : t;   // the 3D world freezes, the overlay keeps going
   cam(t3);
   world.update(t3, CAM.s);
