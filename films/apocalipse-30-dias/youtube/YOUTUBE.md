@@ -2,10 +2,9 @@
 
 ## Nome, identificador e imagens
 
-- **Nome:** O Que Aconteceria Se (igual ao Instagram, pra quem te acha numa rede te reconhecer na outra)
-- **Identificador:** @oqueaconteceriase
-  - Se estiver ocupado: @o_que_aconteceria_se, depois @oqueaconteceriase.br
-- **Foto de perfil:** `FOTO_PERFIL_800x800.png`
+- **Nome:** Diário do Apocalipse Zumbi (o mesmo do perfil novo do Instagram; veja `instagram/INSTAGRAM.md`)
+- **Identificador:** @diariodoapocalipse (alternativas: @diariodoapocalipse.br, @diario.do.apocalipse)
+- **Foto de perfil:** `FOTO_PERFIL_800x800.png` (a mesma do Instagram novo)
 - **Banner:** `BANNER_YOUTUBE_2560x1440.jpg` (o texto fica dentro da área que aparece no celular)
 
 ## Descrição do canal (copiar e colar)
