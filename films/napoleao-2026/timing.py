@@ -3,7 +3,7 @@ usage: python3 timing.py"""
 import json, os, re, unicodedata, difflib, subprocess, numpy as np
 from faster_whisper import WhisperModel
 L = json.load(open('lines.json')); D = json.load(open('voices/dur.json'))
-GAP = {'h1': .35, 'v6': .15, 'v7': .55, 'v9': .3, 'v10': .3}
+GAP = {'h1': .35, 'v6': .15, 'v7': .55, 'v9': .3, 'v10': 1.1}
 REP = {'dois mil e vinte e seis': '2026', 'duzentos e cinco': '205', 'cinquenta': '50', 'dez minutos': '10 MINUTOS', 'dez milhões': '10 MILHÕES',
        'um metro e sessenta e nove': '1,69 M', 'um e setenta e cinco': '1,75 M'}
 def nrm(w):
@@ -33,7 +33,7 @@ DUR = round(t + 2.6, 2)
 # captions: chunks of up to 3 words / 16 chars, numbers replaced, absolute times
 CAPS = []
 for v in VO:
-    if v['id'] in ('h1', 'v11'): continue
+    if v['id'] in ('h1',): continue
     ws, disp, i = v['words'], [], 0
     while i < len(ws):
         for k, r in REP.items():

@@ -42,7 +42,7 @@ const SH = () => [
   [at('c1', 0) - .1, 'cta', 'crypt', 'stand', P([0, 1.35, 2.6], 14, 8, 5.0, { clip: 3.0 }), P([0, 1.35, 2.6], 4, 8, 4.4, { clip: 3.0 })],
   [at('v8', 0) - .1, 'march', 'street', 'st', P(null, 12, 9, 6.5, { follow: 1 }), P(null, -6, 7, 6.0, { follow: 1 })],
   [at('v9', K.border) - .15, 'border', 'street', 'st', P([60, 1.6, -6.5], 205, 12, 9), P([60, 1.6, -6.5], 195, 10, 8)],
-  [at('v10', K.live) - .1, 'live', 'street', 'st', P([60, 1.45, -4.8], 172, 6, 3.6), P([60, 1.45, -4.8], 178, 6, 3.0)],
+  [at('v10', K.live) - .1, 'live', 'street', 'st', P([60, 1.45, -4.8], 10, 6, 3.8), P([60, 1.45, -4.8], 3, 6, 3.2)],
 ];
 let SHOTS = SH();
 function shotAt(t) { let i = 0; while (i < SHOTS.length - 1 && t >= SHOTS[i + 1][0]) i++; return { i, t0: SHOTS[i][0], t1: i < SHOTS.length - 1 ? SHOTS[i + 1][0] : DUR, name: SHOTS[i][1], loc: SHOTS[i][2], nap: SHOTS[i][3], A: SHOTS[i][4], B: SHOTS[i][5] }; }
@@ -111,7 +111,7 @@ function counter(t, label, from, to, t0, t1, tEnd, color = RED) {   // the chann
   g.restore(); TXT.push({ id: 'cnt', text: label, x0: 60, y0: 220, x1: 700, y1: 370 });
 }
 function captions(t) {
-  if (t < end('h1') + .1 || t >= at('v11', 0) - .05) return;
+  if (t < end('h1') + .1 || t >= at('v11', 'quem') - .1) return;
   const c = CAPS.find(c => t >= c.t0 && t < c.t1); if (!c) return;
   const size = (c.big ? 112 : 88) * S, pop = back(seg(t, c.t0, c.t0 + .12), 2.2);
   g.save(); g.font = `900 ${size}px Overpass`;
@@ -159,13 +159,16 @@ function ruler(t) {   // v5–v6: heights
   if (t >= at('v5', 'acima')) { const a = seg(t, at('v5', 'acima'), at('v5', 'acima') + .3) * (1 - seg(t, at('v6', 0), at('v6', 0) + .2)); g.save(); g.globalAlpha = a; txt('MÉDIA EM 1800: 1,65 M', W / 2, 420 * S, 54 * S, '#fff'); g.restore(); }
   draw(R.tall, 1.75, '#7CF29A', at('v6', 'setenta'), '1,75 M+');
 }
+function star(x, y, r, col) { g.beginPath(); for (let i = 0; i < 10; i++) { const rr_ = i % 2 ? r * .45 : r, an = -Math.PI / 2 + i * Math.PI / 5; g.lineTo(x + Math.cos(an) * rr_, y + Math.sin(an) * rr_); } g.closePath(); g.fillStyle = col; g.fill(); g.lineWidth = 4 * S; g.strokeStyle = '#14110f'; g.stroke(); }
 function euStars(t) {   // v9: the border is gone
   const t0 = at('v9', K.border); if (t < t0 || t > at('v10', K.live) - .1) return;
-  const a = seg(t, t0, t0 + .3), cx = W / 2, cy = 640 * S, r = 210 * S;
+  const a = seg(t, t0, t0 + .3) * (1 - seg(t, at('v10', K.live) - .4, at('v10', K.live) - .1)), cx = W / 2, cy = 600 * S, r = 250 * S;
   g.save(); g.globalAlpha = a;
-  for (let i = 0; i < 12; i++) { const ang = i / 12 * TAU + t * .6, p = back(seg(t, t0 + i * .05, t0 + i * .05 + .3), 2.5); g.save(); g.translate(cx + Math.cos(ang) * r, cy + Math.sin(ang) * r); g.scale(p, p); g.font = `${58 * S}px "Noto Color Emoji"`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('⭐', 0, 0); g.restore(); }
-  const p2 = back(seg(t, t0 + .4, t0 + .7), 2);
-  g.translate(cx, cy); g.scale(p2, p2); txt('SEM FRONTEIRA', 0, -20 * S, 70 * S, '#fff'); txt('SEM UM TIRO', 0, 60 * S, 52 * S, GOLD);
+  g.fillStyle = 'rgba(29,63,160,.82)'; g.beginPath(); g.arc(cx, cy, r + 70 * S, 0, TAU); g.fill();
+  for (let i = 0; i < 12; i++) { const ang = i / 12 * TAU + t * .5, p = back(seg(t, t0 + i * .04, t0 + i * .04 + .3), 2.5); if (p > 0) star(cx + Math.cos(ang) * r, cy + Math.sin(ang) * r, 34 * S * p, '#FFD31A'); }
+  const p2 = back(seg(t, t0 + .35, t0 + .65), 2);
+  g.translate(cx, cy); g.scale(p2, p2); txt('SEM', 0, -70 * S, 96 * S, '#fff'); txt('FRONTEIRA', 0, 20 * S, 96 * S, '#fff');
+  if (t > at('v9', 'tiro') - .1) txt('SEM UM TIRO', 0, 110 * S, 64 * S, GOLD);
   g.restore();
 }
 const COMMENTS = ['volta pro caixão kkkk', 'IMPERADOR DO TIKTOK 👑', 'baixinho 🤏', 'cadê a Josefina?', 'faz o code civil 2', 'skibidi bonaparte'];
@@ -213,7 +216,7 @@ function ctaCard(t) {   // c1: like + follow
   TXT.push({ id: 'cta', text: 'o_que_aconteceria_se Seguir', x0: x, y0: y, x1: x + cw, y1: y + ch });
 }
 function endCard(t) {
-  const t0 = at('v11', 0) - .05; if (t < t0) return;
+  const t0 = at('v11', 'quem') - .1; if (t < t0) return;
   const a = seg(t, t0, t0 + .3);
   g.fillStyle = `rgba(8,10,20,${.55 * a})`; g.fillRect(0, 0, W, H);
   g.save(); g.globalAlpha = a; const p = back(seg(t, t0, t0 + .3), 2);
@@ -268,6 +271,6 @@ function events() {
 }
 window.render = render; window.DUR = DUR; window.EV = events(); window.TEXTS = t => { render(t); return TXT; };
 window.DBG = { camera, world, scene, post };
-await document.fonts.load(`900 80px Overpass`); await document.fonts.load(`700 30px "Overpass Mono"`);
+await document.fonts.load(`900 80px Overpass`); await document.fonts.load(`800 36px Overpass`); await document.fonts.load(`700 30px Overpass`); await document.fonts.load(`700 30px "Overpass Mono"`);
 render(parseFloat(QS.get('t') ?? '1'));
 window.READY = true;

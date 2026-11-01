@@ -28,8 +28,9 @@ sting = T['sting'][0]['t']; v8 = next(e['t'] for e in T['vo'] if e['id'] == 'v8'
 music = np.zeros(N)
 m = epic(DUR - v1 + 2)
 put(music, m, v1)
-dr = (tone(36.7, v1 + .5) + .5 * tone(55, v1 + .5)) * np.minimum(1, t_(v1 + .5) / .2)
-put(music, lp(dr, 200) * .5 * np.minimum(1, (v1 + .5 - t_(v1 + .5)) / .4), 0)
+_d = round(v1 + .5, 2); _n = int(_d * SR); _tt = np.arange(_n) / SR
+dr = (np.sin(2 * np.pi * 36.7 * _tt) + .5 * np.sin(2 * np.pi * 55 * _tt)) * np.minimum(1, _tt / .2) * np.minimum(1, (_d - _tt) / .4)
+put(music, lp(dr, 200) * .5, 0)
 tt = np.arange(N) / SR
 gate = np.ones(N); gate[(tt > sting - .15) & (tt < v8 - .05)] = .0          # silence for the trombone, march back on v8
 gate = lp(gate, 30)
