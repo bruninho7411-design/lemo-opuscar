@@ -1,0 +1,1 @@
+Tripulação: random.SystemRandom().sample entre 15 comentaristas dos prints: piloto=deboragisella2026, comissário(a)=deassisverax

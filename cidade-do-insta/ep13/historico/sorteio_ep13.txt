@@ -1,0 +1,6 @@
+Sorteio ep. 13 · Usina de energia · 2026-11-05T22:19:33.551177+00:00
+Método: random.SystemRandom().sample(pool, 3)
+Pool (18): comentaristas não sorteados dos prints de 05/11 + quem comentou o próprio @ ou recebeu resposta do perfil nos posts do jogo/loja/ep12 (Windsor, 05/11).
+Excluídos: quem já tem cargo (hospital, aeroporto, polícia, água) e @ marcados por terceiros.
+Resultado: chefe da usina = me._.maite7, eletricista = laracarvalho190, técnico = gusta_mendes_cria
+Pool: ['julia_leite_m', 'p.v.d.david_lucas', 'davi_guilherme271216', 'melissaponciano01', 'willian380696', 'gusta_mendes_cria', 'marcosviniciusrodrigues9605', 'ee_ramos10', '014jean', 'clara_121674', 'juliamatias2066', 'enzo_lima80', 'eu.lauramoura__amo_katseye', 'laracarvalho190', 'me._.maite7', 'ingridingridsantana5', 'alice_est263', '_rayssa._gabrielle']
