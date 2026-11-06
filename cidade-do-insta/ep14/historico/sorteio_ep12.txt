@@ -1,0 +1,6 @@
+Sorteio ep. 12 · Estação de água · 2026-11-05T12:56:08.452722+00:00
+Método: random.SystemRandom().sample(pool, 3)
+Pool (12): comentaristas dos prints de 05/11 (posts da Delegacia/ep9 e anteriores).
+Excluída: sosoh124365 (já é enfermeira do hospital).
+Resultado: chefe da estação = pedrohenriquegalvao.2025, técnico = sofiamanuelalandgrafmanuela, técnico = roseanelaura2023
+Pool: ['julia_leite_m', 'p.v.d.david_lucas', '014jean', 'sofiamanuelalandgrafmanuela', 'davi_guilherme271216', 'melissaponciano01', 'willian380696', 'gusta_mendes_cria', 'marcosviniciusrodrigues9605', 'pedrohenriquegalvao.2025', 'ee_ramos10', 'roseanelaura2023']

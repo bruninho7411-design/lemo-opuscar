@@ -1,0 +1,1 @@
+Funcionários do shopping: random.SystemRandom().sample entre 307 seguidores conhecidos: ['a.fernandozx', 'ericksanttos_10', 'dias_1353']
