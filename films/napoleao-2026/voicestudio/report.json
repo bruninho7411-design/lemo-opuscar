@@ -1,0 +1,80 @@
+{
+ "h1": {
+  "take": "h1_s1.wav",
+  "dur": 3.06,
+  "wer": 0.55,
+  "asr": "e se Napoleão acordasse em 2026."
+ },
+ "v1": {
+  "take": "v1_s1.wav",
+  "dur": 4.629,
+  "wer": 0.2,
+  "asr": "Paris. 205 anos depois da morte dele, a tampa do caixão se mexe."
+ },
+ "v2": {
+  "take": "v2_s1.wav",
+  "dur": 4.852,
+  "wer": 0.21,
+  "asr": "E a primeira coisa que ele vê são 50 celulares apontados para a cara dele."
+ },
+ "v3": {
+  "take": "v3_s1.wav",
+  "dur": 3.436,
+  "wer": 0.08,
+  "asr": "ele acha que é um pelotão de fusilamento e levanta as mãos."
+ },
+ "v4": {
+  "take": "v4_s1.wav",
+  "dur": 5.255,
+  "wer": 0.07,
+  "asr": "Dez minutos depois, o vídeo já tem 10 milhões de views. Imperador baixinho ressuscita."
+ },
+ "v5": {
+  "take": "v5_s1.wav",
+  "dur": 4.815,
+  "wer": 0.35,
+  "asr": "e isso ofende. Ele tinha 1,69m acima da média da época dele."
+ },
+ "v6": {
+  "take": "v6_s1.wav",
+  "dur": 3.456,
+  "wer": 0.38,
+  "asr": "Só que hoje o francês médio passa de 1,75."
+ },
+ "v7": {
+  "take": "v7_s1.wav",
+  "dur": 1.719,
+  "wer": 0.0,
+  "asr": "Agora sim, ele é baixinho."
+ },
+ "v8": {
+  "take": "v8_s1.wav",
+  "dur": 3.183,
+  "wer": 0.11,
+  "asr": "revoltado. Ele sai na rua para reconquistar a Europa."
+ },
+ "v9": {
+  "take": "v9_s1.wav",
+  "dur": 4.648,
+  "wer": 0.0,
+  "asr": "e descobre que nem tem mais fronteira. A Europa se juntou sozinha, sem um tiro."
+ },
+ "v10": {
+  "take": "v10_s1.wav",
+  "dur": 3.608,
+  "wer": 0.0,
+  "asr": "Então, ele faz o que todo imperador faria hoje. Abre uma live."
+ },
+ "v11": {
+  "take": "v11_s1.wav",
+  "dur": 4.011,
+  "wer": 0.08,
+  "asr": "Comenta aí quem a gente acorda no próximo e segue para não perder."
+ },
+ "c1": {
+  "take": "c1_s1.wav",
+  "dur": 4.364,
+  "wer": 0.0,
+  "asr": "Se você riu, já curte e segue porque toda semana a gente acorda alguém."
+ }
+}

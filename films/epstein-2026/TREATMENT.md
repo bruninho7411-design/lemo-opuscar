@@ -1,0 +1,3 @@
+# E se Epstein acordasse... em 2026?
+Mesmo motor 3D em blocos (napoleao-2026/einstein-2026). Tom sério e factual: sem humor sobre os crimes, sem vítimas em cena, sem apontar terceiros (aviso explícito "aparecer nos arquivos ≠ prova de crime"). Voz: "Narrador Milionario 23" (ElevenLabs/Higgsfield, ~1,5 crédito). Trilha: pulso sombrio do sound.py.
+Fatos: morte em 10/8/2019 no MCC de Nova York; acordo de 2008 na Flórida (13 meses, com saída diária para trabalhar); acusação federal de 2019 (tráfico sexual de menores e conspiração, pena máxima somada 45 anos); Ghislaine Maxwell condenada em dez/2021, 20 anos; Epstein Files Transparency Act (nov/2025) e divulgação de documentos pelo DOJ a partir de dez/2025.

@@ -1,0 +1,250 @@
+{
+ "title": "NAPOLEÃO NÃO ERA BAIXINHO",
+ "handle": "o_que_aconteceria_se",
+ "cta_sub": "mentiras da história",
+ "replace": {
+  "mil oitocentos e três": "1803",
+  "cinco pés e duas polegadas": "5 PÉS E 2 POLEGADAS",
+  "um metro e sessenta e nove": "1,69 M",
+  "duzentos anos": "200 ANOS",
+  "parte dois": "PARTE 2",
+  "fake news": "FAKE NEWS"
+ },
+ "hook_hi": [
+  "baixinho"
+ ],
+ "stamp_at": {
+  "scene": "s01",
+  "word": "fake"
+ },
+ "stamp_text": "FAKE NEWS",
+ "end_lines": [
+  "E O ARSÊNICO",
+  "NA PAREDE?"
+ ],
+ "end_pill": "COMENTA \"PARTE 2\"",
+ "cta_from": {
+  "scene": "s08",
+  "word": "segue"
+ },
+ "cta_to": {
+  "scene": "s08",
+  "word": "contou"
+ },
+ "scenes": [
+  {
+   "id": "s01",
+   "year": null,
+   "motion": "crash",
+   "fx": [
+    "dust"
+   ],
+   "say": "Napoleão não era baixinho. Ele foi vítima da primeira fake news viral da história."
+  },
+  {
+   "id": "s02a",
+   "year": "1803",
+   "motion": "panleft",
+   "reuse": "s06",
+   "fx": [
+    "smoke"
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "say": "Em mil oitocentos e três, a Inglaterra estava em guerra com ele."
+  },
+  {
+   "id": "s02",
+   "year": "1803",
+   "motion": "punch",
+   "fx": [
+    "paper"
+   ],
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "say": "E um cartunista inglês, James Gillray, começou a desenhar Napoleão minúsculo: um homenzinho birrento, com um chapéu gigante.",
+   "label": {
+    "at": "gillray",
+    "text": "JAMES GILLRAY · 1803"
+   }
+  },
+  {
+   "id": "s03",
+   "year": "1803",
+   "motion": "panright",
+   "fx": [
+    "dust"
+   ],
+   "at": "apelido",
+   "say": "O apelido pegou: Little Boney. O pequeno Bonaparte. E os desenhos se espalharam pela Europa inteira."
+  },
+  {
+   "id": "s04",
+   "year": "1821",
+   "motion": "slowpush",
+   "fx": [
+    "dust",
+    "candle"
+   ],
+   "at": "só",
+   "say": "Só que olha a autópsia dele. Cinco pés e duas polegadas. Medida francesa. E a polegada francesa era maior que a inglesa.",
+   "doc": {
+    "at": "cinco",
+    "text": "5 pieds 2 pouces"
+   }
+  },
+  {
+   "id": "s05",
+   "year": "1821",
+   "motion": "pullsoft",
+   "fx": [
+    "ruler"
+   ],
+   "at": "convertendo",
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "say": "Convertendo: um metro e sessenta e nove. Mais alto que o francês médio da época.",
+   "ruler": {
+    "at": "convertendo",
+    "to": 1.69,
+    "avg_at": "médio",
+    "avg": 1.65
+   }
+  },
+  {
+   "id": "s06",
+   "year": null,
+   "motion": "pullback",
+   "fx": [
+    "smoke"
+   ],
+   "at": "então",
+   "say": "Então por que ele parecia pequeno? Porque vivia cercado pela Guarda Imperial: soldados escolhidos a dedo... pela altura."
+  },
+  {
+   "id": "s07",
+   "year": null,
+   "motion": "pushin",
+   "fx": [
+    "embers"
+   ],
+   "at": "e",
+   "at_nth": 1,
+   "at_after": "altura",
+   "say": "E o apelido pequeno cabo? Era carinho dos soldados. Não era medida.",
+   "label": {
+    "at": "pequeno",
+    "text": "\"LE PETIT CAPORAL\""
+   }
+  },
+  {
+   "id": "s08",
+   "year": null,
+   "motion": "slowpush",
+   "reuse": "s01",
+   "fx": [
+    "dust"
+   ],
+   "blur": 6,
+   "at": "segue",
+   "say": "Segue o perfil pra ver mais mentiras que a história te contou."
+  },
+  {
+   "id": "s09a",
+   "year": null,
+   "motion": "zoomout",
+   "reuse": "s02",
+   "fx": [
+    "paper"
+   ],
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "say": "A fake news durou duzentos anos. Virou até nome: complexo de Napoleão.",
+   "label": {
+    "at": "complexo",
+    "text": "\"COMPLEXO DE NAPOLEÃO\""
+   }
+  },
+  {
+   "id": "s09",
+   "year": "1821",
+   "motion": "slowpush",
+   "fx": [
+    "rain",
+    "candle"
+   ],
+   "at": "a",
+   "at_after": "contou",
+   "say": "Mas a morte dele foi ainda mais estranha. O papel de parede do quarto... tinha arsênico. Comenta parte dois que eu te conto.",
+   "end_at": "comenta"
+  }
+ ],
+ "events": [
+  {
+   "scene": "s02",
+   "word": "minúsculo",
+   "type": "boing",
+   "v": 0.6
+  },
+  {
+   "scene": "s03",
+   "word": "boney",
+   "type": "laugh",
+   "v": 0.5
+  },
+  {
+   "scene": "s04",
+   "word": "francesa",
+   "type": "stamp",
+   "v": 0.6
+  },
+  {
+   "scene": "s05",
+   "word": "sessenta",
+   "type": "ding",
+   "v": 0.7
+  },
+  {
+   "scene": "s06",
+   "word": "altura",
+   "type": "impact",
+   "v": 0.6
+  },
+  {
+   "scene": "s09",
+   "word": "arsênico",
+   "type": "impact",
+   "v": 0.8
+  },
+  {
+   "scene": "s09",
+   "word": "arsênico",
+   "type": "heartbeat1",
+   "v": 0.6,
+   "off": 0.4
+  }
+ ],
+ "cover": {
+  "img": "s05",
+  "focus": [
+   0.5,
+   0.4
+  ],
+  "zoom": 1.0,
+  "lines": [
+   "NAPOLEÃO",
+   "NÃO ERA",
+   "BAIXINHO"
+  ],
+  "hi": 2,
+  "tag": "A 1ª FAKE NEWS VIRAL"
+ }
+}
