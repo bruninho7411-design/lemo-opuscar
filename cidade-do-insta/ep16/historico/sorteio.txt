@@ -1,0 +1,1 @@
+Sorteio mansão 1: escolhido com random.SystemRandom entre 259 seguidores (lista completa, exceto 2 @ cortados): @nicollas__033
