@@ -89,16 +89,14 @@ def whistle(d=0.5, v=0.4):
     return np.sin(2 * np.pi * np.cumsum(f) / SR) * v * np.minimum(1, tt * 30) * np.minimum(1, (d - tt) * 20)
 def kick():
     return X.thump(1.4, 90)
-add(fx, crowd(3.6, 0.35), 0.0, 0.5); add(fx, X.thump(1.0, 50), 0.0, 0.6)
-add(fx, crowd(0.6, 0.35), 48.6, 0.5)
+ add(fx, X.thump(1.0, 50), 0.0, 0.6)
 for tb in (6.02, 6.76, 7.58, 8.2, 8.82):
     add(fx, X.pop(1.2), tb, 0.45); add(fx, X.ding(1.3), tb + 0.02, 0.25)
 add(fx, whistle(0.25), 11.26, 0.6); add(fx, whistle(0.6), 11.6, 0.6)
-add(fx, crowd(10.4, 0.25), 11.3, 0.35)
 for tk in (12.2, 13.0, 13.45, 14.9, 15.5, 15.95, 16.15, 17.5, 18.2, 18.75, 46.9):
     add(fx, kick(), tk, 0.45)
 for g in (13.9, 16.46, 19.14, 47.8):
-    add(fx, X.thump(0.8, 50), g, 0.8); add(fx, crowd(2.2, 0.6), g, 0.7)
+    add(fx, X.thump(0.8, 50), g, 0.8); add(fx, S.hit('claps', 'group', 0.9), g + 0.05, 0.45)
 add(fx, S.hit('claps', 'group', 0.9), 16.6, 0.5); add(fx, S.hit('claps', 'group', 0.9), 19.3, 0.6)
 add(fx, whistle(0.3), 19.6, 0.5); add(fx, whistle(0.3), 19.95, 0.5); add(fx, whistle(0.7), 20.3, 0.5)
 add(fx, X.ding(1.0), 22.3, 0.45)
