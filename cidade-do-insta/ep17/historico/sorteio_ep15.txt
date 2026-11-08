@@ -1,0 +1,6 @@
+Sorteios ep. 15 · Parque de diversões · 2026-11-06T22:16:16.773938+00:00
+Método: random.SystemRandom()
+PREFEITO DO EPISÓDIO: choice entre 6 comentaristas do post do ep. 14 (prints de 06/11, 19h): ['isabellapereirasilva0705', 'reyzinho777.capa', 'julioooo.cesarrrr', 'lalagabi15', 'lucca_dabaike', 'lauramarizz'] -> reyzinho777.capa
+  Observação: republicações não aparecem nos prints; sorteio só entre quem comentou.
+FUNCIONÁRIOS DO PARQUE: sample(3) entre 39 seguidores novos dos prints de 06/11 (excluídos os do sorteio de prefeito): ['samuel__rei_do_pandeiro', 'kadu_mundolego', 'carina.carina.3363', 'yanluvv378', 'livia_scapin', 'bran.daonicolefernandes', 'maicom4922', 'igor25022013', 'pedromatte_correa', 'emerson.luan.1', 'laranunesprado', 'anaalmeida1852', 'afonso93297', 'josepedromelopereira', 'rafaeljoseew2', 'carlinhaclarkoliveira', 'bartniklucas', 'heloaalves6', 'mceciliacastro1', '00.alves_jotta', 'vaqueirinho_134', 'helen.00143', 'igor_gugel22', 'arthur.wivlik', 'luancorrea00', 'samuel014614', 'lucianeufmt', 'lucianechimanski', 'crisjesus480', 'sophialopes3011', 'guxta_vozdn', 'luanamikaelly953', 'camargo_kemilly3', '_f_kauan_r_', 'thxrz.xpz_67', 'sidmey2026', 'marcoalves058', 'pvd.da.liice3', 'ferreirajoseheitor8']
+  -> montanha-russa = lucianechimanski, roda-gigante = heloaalves6, carrossel = pvd.da.liice3

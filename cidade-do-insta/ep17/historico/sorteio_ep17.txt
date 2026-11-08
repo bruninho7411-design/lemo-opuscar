@@ -1,0 +1,6 @@
+Sorteios ep. 17 · Estádio · 2026-11-07T22:44:59.642703+00:00
+Método: random.SystemRandom()
+PREFEITO DO EPISÓDIO: choice entre comentaristas do ep. 16 sem cargo (prints de 07/11): ['alice_maelly484', 'enzo2209906'] -> alice_maelly484
+  (laracarvalho190 ficou de fora: já é eletricista da usina)
+TIME DA CIDADE: sample(3) entre 36 seguidores dos prints de 06/11 ainda sem cargo: ['samuel__rei_do_pandeiro', 'kadu_mundolego', 'carina.carina.3363', 'yanluvv378', 'livia_scapin', 'bran.daonicolefernandes', 'maicom4922', 'igor25022013', 'pedromatte_correa', 'emerson.luan.1', 'laranunesprado', 'anaalmeida1852', 'afonso93297', 'josepedromelopereira', 'rafaeljoseew2', 'carlinhaclarkoliveira', 'bartniklucas', 'mceciliacastro1', '00.alves_jotta', 'vaqueirinho_134', 'helen.00143', 'igor_gugel22', 'arthur.wivlik', 'luancorrea00', 'samuel014614', 'lucianeufmt', 'crisjesus480', 'sophialopes3011', 'guxta_vozdn', 'luanamikaelly953', 'camargo_kemilly3', '_f_kauan_r_', 'thxrz.xpz_67', 'sidmey2026', 'marcoalves058', 'ferreirajoseheitor8']
+  -> goleiro(a) = carina.carina.3363, atacante = rafaeljoseew2, técnico(a) = sophialopes3011

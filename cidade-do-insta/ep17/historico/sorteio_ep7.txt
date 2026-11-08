@@ -1,0 +1,1 @@
+Equipe do hospital: random.SystemRandom().sample entre 13 comentaristas dos prints: médico=tiaguinho.thp, enfermeiro=sosoh124365, recepcionista=lauraso_uza
