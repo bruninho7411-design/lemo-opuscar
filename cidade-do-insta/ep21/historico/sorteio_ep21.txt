@@ -1,0 +1,5 @@
+Sorteios ep. 21 · Parque Aquático · 2026-11-09T21:28:11.782765+00:00
+Método: random.SystemRandom()
+CASINHAS (só comentaram): sample(4) da lista de quem só comentou, ainda sem cargo -> ['miguelcg.01', 'av4338926', 'livinha.15.30.kkk', 'goncalomachado95']
+SALVA-VIDAS DO PARQUE: sample(3) entre seguidores da lista ainda sem cargo -> ['arthur__112013', 'vitoria27733', 'fa_do_xing6558']
+MANSÕES: as já conquistadas (laracarvalho190, let_noglima + as do ep. 19).
