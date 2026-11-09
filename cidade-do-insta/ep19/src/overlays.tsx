@@ -34,8 +34,9 @@ export const Header: React.FC<{t: number}> = ({t}) => {
 };
 
 type W = {t: string; s: number; e: number; hl: boolean};
-const WORDS = words as W[];
-export const Caption: React.FC<{t: number}> = ({t}) => {
+const WORDS0 = words as W[];
+export const Caption: React.FC<{t: number; words?: W[]}> = ({t, words: WL}) => {
+  const WORDS = WL ?? WORDS0;
   let idx = -1;
   for (let i = 0; i < WORDS.length; i++) if (WORDS[i].s <= t + 0.02) idx = i;
   if (idx < 0) return null;

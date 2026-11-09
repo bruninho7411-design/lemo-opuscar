@@ -2,3 +2,6 @@ Sorteios ep. 19 · Praia · 2026-11-09T16:04:50.114702+00:00
 Método: random.SystemRandom()
 PREFEITO DO EPISÓDIO: choice entre quem comentou no ep. 17 e não entrou na seleção: ['lorenzo287549', 'melhores_190', 'agathalimabasques', 'junior.connect_', 'otavioborges2026', 'antonio.pedro67', 'marcin._.11', 'kayque_benicio', 'zayon_vzx', 'mgsouzasx_00_'] -> marcin._.11
 SALVA-VIDAS: sample(2) entre 33 seguidores dos prints de 06/11 ainda sem cargo -> ['maicom4922', 'camargo_kemilly3']
+
+MANSÕES (2026-11-09T16:18:33.651937+00:00): sample(4) entre os 17 seguidores dos prints de 09/11 -> ['conradooxz_.pjl', 'gomeswz00', 'chipmunk.7149822', 'emilly_lety']
+CASINHAS: sample(4) entre quem só comentou (lista commenters) -> ['willian380696', 'luana.rodrigues.campos', 'jias.santa.ths', 'ludmyla_108']

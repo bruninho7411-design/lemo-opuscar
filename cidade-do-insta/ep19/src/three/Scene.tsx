@@ -115,7 +115,7 @@ function mayorPose(t: number) {
   return pose;
 }
 
-export const Scene: React.FC<{t: number; cam?: any}> = ({t, cam}) => {
+export const Scene: React.FC<{t: number; cam?: any; children?: React.ReactNode}> = ({t, cam, children}) => {
   const s = shotAt(t);
   const c = cam ?? camAt(t);
   const target = React.useMemo(() => new THREE.Object3D(), []);
@@ -147,6 +147,7 @@ export const Scene: React.FC<{t: number; cam?: any}> = ({t, cam}) => {
         shadow-bias={-0.0006}
       />
       <City t={t} wt={wt} mayorPose={mayorPose(t)} cheer={cheer} />
+      {children}
     </>
   );
 };

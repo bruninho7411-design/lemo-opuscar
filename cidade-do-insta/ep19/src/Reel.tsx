@@ -352,7 +352,7 @@ export const Reel: React.FC<{audio?: string}> = ({audio = 'mix19.wav'}) => {
       <PollCard t={t} t0={36.5} t1={41.86} />
       <Callout t={t} t0={42.52} t1={43.45} text="🌊 TSUNAMI!" top={1460} rot={-4} size={84} bg="#2fb5ff" />
       <Caption t={t} />
-      <Audio src={staticFile(audio)} />
+      {audio ? <Audio src={staticFile(audio)} /> : null}
     </AbsoluteFill>
   );
 };
