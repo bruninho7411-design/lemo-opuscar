@@ -1,0 +1,7 @@
+Sorteios ep. 16 · Bombeiros · 2026-11-07T14:19:23.917687+00:00
+Método: random.SystemRandom()
+PREFEITO DO EPISÓDIO: choice entre quem comentou no ep. 15 (prints de 07/11): ['wellington.leal9460', 'saracarnim', 'valentina_gpro'] -> wellington.leal9460
+BOMBEIROS: sample(3) entre comentaristas dos eps. 14 e 15 sem cargo (sem o prefeito): ['julioooo.cesarrrr', 'saracarnim', 'isabellapereirasilva0705', 'lalagabi15', 'lucca_dabaike', 'lauramarizz']
+  -> comandante = lauramarizz, bombeiro(a) = isabellapereirasilva0705, bombeiro(a) = lucca_dabaike
+FILA DA MONTANHA-RUSSA (promessa do ep. 15): primeira a comentar "Fila" nos prints: valentina_gpro
+NOVOS MORADORES (casa com @): ['grazillybizerra204', 'jennifer8236558', 'gabrielle201519', 'millyzinha580', 'lurdes_e_jailson', 'julia696642', 'alice6522326', 'angela.correia.526', 'maternandoecantando', 'annaluizatelesmeireles', 'analara86741', 'guimaraes18481']

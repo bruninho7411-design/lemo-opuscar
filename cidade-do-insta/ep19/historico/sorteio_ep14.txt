@@ -1,0 +1,7 @@
+Sorteios ep. 14 · Escola · 2026-11-06T14:22:12.683241+00:00
+Método: random.SystemRandom()
+PREFEITO DO EPISÓDIO: choice entre 6 comentaristas do post do ep. 13 (prints de 06/11): ['marina.alice.magalhaes', 'rych.38_', 'luizfmachado658', 'bernardorodriguesda55', 'lsj_kaique200', 'igor3273']
+  (sosoh124365 ficou de fora: já é enfermeira) -> bernardorodriguesda55
+  Observação: republicações não aparecem nos prints, então o sorteio foi só entre quem comentou.
+PROFESSORES: sample(3) entre 21 seguidores dos prints de 06/11: ['smk_vargas_vida', 'arthurarantees', 'samuelpiloto_01', 'mydai_lylalah', 'iorrana.nascimento87', 'vanderlisinfronio', 'kalebguedesmoto', 'pvddaisa642', 'ri.quelmee00', 'geronimo24444', 'yasmim12349731', 'yas_esther1', 'cleide75168', 'meninoo_mal71', 'heytor_lamberti17', 'davizim33ney', 'carlav.viana', 'becamoraissilva', 'kateliriaferreiradesouza', 'adrianoroque760', 'carlos.neto7']
+  -> professora/diretor(a) = iorrana.nascimento87, professor(a) = arthurarantees, professor(a) = davizim33ney
