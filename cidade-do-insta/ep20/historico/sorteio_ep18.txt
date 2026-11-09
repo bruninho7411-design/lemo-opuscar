@@ -1,0 +1,9 @@
+Escalação ep. 18 · Seleção da Cidade do Insta x Santos · 2026-11-08T21:31:50.748776+00:00
+Método: random.SystemRandom(), entre quem comentou a posição no post do ep. 17 (prints de 08/11)
+GOLEIRO: choice ['lorenzo287549', 'melhores_190', 'caduhl.067', 'agathalimabasques', 'junior.connect_'] -> caduhl.067
+ZAGUEIROS: sample(2) ['damidia_0032', 'otavioborges2026', 'ft187816', 'antonio.pedro67'] -> ['ft187816', 'damidia_0032']
+  (fora: _carlos.cpx7___, marcado como perfil gerado por IA; miqueias…mourah, @ ilegível no print)
+MEIA: _baabyguilherme (único que pediu meia) · PONTA: thyzz0711 (único que pediu ponta)
+ATACANTES: sample(2) ['lipe.eze', 'marcin._.11', 'davi_luizzzw'] -> ['lipe.eze', 'davi_luizzzw']
+CAPITÃO: choice entre os 7 escalados -> lipe.eze
+  (a promessa era sortear entre quem republicou; os prints não mostram republicações)

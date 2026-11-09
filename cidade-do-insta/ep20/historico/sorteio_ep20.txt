@@ -1,0 +1,6 @@
+Sorteios ep. 20 · Zoológico · 2026-11-09T19:29:43.423161+00:00
+Método: random.SystemRandom()
+MANSÕES (sem sorteio, por prova): laracarvalho190 (comentou + mandou print da republicação e do perfil seguindo), let_noglima (seguidora nova, comentou 'fiz tudo').
+CASAS: novos seguidores do print de 09/11 16:28 (ordenado por data) -> ['menor_quik_oakley', '1freitass2', '_mankexnz.x7', 'lorenzo_vip_', 'vitoria.sofia55', 'ana_reisoliveira', 'lucas.jfds2.0', 'laristhefani', 'sam_illy021']
+PREFEITO DO EPISÓDIO: choice entre quem comentou no ep. 19 e não ganhou mansão ['juveniliasoares', '1freitass2', 'maria._.eloisa._.02'] -> 1freitass2
+TRATADORES DO ZOO: sample(3) entre os seguidores do print 'Padrão' de 09/11 16:28 ainda sem cargo -> ['privs_nicolly8', 'luizmiguel0820', 'gb_guiado_deus']
