@@ -1,0 +1,7 @@
+Sorteios ep. 22 · Cinema · 2026-11-10T16:09:42.883745+00:00
+Método: random.SystemRandom()
+FUNCIONÁRIOS DO CINEMA: sample(3) entre os novos seguidores do print de 10/11 (ordenado por data) -> ['leandrodewg14', 'eu_juhsantos1', 'jogador_de_ouro244']
+CASAS LEGAIS (comentaram no ep. 21): ['triz_12_', 'cloe_tavares', 'esquilossem.alves', 'laura_beatriiz_ofc', 'sandravitoria1551', 'haylla.lavigne']
+DONA DO MERCADINHO (pedido no comentário): triz_12_
+PERSONAGEM MENINA (pedido no comentário: 'não quero ser uma capivara'): haylla.lavigne
+SUPER CASAS: as já conquistadas com print de republicação (laracarvalho190, let_noglima + ep. 19)
