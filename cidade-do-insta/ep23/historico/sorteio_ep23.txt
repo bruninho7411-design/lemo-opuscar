@@ -1,0 +1,9 @@
+Sorteios ep. 23 · Sorveteria · 10 MIL · 2026-11-10T19:45:33.507075+00:00
+Método: random.SystemRandom()
+PRÊMIOS DOS 10 MIL, sorteados entre todos que comentaram no ep. 22 (22 pessoas: ['__mduda_bs', 'annalissouzade', 'by.yong.lixx_', 'dark_sus98', 'elenadiasfoz', 'eloah_poyoyoi', 'francisco_junior0304', 'heitorfernandoc.da', 'isabella_araujo_de_morais', 'jhenniferpoltronieire', 'kattysouza_studio', 'lai.s0160', 'laisdecarvalhoschaffer', 'lind.aaa344', 'mabelreginagoncalves', 'maite.sophia14', 'mariaaparecidadealmeida498', 'pietrakaufman', 'rojeanepatricio', 'sophya.nunes.121', 'yooni_slk', 'ysadora_venancio_batista_']):
+  DONO DO SHOPPING -> elenadiasfoz
+  ARTE PERSONALIZADA (personagem com a camisa 10) -> sophya.nunes.121
+CASA RUIM (só comentaram): sample(4) -> ['by.yong.lixx_', 'lai.s0160', 'lind.aaa344', '__mduda_bs']
+CASA BOA (seguem): sample(4) da lista de seguidores sem cargo -> ['elizio_rauan90', 'kauancontapela100000vez', 'guilherme.sts._', 'mari_xzi8']
+SUPER CASA (mandaram print ou disseram que fizeram tudo): ['dark_sus98', 'rojeanepatricio', 'yooni_slk', 'pietrakaufman', 'sophya.nunes.121']
+DESEJOS: meninas ['annalissouzade', 'jhenniferpoltronieire', 'laisdecarvalhoschaffer']; juíza sophya.nunes.121; dona do zoológico maite.sophia14; dono da sorveteria dark_sus98 (pediu + print).
