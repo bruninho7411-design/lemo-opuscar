@@ -359,7 +359,7 @@ export const Reel: React.FC<{audio?: string}> = ({audio = 'mix21.wav'}) => {
       <Confetti t={t} t0={16.36} />
       <Callout t={t} t0={17.7} t1={19.18} text="🧱 MODO LEGO!" top={1480} rot={-4} />
       <Confetti t={t} t0={22.9} />
-      <WorkersCard t={t} t0={21.9} t1={23.38} names={P.salvavidas_parque} title="SALVA-VIDAS DO PARQUE" roles={['SALVA-VIDAS', 'SALVA-VIDAS', 'SALVA-VIDAS']} color="#e2483d" />
+      <WorkersCard t={t} t0={17.9} t1={19.18} names={P.salvavidas_parque} title="SALVA-VIDAS DO PARQUE" roles={['SALVA-VIDAS', 'SALVA-VIDAS', 'SALVA-VIDAS']} color="#e2483d" />
       {/* tycoon section */}
       {t >= 23.38 && t < 26.56 ? (
         <>

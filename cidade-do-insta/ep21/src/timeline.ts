@@ -30,7 +30,7 @@ export const ZO = {HOOK: -9, CERCA: -9, LEAO: -9, GIRAFA: -9, ELEFANTE: -9, MACA
 /** ep. 20 mansions / new houses */
 export const BA = {LARA: -9, LET: -9, CASAS: -9, SHACK: 11.96};
 /** ep. 21 water park beats */
-export const PK = {BASE: 17.6, PISCINA: 18.9, TOBOGA: 19.7, ONDAS: 20.6, BALDE: 21.9, SV: 21.0, VIRA: 45.3};
+export const PK = {BASE: 17.6, PISCINA: 18.9, TOBOGA: 19.7, ONDAS: 20.6, BALDE: 21.9, SV: 17.8, VIRA: 45.3};
 const INTRO: Cam = {pos: [15, 11, 212], look: [15, 3, 150], fov: 52};
 export const OPEN: Cam = INTRO;
 export const PEDRA = OPEN;
@@ -46,12 +46,12 @@ export const SHOTS: Shot[] = [
   {id: 'c_piscina', start: 19.18, end: 20.02, from: {pos: [182, 8, 141], look: [196, 0.6, 126], fov: 52}, to: {pos: [183, 7.5, 140], look: [196, 0.6, 126], fov: 52}, ease: 'out', title: 'PISCINA', sub: '1/4'},
   {id: 'c_toboga', start: 20.02, end: 20.68, from: {pos: [199, 9, 129], look: [215, 5, 109], fov: 54}, to: {pos: [200, 8.6, 128], look: [215, 5, 109], fov: 54}, ease: 'out', title: 'TOBOGÃ', sub: '2/4'},
   {id: 'c_ondas', start: 20.68, end: 21.86, from: {pos: [203, 7.5, 143], look: [215, 0.6, 126], fov: 52}, to: {pos: [204, 7, 142], look: [215, 0.6, 126], fov: 52}, ease: 'out', title: 'PISCINA', sub: 'DE ONDAS 3/4'},
-  {id: 'c_balde', start: 21.86, end: 23.38, from: {pos: [178, 9, 131], look: [195, 8.5, 109], fov: 54}, to: {pos: [180, 8.5, 129], look: [195, 8.5, 109], fov: 54}, ease: 'out', title: 'BALDE', sub: 'GIGANTE 4/4'},
+  {id: 'c_balde', start: 21.86, end: 23.38, from: {pos: [172, 13, 138], look: [195, 8, 109], fov: 56}, to: {pos: [174, 12, 136], look: [195, 8, 109], fov: 56}, ease: 'out', title: 'BALDE', sub: 'GIGANTE 4/4'},
   {id: 'g_ty', start: 23.38, end: 34.68, from: MAY, to: MAY, ease: 'linear', title: ''},
   {id: 'bio', start: 34.68, end: 35.74, from: MAY, to: {pos: [0.0, 1.95, 5.2], look: [0, 1.6, 0.4], fov: 36}, ease: 'out', title: 'LINK NA BIO'},
   {id: 'quer', start: 35.74, end: 39.72, from: {pos: [-330, 10, -12], look: [-330, 1.5, -44], fov: 58}, to: {pos: [-330, 8, -16], look: [-330, 1.5, -44], fov: 58}, ease: 'out', title: 'QUER UMA', sub: 'MANSÃO? 🏰'},
   {id: 'enquete', start: 39.72, end: 43.62, from: {pos: [A0 - 44, 36, A1 + 36], look: [A0, 0, A1], fov: 46}, to: {pos: [A0 - 36, 31, A1 + 31], look: [A0, 0, A1], fov: 46}, ease: 'linear', title: '19ª VOTAÇÃO', sub: 'COMENTA A OU B'},
-  {id: 'senao', start: 43.62, end: LOOP_AT, from: {pos: [195, 3.0, 125], look: [195, 10, 109], fov: 56}, to: {pos: [195, 2.6, 123], look: [195, 11, 109], fov: 56}, ease: 'linear', title: 'SENÃO...', titleBig: true},
+  {id: 'senao', start: 43.62, end: LOOP_AT, from: {pos: [195, 5, 135], look: [195, 10, 109], fov: 58}, to: {pos: [195, 4.5, 132], look: [195, 10.5, 109], fov: 58}, ease: 'linear', title: 'SENÃO...', titleBig: true},
   {id: 'loop', start: LOOP_AT, end: TOTAL_SEC, from: INTRO, to: INTRO, ease: 'linear', title: 'CIDADE DO INSTA', sub: 'EPISÓDIO 21'},
 ];
 

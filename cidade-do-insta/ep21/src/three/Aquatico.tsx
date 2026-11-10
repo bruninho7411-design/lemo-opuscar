@@ -110,7 +110,7 @@ export const Aquatico: React.FC<{t: number; tt: number}> = ({t, tt}) => {
         <mesh geometry={G.box} material={sign} position={[-0.4, 5.5, 0]} rotation={[0, -Math.PI / 2, 0]} scale={[8.6, 1.45, 0.12]} />
       </Drop>
       {/* palms */}
-      {[[-21, -6], [-21, 17], [21, 17], [21, -17], [0, 17]].map(([x, z], i) => (
+      {[[-21, -6], [-21, 17], [21, 17], [21, -17], [-13, 19]].map(([x, z], i) => (
         <Drop key={i} t={t} t0={PK.BASE + 0.3 + i * 0.06} h={6} dur={0.25} p={[X(x), 0.1, Z(z)]}>
           <P geo={G.cyl} color="#8a5a32" p={[0, 2, 0]} r={[0, 0, 0.12]} s={[0.22, 4, 0.22]} o={0.02} />
           {[0, 1, 2, 3, 4].map((k) => <P key={k} geo={G.box} color="#3f9a4a" p={[Math.cos(k * 1.26) * 1.1, 4.1, Math.sin(k * 1.26) * 1.1]} r={[0, -k * 1.26, -0.4]} s={[2.2, 0.12, 0.6]} o={0.02} />)}
