@@ -1,0 +1,7 @@
+Sorteios ep. 24 · Hamburgueria · 2026-11-10T23:51:11.274294+00:00
+Método: random.SystemRandom()
+DONA DA HAMBURGUERIA: choice entre as duas que pediram nos comentários ['giovanamattos961','emylly6364'] -> giovanamattos961
+SUPER CASA (disseram que fizeram tudo): valdilenemotaa ("meu nome é Nicole, já fiz tudo"), angelicamourabezerra ("eu fiz tudo"), maluli.ma (pediu super casa)
+CASA LEGAL (comentaram e seguem/curtiram): ['dani_rosagomes', 'nathallygabrielly45', 'pvd.2604584', 'emylly6364']
+CASA RUIM (só comentaram): sample(4) da lista antiga de comentaristas sem cargo -> ['marcosviniciusrodrigues9605', 'julia_leite_m', 'batman_12302', 'lsj_kaique200']
+DESEJOS: médica moniquinha_098; casinha amarela neidinha_santana75; oficina kadoido_22.
