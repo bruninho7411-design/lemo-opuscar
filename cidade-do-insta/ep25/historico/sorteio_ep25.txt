@@ -1,0 +1,9 @@
+Sorteios ep. 25 · Desejos + site · 2026-11-11T10:47:07.137232+00:00
+Método: random.SystemRandom()
+CASA LEGAL (seguiram): sample(5) dos novos seguidores dos prints de 11/11 -> ['b11_teodoro', 'jcmonteirot', 'matronadeviloff', 'aninhaqcz', 'anajulianascimento386']
+CASA RUIM (só comentaram, sem pedido): ['davilucascorreiadapazz','marygg.2210']
+DESEJOS REALIZADOS (pedidos nos comentários do ep. 24):
+  flux_tvv -> dono do aeroporto; santana_santos021 -> comercial com o nome Thaila (outdoor);
+  anaclarapuccinelli -> dona da passarela; arthurfenamdo -> casa verde;
+  casa amarela para quem 'nunca morou numa casinha' (@ ilegível no print, não citado).
+Votação 22ª (Oficina x Biblioteca) ainda aberta no momento do episódio.
