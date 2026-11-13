@@ -1,7 +1,7 @@
 export const FPS = 30;
-export const TOTAL_SEC = 58.05;
+export const TOTAL_SEC = 67.95;
 export const TOTAL_FRAMES = Math.round(TOTAL_SEC * FPS);
-export const LOOP_AT = 57.45;
+export const LOOP_AT = 67.35;
 export const NIGHT = false;
 
 export type V3 = [number, number, number];
@@ -50,33 +50,39 @@ export const D29 = {MEDICA: -9, IRMA: -9, VOZINHA: -9, ADRIAN: -9, GATO: -9, FUT
 /** ep. 30 beats */
 export const D30 = {LETREIRO: -9, FLIPER: -9, PAREDES: -9, TELHADO: -9, MAQUINAS: -9, NEON: -9, HENRIQUE: -9, FILHA: -9, LOBO: -9, MANICURE: -9, INFLU: -9, ROCK: -9, PROF: -9, UIVO: 999};
 /** ep. 31 beats (provisional: re-timed against the narration) */
-export const D31 = {VAMP: 3.0, VAMPIRA: 4.2, LUNA: 12, POLICIAL: 14, ROCK: 16, BASQUETE: 18, FUTSAL: 20, RICO: 22, MAE: 24};
+export const D31 = {GOV: 5.0, VAMP: 17.46, VAMPIRA: 17.94, LUNA: 24.8, POLICIAL: 27.12, ROCK: 28.2, BASQUETE: 30.2, FUTSAL: 31.3, RICO: 32.8, MAE: 34.5};
 const INTRO: Cam = {pos: [15, 11, 212], look: [15, 3, 150], fov: 52};
-const HOOKC: Cam = {pos: [-265.6, 1.75, 222.6], look: [-266.2, 1.3, 218], fov: 44};
+const HOOKC: Cam = {pos: [-282, 1.9, 132.4], look: [-282, 1.4, 126.2], fov: 46};
 export const OPEN: Cam = HOOKC;
 export const PEDRA = OPEN;
 const MAY: Cam = {pos: [0.0, 2.1, 6.6], look: [0, 1.55, 0.4], fov: 36};
-const W = (id: string, s0: number, s1: number, p: [number, number, number], l: [number, number, number], title: string, sub: string, fov = 46): Shot => ({id, start: s0, end: s1, from: {pos: p, look: l, fov}, to: {pos: [p[0], p[1] - 0.1, p[2] - 0.6], look: l, fov}, ease: 'out', title, sub});
+type V = [number, number, number];
+const W = (id: string, s0: number, s1: number, p: V, l: V, title: string, sub: string, fov = 52): Shot => ({id, start: s0, end: s1, from: {pos: p, look: l, fov}, to: {pos: [p[0], p[1] - 0.1, p[2] - 0.7], look: l, fov}, ease: 'out', title, sub});
+const VAMPC: Cam = {pos: [-306, 2.4, 157], look: [-306, 1.6, 149.8], fov: 52};
 export const SHOTS: Shot[] = [
-  {id: 'hook', start: 0, end: 3.6, from: HOOKC, to: {pos: [-265.7, 1.8, 222.0], look: [-266.2, 1.35, 218], fov: 44}, ease: 'linear', title: '"VOU PARAR DE', sub: 'TE SEGUIR..." 😭'},
-  {id: 'hook2', start: 3.6, end: 6.95, from: {pos: [-265, 3.0, 232], look: [-265, 5.5, 212], fov: 56}, to: {pos: [-264.2, 5.0, 245], look: [-264.2, 8.0, 210], fov: 56}, ease: 'out', title: 'SEU NOME', sub: 'NO MAIOR LETREIRO! ✨'},
-  {id: 'intro', start: 6.95, end: 10.55, from: INTRO, to: {pos: [15, 8.5, 118], look: [15, 2, 38], fov: 54}, ease: 'linear', title: 'CIDADE DO INSTA', sub: 'EPISÓDIO 30'},
-  {id: 't_ruim', start: 10.55, end: 12.1, from: {pos: [-340, 3.8, 89], look: [-340, 1.3, 78], fov: 50}, to: {pos: [-340, 3.4, 87], look: [-340, 1.3, 78], fov: 50}, ease: 'out', title: 'SÓ COMENTOU', sub: '= CASA RUIM 😬'},
-  {id: 't_legal', start: 12.1, end: 13.4, from: {pos: [-331, 4.4, 90], look: [-331, 2, 78], fov: 50}, to: {pos: [-331, 4.1, 89], look: [-331, 2, 78], fov: 50}, ease: 'out', title: 'SEGUIU', sub: '= CASA LEGAL 🏠'},
-  {id: 't_super', start: 13.4, end: 16.5, from: {pos: [-319, 6, 96], look: [-319, 2.6, 77], fov: 52}, to: {pos: [-321, 8, 99], look: [-322, 2.2, 77], fov: 54}, ease: 'out', title: 'COMENTOU + CURTIU', sub: '+ REPUBLICOU = DESEJO REALIZADO ✨'},
-  {id: 'fliper', start: 16.5, end: 21.1, from: {pos: [-274, 7, 216], look: [-282, 2.5, 196], fov: 52}, to: {pos: [-275, 8.5, 219], look: [-282, 2.8, 196], fov: 54}, ease: 'out', title: 'DEU FLIPERAMA!', sub: '🕹️ EM MODO LEGO'},
-  {id: 'henrique', start: 21.1, end: 23.7, from: {pos: [-278.4, 3.2, 209.5], look: [-283, 1.6, 200.8], fov: 50}, to: {pos: [-278.8, 3.0, 208.6], look: [-283, 1.6, 200.8], fov: 48}, ease: 'out', title: 'PRIMEIRO', sub: 'A JOGAR 🎮'},
-  W('filha', 23.7, 25.8, [-341, 6.5, 214], [-341, 5.6, 207.5], 'FILHA DA', 'RAINHA 👑', 48),
-  W('lobo', 25.8, 27.7, [-351.0, 2.9, 203.6], [-352, 1.9, 196.5], 'VIROU', 'LOBISOMEM 🐺', 48),
-  W('manicure', 27.7, 29.5, [-311.4, 2.4, 202.2], [-311.6, 1.4, 196.5], 'MANICURE', 'DE BLUSA AZUL 💅'),
-  W('influ', 29.5, 31.4, [-304.4, 2.5, 202.4], [-305, 1.6, 196.5], 'INFLUENCER', 'FAMOSA ⭐'),
-  W('rock', 31.4, 33.3, [-356, 2.8, 195.2], [-356, 1.3, 187], 'ROQUEIRA', 'DE SKATE 🎸🛹', 54),
-  W('prof', 33.3, 35.0, [-363.4, 2.4, 202.2], [-364, 1.5, 196], 'VIROU', 'PROFESSORA 📚'),
-  {id: 'g_loja', start: 35.0, end: 49.5, from: MAY, to: MAY, ease: 'linear', title: ''},
-  {id: 'bio', start: 49.5, end: 50.4, from: MAY, to: {pos: [0.0, 1.95, 5.2], look: [0, 1.6, 0.4], fov: 36}, ease: 'out', title: 'LINK NA BIO'},
-  {id: 'enquete', start: 50.4, end: 55.15, from: {pos: [60, 60, 120], look: [0, 0, 0], fov: 50}, to: {pos: [45, 52, 110], look: [0, 0, 0], fov: 50}, ease: 'linear', title: '24ª VOTAÇÃO', sub: 'O QUE A CIDADE GANHA?'},
-  {id: 'senao', start: 55.15, end: LOOP_AT, from: {pos: [-351.3, 2.1, 201.6], look: [-352, 2.2, 196.5], fov: 48}, to: {pos: [-351.6, 1.8, 199.8], look: [-352, 2.4, 196.5], fov: 42}, ease: 'in', title: 'SENÃO...', titleBig: true},
-  {id: 'loop', start: LOOP_AT, end: TOTAL_SEC, from: HOOKC, to: HOOKC, ease: 'linear', title: '"VOU PARAR DE', sub: 'TE SEGUIR..." 😭'},
+  {id: 'hook', start: 0, end: 5.0, from: HOOKC, to: {pos: [-282, 2.0, 131.2], look: [-282, 1.5, 126.2], fov: 46}, ease: 'inOut', title: 'PAGOU R$ 10', sub: 'PRA SER GOVERNADORA 🏛️'},
+  {id: 'gov2', start: 5.0, end: 9.4, from: {pos: [-282, 2.8, 134], look: [-282, 2.0, 124], fov: 54}, to: {pos: [-282, 6.5, 147], look: [-282, 3, 119], fov: 54}, ease: 'inOut', title: 'GOVERNADORA', sub: 'LILICA 🏛️✨'},
+  {id: 'site', start: 9.4, end: 12.96, from: {pos: [-282, 6.5, 147], look: [-282, 3, 119], fov: 54}, to: {pos: [-282, 7.5, 152], look: [-282, 3, 119], fov: 56}, ease: 'out', title: 'GRAÇAS AO SITE!', sub: '🛒 LINK NA BIO'},
+  {id: 'vamp_pre', start: 12.96, end: 17.46, from: {pos: [-306.4, 2.2, 158.5], look: [-306, 1.5, 149.8], fov: 50}, to: {pos: [-306.2, 2.1, 157], look: [-306, 1.5, 149.8], fov: 50}, ease: 'in', title: 'E TEM MAIS...', sub: '🧛 DOIS PEDIRAM VAMPIRO'},
+  {id: 'vamp', start: 17.46, end: 19.66, from: VAMPC, to: {pos: [-306, 2.9, 160], look: [-306, 2.4, 149.8], fov: 56}, ease: 'out', title: 'VAMPIROS', sub: 'NA CIDADE! 🧛🦇'},
+  {id: 'intro', start: 19.66, end: 23.6, from: INTRO, to: {pos: [15, 8.5, 118], look: [15, 2, 38], fov: 54}, ease: 'linear', title: 'CIDADE DO INSTA', sub: 'EPISÓDIO 31'},
+  W('rua', 23.6, 24.6, [-277, 5.5, 164], [-277, 1.5, 150], 'VAMOS DE', 'DESEJOS! ✨', 60),
+  W('luna', 24.6, 27.0, [-297.5, 2.9, 158.8], [-297.5, 1.8, 150], 'DONA DE', 'CAFETERIA ☕', 54),
+  W('policial', 27.0, 28.1, [-288.4, 2.9, 157.5], [-288.4, 1.4, 150.5], 'POLICIAL', 'DA CIDADE 🚓', 52),
+  W('rock', 28.1, 30.0, [-280.5, 3.6, 160], [-280.5, 1.4, 149.5], 'ROQUEIRO', 'COM BANDA 🎸', 56),
+  W('basquete', 30.0, 31.2, [-272, 3.2, 157.5], [-272, 1.7, 149], 'BASQUETE', 'COM QUADRA 🏀', 54),
+  W('futsal', 31.2, 32.7, [-263.5, 3.4, 157.5], [-263.5, 1.0, 150], 'FUTSAL', 'COM QUADRA ⚽', 54),
+  W('rico', 32.7, 34.4, [-255.6, 3.2, 158], [-255.6, 1.5, 150.5], 'O MAIS RICO', 'DA CIDADE 💰', 54),
+  W('mae', 34.4, 35.92, [-246.7, 2.6, 156], [-246.7, 1.3, 150.3], 'MÃE E FILHA', 'DE 1 ANO 💗', 50),
+  {id: 'g_loja', start: 35.92, end: 44.6, from: MAY, to: MAY, ease: 'linear', title: ''},
+  {id: 't_dica', start: 44.6, end: 47.3, from: {pos: [-331, 6.5, 96], look: [-331, 2.4, 77], fov: 54}, to: {pos: [-326, 7.5, 99], look: [-327, 2.4, 77], fov: 54}, ease: 'out', title: 'COMENTA · CURTE', sub: '· REPUBLICA 🔁'},
+  {id: 't_ruim', start: 47.3, end: 48.95, from: {pos: [-340, 3.8, 89], look: [-340, 1.3, 78], fov: 50}, to: {pos: [-340, 3.4, 87], look: [-340, 1.3, 78], fov: 50}, ease: 'out', title: 'SÓ COMENTOU', sub: '= CASA RUIM 😬'},
+  {id: 't_legal', start: 48.95, end: 50.35, from: {pos: [-331, 4.4, 90], look: [-331, 2, 78], fov: 50}, to: {pos: [-331, 4.1, 89], look: [-331, 2, 78], fov: 50}, ease: 'out', title: 'SEGUIU', sub: '= CASA LEGAL 🏠'},
+  {id: 't_super', start: 50.35, end: 55.7, from: {pos: [-319, 6, 96], look: [-319, 2.6, 77], fov: 52}, to: {pos: [-321, 8, 99], look: [-322, 2.2, 77], fov: 54}, ease: 'out', title: 'COMENTA+CURTE', sub: '+ REPUBLICA = MANSÃO 🏰'},
+  {id: 'parcial', start: 55.7, end: 61.25, from: {pos: [60, 60, 120], look: [0, 0, 0], fov: 50}, to: {pos: [45, 52, 110], look: [0, 0, 0], fov: 50}, ease: 'linear', title: '24ª VOTAÇÃO', sub: 'VAI TERMINAR! ⏳'},
+  {id: 'enquete', start: 61.25, end: 65.92, from: {pos: [60, 60, 120], look: [0, 0, 0], fov: 50}, to: {pos: [45, 52, 110], look: [0, 0, 0], fov: 50}, ease: 'linear', title: '25ª VOTAÇÃO', sub: 'O QUE A CIDADE GANHA?'},
+  {id: 'senao', start: 65.92, end: LOOP_AT, from: {pos: [-306, 2.4, 160], look: [-306, 1.8, 149.8], fov: 56}, to: {pos: [-306, 2.0, 155], look: [-306, 1.8, 149.8], fov: 46}, ease: 'in', title: 'SENÃO...', titleBig: true},
+  {id: 'loop', start: LOOP_AT, end: TOTAL_SEC, from: HOOKC, to: HOOKC, ease: 'linear', title: 'PAGOU R$ 10', sub: 'PRA SER GOVERNADORA 🏛️'},
 ];
 
 import {povCam, trainU, TRACK} from './three/coaster';

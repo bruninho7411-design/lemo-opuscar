@@ -16,11 +16,11 @@ const Poof: React.FC<{tt: number; t0: number; y?: number; c?: string}> = ({tt, t
 const Tag: React.FC<{name: string; y?: number}> = ({name, y = 0.8}) => <group position={[0, y, 0]}><NameTag name={name} k={1} /></group>;
 
 /** stage i of the "wish street" (x from -318 to -246, z 150, all facing +z) */
-export const SX = (i: number) => -318 + i * 9;
+export const SX = (i: number) => -306 + i * 8.5;
 export const SZ = 150;
 
 export const Rua31: React.FC = () => (
-  <mesh geometry={G.box} material={mat('#a6dd6c')} position={[-282, 0.045, 150]} scale={[88, 0.04, 24]} receiveShadow />
+  <mesh geometry={G.box} material={mat('#a6dd6c')} position={[-277, 0.045, 150]} scale={[80, 0.04, 24]} receiveShadow />
 );
 
 /* ---------------- hook: two vampires ---------------- */
@@ -28,7 +28,7 @@ const Bats: React.FC<{tt: number; on: boolean}> = ({tt, on}) => !on ? null : (
   <>{Array.from({length: 7}).map((_, i) => {
     const a = tt * 1.3 + i * 0.9, flap = Math.sin(tt * 16 + i) * 0.7;
     return (
-      <group key={i} position={[Math.cos(a) * (3 + (i % 3)) , 5 + (i % 4) * 0.7 + Math.sin(tt * 2 + i) * 0.3, Math.sin(a) * 2 - 1]}>
+      <group key={i} scale={0.55} position={[Math.cos(a) * (4 + (i % 3)) , 5.5 + (i % 4) * 0.8 + Math.sin(tt * 2 + i) * 0.3, Math.sin(a) * 2 - 2]}>
         <P geo={G.ballLo} color="#1a0f24" p={[0, 0, 0]} s={0.18} o={0} />
         {[-1, 1].map((sd) => <group key={sd} rotation={[0, 0, sd * flap]}><P geo={G.box} color="#2a1745" p={[sd * 0.3, 0, 0]} s={[0.55, 0.04, 0.3]} o={0} /></group>)}
       </group>
@@ -262,7 +262,7 @@ export const Desejos31: React.FC<{tt: number}> = ({tt}) => {
             <group position={[-0.6, 0, 0]}>
               <Girl tt={tt} wave={0.5} skin="#f1d0b0" dress="#ff7aa8" hair="#4a2c17" />
               <P geo={G.box} color="#ff7aa8" p={[0, 1.38, 0]} s={[0.44, 0.36, 0.28]} o={0.03} />
-              <Tag name="manuelamsilvav" y={1.15} />
+              <Tag name="manuelamsilvav" y={0.95} />
             </group>
             <group position={[0.8, 0, 0.3]}>
               <Girl tt={tt} wave={0.3} scale={0.45} skin="#f1d0b0" dress="#b39ddb" hair="#4a2c17" />
@@ -274,6 +274,68 @@ export const Desejos31: React.FC<{tt: number}> = ({tt}) => {
         ) : null}
         <Poof tt={tt} t0={D31.MAE - 0.1} c="#ff9fd0" />
       </Stage>
+    </group>
+  );
+};
+
+/* ---------------- hook: the paid order (lilica_444 becomes the governor) ---------------- */
+export const GX = -282, GZ = 118;
+export const Governadora: React.FC<{tt: number}> = ({tt}) => {
+  const rt = tt >= LOOP_AT ? tt - TOTAL_SEC : tt;
+  const kp = pop(rt, D31.GOV + 0.2, 0.6);
+  const kg = pop(rt, D31.GOV + 0.1, 0.45);
+  const sign = useMemo(() => texMat(textTexture('🏛️ PALÁCIO DA GOVERNADORA', {bg: '#14308a', fg: '#ffd21e', border: '#ffd21e', w: 1024, h: 170, size: 74})), []);
+  const flag = useMemo(() => texMat(textTexture('✨', {bg: '#14308a', fg: '#ffd21e', border: '#ffffff', w: 256, h: 160, size: 90})), []);
+  return (
+    <group position={[GX, 0, GZ]}>
+      <mesh geometry={G.box} material={mat('#a6dd6c')} position={[0, 0.045, 5]} scale={[34, 0.04, 20]} receiveShadow />
+      <group scale={[Math.max(0.001, kp), Math.max(0.001, kp), Math.max(0.001, kp)]}>
+        {/* main block + wings */}
+        <P geo={G.box} color="#f3ead2" p={[0, 2.4, -1]} s={[10, 4.8, 5]} o={0.05} />
+        {[-1, 1].map((sd) => <P key={sd} geo={G.box} color="#efe3c6" p={[sd * 8.2, 1.8, -1.4]} s={[6.4, 3.6, 4.2]} o={0.05} />)}
+        <P geo={G.box} color="#ffd21e" p={[0, 4.9, -1]} s={[10.4, 0.25, 5.4]} o={0.03} />
+        {[-1, 1].map((sd) => <P key={'r' + sd} geo={G.box} color="#14308a" p={[sd * 8.2, 3.75, -1.4]} s={[6.8, 0.3, 4.6]} o={0.03} />)}
+        {/* portico */}
+        {[-3.6, -1.2, 1.2, 3.6].map((x) => <P key={x} geo={G.cyl12} color="#ffffff" p={[x, 2.1, 2.0]} s={[0.4, 4.2, 0.4]} o={0.03} />)}
+        <P geo={G.box} color="#ffffff" p={[0, 4.35, 2.0]} s={[9.2, 0.45, 1.2]} o={0.03} />
+        <P geo={G.cone4} color="#ffffff" p={[0, 5.4, 2.0]} r={[0, Math.PI / 4, 0]} s={[7.4, 1.6, 1.2]} o={0.03} />
+        <mesh geometry={G.box} material={sign} position={[0, 4.35, 2.65]} scale={[6.6, 0.6, 0.08]} />
+        <P geo={G.box} color="#7b4a28" p={[0, 1.2, 1.55]} s={[1.8, 2.4, 0.08]} o={0.02} />
+        {[-3.2, 3.2].map((x) => <P key={'w' + x} geo={G.box} color="#9fd3ff" p={[x, 2.4, 1.55]} s={[1.3, 1.5, 0.06]} o={0.02} />)}
+        {[-8.2, 8.2].map((x) => <P key={'ww' + x} geo={G.box} color="#9fd3ff" p={[x, 1.9, 0.72]} s={[2.4, 1.3, 0.06]} o={0.02} />)}
+        {/* flag pole */}
+        <group position={[-5.8, 0, 4]}>
+          <P geo={G.cyl} color="#cfd4da" p={[0, 3.2, 0]} s={[0.06, 6.4, 0.06]} o={0} />
+          <mesh geometry={G.box} material={flag} position={[0.7, 5.8 + Math.sin(tt * 4) * 0.04, 0]} scale={[1.4, 0.9, 0.04]} />
+        </group>
+        {/* steps + red carpet */}
+        {[0, 1, 2].map((i) => <P key={i} geo={G.box} color="#d9d2c0" p={[0, 0.1 + i * 0.1, 4.4 - i * 0.9]} s={[8.6 + i * 0.6, 0.12, 2.6 - i * 0.7]} o={0.02} />)}
+        <P geo={G.box} color="#b3122e" p={[0, 0.34, 5.0]} s={[1.6, 0.04, 6]} o={0} />
+        {[-2.6, 2.6].map((x) => <P key={'sh' + x} geo={G.cyl12} color="#2d9a5a" p={[x, 0.5, 6.2]} s={[0.6, 1, 0.6]} o={0.02} />)}
+        {/* guards */}
+        {[-1.8, 1.8].map((x, i) => (
+          <group key={'g' + x} position={[x, 0.3, 3.5]}>
+            <Capy scale={0.78} shirt="#14308a" cap="#14110c" pose={{armL: [0, 0, 0.12], armR: [0, 0, -0.12], mouth: 0.1, brow: 0.2, blink: 0}} />
+          </group>
+        ))}
+      </group>
+      {/* the person: a capybara before the POOF, the governor after */}
+      <group position={[0, 0.3, 8.2]}>
+        {rt < D31.GOV + 0.08 ? <Capy scale={0.9} shirt="#8d8478" cap={null} pose={{brow: -0.2, mouth: 0.3, blink: 0, head: [0.1, 0, 0]}} /> : null}
+        {kg > 0 ? (
+          <group scale={kg}>
+            <Girl tt={tt} wave={0.9} skin="#c98a5e" dress="#14308a" hair="#2a1a12" />
+            <P geo={G.box} color="#ffffff" p={[0, 1.4, 0.15]} s={[0.12, 0.22, 0.03]} o={0} />
+            <group position={[0, 1.2, 0.02]} rotation={[0, 0, -0.75]}>
+              <P geo={G.box} color="#2d9a5a" p={[0, 0.1, 0.16]} s={[0.1, 0.8, 0.03]} o={0.01} />
+              <P geo={G.box} color="#ffd21e" p={[0.1, 0.1, 0.16]} s={[0.04, 0.8, 0.032]} o={0} />
+            </group>
+            <P geo={G.ball} color="#ffd21e" p={[0.16, 1.5, 0.16]} s={0.05} o={0} />
+          </group>
+        ) : null}
+        <Poof tt={rt} t0={D31.GOV} c="#ffd21e" />
+        <group position={[0, rt < D31.GOV + 0.08 ? 0.35 : 0.8, 0]}><NameTag name="lilica_444" k={1} /></group>
+      </group>
     </group>
   );
 };

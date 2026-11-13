@@ -198,11 +198,11 @@ export const PollCard: React.FC<{t: number; t0: number; t1: number}> = ({t, t0, 
     <div style={{position: 'absolute', left: 0, right: 0, top: 380, display: 'flex', justifyContent: 'center', transform: `scale(${k}) rotate(${Math.sin(t * 2) * 0.6}deg)`}}>
       <div style={{width: 900, background: '#fff', borderRadius: 48, padding: '34px 36px 30px', border: '7px solid #111', boxShadow: '0 20px 0 rgba(0,0,0,.28)', display: 'flex', flexDirection: 'column', gap: 22}}>
         <div style={{display: 'flex', justifyContent: 'center'}}>
-          <div style={{background: 'linear-gradient(90deg,#962fbf,#d62976,#fa7e1e)', color: '#fff', fontFamily: LILITA, fontSize: 44, padding: '8px 34px', borderRadius: 40, letterSpacing: 2}}>ENQUETE · 24ª VOTAÇÃO</div>
+          <div style={{background: 'linear-gradient(90deg,#962fbf,#d62976,#fa7e1e)', color: '#fff', fontFamily: LILITA, fontSize: 44, padding: '8px 34px', borderRadius: 40, letterSpacing: 2}}>ENQUETE · 25ª VOTAÇÃO</div>
         </div>
         <div style={{fontFamily: LILITA, fontSize: 60, textAlign: 'center', color: '#111', lineHeight: 1.05}}>O QUE A CIDADE<br />GANHA AGORA?</div>
-        {opt('A', 'LAVA-JATO', <div style={{fontSize: 86, lineHeight: 1}}>🚗</div>, a, '#2f6fd6')}
-        {opt('B', 'AQUÁRIO', <div style={{fontSize: 86, lineHeight: 1}}>🐠</div>, b, '#7a1f3d')}
+        {opt('A', 'CAFETERIA', <div style={{fontSize: 86, lineHeight: 1}}>☕</div>, a, '#2f6fd6')}
+        {opt('B', 'BASQUETE', <div style={{fontSize: 86, lineHeight: 1}}>🏀</div>, b, '#7a1f3d')}
         <div style={{display: 'flex', alignItems: 'center', gap: 16, border: '4px solid #ddd', borderRadius: 40, padding: '14px 26px', fontFamily: INTER, fontSize: 36, color: typed ? '#111' : '#999', fontWeight: 600}}>
           <Img src={staticFile('avatar.png')} style={{width: 60, height: 60, borderRadius: '50%'}} />
           <div style={{flex: 1}}>{typed ? `${typed}` : 'Comente A ou B...'}<span style={{opacity: Math.floor(t * 4) % 2 ? 1 : 0}}>|</span></div>

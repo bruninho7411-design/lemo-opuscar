@@ -21,7 +21,7 @@ import {Lote27, Princesa, Biblioteca, Robo, Desejos27} from './Ep27';
 import {Rainha, Dragao, Desejos28} from './Ep28';
 import {Lote29, Medica29, Irma, Desejos29} from './Ep29';
 import {Lote30, Letreiro, Fliperama, Desejos30} from './Ep30';
-import {Rua31, Vampiros, Desejos31} from './Ep31';
+import {Rua31, Vampiros, Desejos31, Governadora} from './Ep31';
 import {Pizzaria, Mercadinho, Shopping, Hospital, Airport, Police, Castle, Showcase, Mansion, MiniHouse, Shack, NameTag, Bench, CROWD, WALLS, ROOFS, FOLLOWERS, ONLY_COMMENT, NEW} from './World';
 import PEOPLE from '../people.json';
 
@@ -766,6 +766,7 @@ export const City: React.FC<{t: number; wt: number; mayorPose: any; cheer: numbe
       <Fliperama tt={t} />
       <Desejos30 tt={t} />
       <Rua31 />
+      <Governadora tt={t} />
       <Vampiros tt={t} />
       <Desejos31 tt={t} />
       <HookBus t={t} />

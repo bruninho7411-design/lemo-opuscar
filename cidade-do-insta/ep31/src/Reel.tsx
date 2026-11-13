@@ -63,6 +63,90 @@ const Parcial: React.FC<{t: number; t0: number; t1: number}> = ({t, t0, t1}) => 
   );
 };
 
+const PassoBadge: React.FC<{t: number; t0: number; t1: number; n: number; text: string}> = ({t, t0, t1, n, text}) => {
+  if (t < t0 || t >= t1) return null;
+  const k = pop(t, t0, 0.3);
+  return (
+    <div style={{position: 'absolute', top: 210, left: 0, right: 0, display: 'flex', justifyContent: 'center', transform: `scale(${k}) rotate(-2deg)`}}>
+      <div style={{display: 'flex', alignItems: 'center', gap: 16, background: '#ffd21e', border: '7px solid #111', borderRadius: 34, padding: '8px 30px 8px 10px', boxShadow: '0 12px 0 rgba(0,0,0,.35)', maxWidth: 1000}}>
+        <div style={{width: 92, height: 92, borderRadius: '50%', background: '#111', color: '#ffd21e', fontFamily: LILITA, fontSize: 64, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>{n}</div>
+        <div style={{fontFamily: LILITA, fontSize: 54, color: '#111', lineHeight: 1.0}}>{text}</div>
+      </div>
+    </div>
+  );
+};
+const Tap: React.FC<{t: number; at: number; x: number; y: number}> = ({t, at, x, y}) => {
+  if (t < at - 0.5 || t > at + 0.8) return null;
+  const e = clamp((t - at) / 0.5);
+  return (
+    <>
+      {t >= at ? <div style={{position: 'absolute', left: x - 70 - e * 40, top: y - 70 - e * 40, width: 140 + e * 80, height: 140 + e * 80, borderRadius: '50%', border: '8px solid #ffd21e', opacity: 1 - e}} /> : null}
+      <div style={{position: 'absolute', left: x - 10, top: y - 10 + (t < at ? (at - t) * 160 : 0), fontSize: 110, transform: `scale(${t >= at && t < at + 0.15 ? 0.85 : 1})`}}>👆</div>
+    </>
+  );
+};
+const Typed: React.FC<{t: number; t0: number; t1: number; show0: number; show1: number; text: string}> = ({t, t0, t1, show0, show1, text}) => {
+  if (t < show0 || t >= show1) return null;
+  const n = Math.round(text.length * clamp((t - t0) / (t1 - t0)));
+  const caret = Math.floor(t * 3) % 2 === 0;
+  return (
+    <div style={{position: 'absolute', left: 36, top: 1017, width: 1003, height: 178, background: '#ffffff', borderRadius: 14, border: '4px solid #6c63ff'}}>
+      <div style={{position: 'absolute', left: 24, top: 22, right: 24, fontFamily: INTER, fontWeight: 500, fontSize: 30, color: '#222', lineHeight: 1.3}}>{text.slice(0, n)}{caret ? '|' : ' '}</div>
+    </div>
+  );
+};
+
+/** the real paid order, redrawn: only the @, "paid" and the wish (no order number / payment time) */
+const OrderCard: React.FC<{t: number; t0: number; t1: number}> = ({t, t0, t1}) => {
+  if (t < t0 || t > t1) return null;
+  const k = pop(t, t0, 0.35) * (1 - easeOut(ramp(t, t1 - 0.2, t1)));
+  const chip = (txt: string, bg: string, fg = '#fff') => <span style={{background: bg, color: fg, fontFamily: LILITA, fontSize: 40, padding: '4px 20px', borderRadius: 30, border: '4px solid #111'}}>{txt}</span>;
+  return (
+    <div style={{position: 'absolute', left: 0, right: 0, top: 440, display: 'flex', justifyContent: 'center', transform: `scale(${k}) rotate(-2deg)`}}>
+      <div style={{width: 900, background: '#fbfaf6', border: '7px solid #111', borderRadius: 40, boxShadow: '0 18px 0 rgba(0,0,0,.3)', padding: '24px 34px 30px', textAlign: 'left'}}>
+        <div style={{fontFamily: INTER, fontWeight: 800, fontSize: 30, color: '#667', letterSpacing: 1}}>PEDIDO NO VÍDEO DO INSTA</div>
+        <div style={{fontFamily: INTER, fontWeight: 900, fontSize: 70, color: '#111', marginTop: 4}}>@lilica_444</div>
+        <div style={{display: 'flex', gap: 12, marginTop: 10, transform: `scale(${pop(t, t0 + 0.8, 0.3)})`, transformOrigin: 'left center'}}>{chip('✅ PAGO', '#2d9a5a')}{chip('R$ 10,00', '#14110c', '#ffd21e')}</div>
+        <div style={{background: '#eeece6', borderRadius: 26, padding: '16px 24px', marginTop: 18, transform: `scale(${pop(t, t0 + 1.7, 0.3)})`, transformOrigin: 'left center'}}>
+          <div style={{fontFamily: INTER, fontWeight: 800, fontSize: 28, color: '#778'}}>O QUE A PESSOA PEDIU</div>
+          <div style={{fontFamily: INTER, fontWeight: 600, fontSize: 56, color: '#111', marginTop: 6}}>Quero ser a governadora</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+const Countdown: React.FC<{t: number; items: [number, string][]}> = ({t, items}) => {
+  let cur: [number, string] | null = null;
+  for (const it of items) if (t >= it[0] && t < it[0] + 0.6) cur = it;
+  if (!cur) return null;
+  const k = pop(t, cur[0], 0.2);
+  return <div style={{position: 'absolute', top: 640, left: 0, right: 0, textAlign: 'center', fontFamily: LILITA, fontSize: 420, lineHeight: 1, color: '#e2483d', ...st(30), textShadow: '0 20px 0 rgba(0,0,0,.4)', transform: `scale(${k * (1.25 - 0.25 * clamp((t - cur[0]) / 0.6))}) rotate(-4deg)`}}>{cur[1]}</div>;
+};
+const ParcialG: React.FC<{t: number; t0: number; t1: number}> = ({t, t0, t1}) => {
+  if (t < t0 || t > t1) return null;
+  const k = pop(t, t0, 0.35) * (1 - easeOut(ramp(t, t1 - 0.2, t1)));
+  const fa = 0.64 * easeOut(clamp((t - 57.54) / 0.6)), fb = 0.36 * easeOut(clamp((t - 58.66) / 0.6));
+  const row = (l: string, label: string, icon: string, frac: number, pct: string, col: string, at: number) => (
+    <div style={{position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', gap: 16, background: '#f3f3f3', border: '6px solid #111', borderRadius: 30, padding: '12px 20px'}}>
+      <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: `${frac * 100}%`, background: col, opacity: 0.55}} />
+      <div style={{position: 'relative', width: 76, height: 76, borderRadius: '50%', background: '#fff', border: '5px solid #111', fontFamily: LILITA, fontSize: 52, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{l}</div>
+      <div style={{position: 'relative', fontFamily: LILITA, fontSize: 56, flex: 1}}>{label} {icon}</div>
+      <div style={{position: 'relative', fontFamily: LILITA, fontSize: 70, transform: `scale(${pop(t, at, 0.3)})`}}>{pct}</div>
+    </div>
+  );
+  return (
+    <div style={{position: 'absolute', left: 0, right: 0, top: 520, display: 'flex', flexDirection: 'column', alignItems: 'center', transform: `scale(${k}) rotate(-2deg)`}}>
+      <div style={{width: 920, background: '#fff', borderRadius: 44, border: '7px solid #111', boxShadow: '0 18px 0 rgba(0,0,0,.3)', padding: '22px 28px', display: 'flex', flexDirection: 'column', gap: 16}}>
+        <div style={{textAlign: 'center'}}><span style={{background: 'linear-gradient(90deg,#962fbf,#d62976,#fa7e1e)', color: '#fff', fontFamily: LILITA, fontSize: 40, padding: '6px 26px', borderRadius: 40}}>PARCIAL · 24ª VOTAÇÃO</span></div>
+        {row('A', 'LAVA-JATO', '🚗', fa, '64%', '#2f6fd6', 57.54)}
+        {row('B', 'AQUÁRIO', '🐠', fb, '36%', '#d62976', 58.66)}
+        <div style={{textAlign: 'center', fontFamily: INTER, fontWeight: 900, fontSize: 38, transform: `scale(${pop(t, 60.2, 0.3)})`}}>330 votos · termina em 2 dias</div>
+      </div>
+      <div style={{marginTop: 26, fontFamily: LILITA, fontSize: 86, color: '#FFD21E', ...st(14), transform: `scale(${pop(t, 59.46, 0.3)}) rotate(-4deg)`}}>AINDA DÁ PRA VIRAR!</div>
+    </div>
+  );
+};
+
 const BigNum: React.FC<{t: number; items: [number, string][]}> = ({t, items}) => {
   let cur: [number, string] | null = null;
   for (const it of items) if (t >= it[0] && t < it[0] + 0.5) cur = it;
@@ -302,6 +386,8 @@ const WaveHit: React.FC<{t: number; t0: number}> = ({t, t0}) => {
   );
 };
 
+const PUNCH31 = [0.84, 2.94, 4.12, 5.0, 6.16, 7.38, 9.62, 10.06, 11.0, 12.14, 13.14, 14.4, 15.82, 16.4, 17.0, 17.46, 18.4, 19.66, 21.04, 22.58, 23.98, 24.8, 26.58, 27.12, 28.2, 29.6, 30.2, 31.3, 32.8, 34.5, 35.42, 36.52, 38.98, 40.94, 42.1, 43.46, 44.82, 45.92, 47.54, 48.96, 50.6, 52.78, 54.5, 56.18, 57.54, 58.66, 59.92, 62.9, 64.58, 65.94, 66.5];
+const PUNCHPD = [0.0, 0.84, 2.0, 2.52, 3.4, 4.08, 4.84, 5.42, 6.6, 7.24, 8.36, 10.04, 10.8, 11.78, 13.18, 14.84, 15.7, 17.38, 19.52, 20.22, 20.8, 21.36, 22.36, 23.16, 25.7, 27.54, 29.54, 30.56, 32.02, 33.5, 34.74, 36.12, 37.1];
 const PUNCH30 = [0.0, 1.48, 2.38, 2.92, 3.68, 4.8, 5.78, 6.95, 8.4, 9.78, 11.5, 12.82, 14.3, 14.7, 15.42, 16.66, 18.42, 19.04, 19.66, 20.6, 22.16, 23.76, 24.68, 26.72, 27.74, 29.54, 31.64, 33.42, 35.04, 36.2, 37.44, 38.52, 41.66, 42.88, 43.56, 44.2, 45.54, 46.24, 47.02, 47.58, 49.58, 51.94, 53.4, 56.44];
 const PUNCH29 = [0.0, 1.18, 2.26, 3.4, 4.06, 4.86, 6.14, 6.95, 8.6, 10.04, 11.84, 13.34, 15.42, 16.24, 17.4, 18.82, 19.6, 21.3, 23.66, 24.5, 26.1, 27.24, 28.48, 30.0, 31.16, 32.0, 33.2, 35.12, 35.7, 37.12, 38.9, 40.28, 42.62, 44.02, 45.42, 46.32, 47.3, 49.66, 50.9, 52.12, 54.7];
 const PUNCH28 = [0.0, 1.2, 2.16, 3.08, 5.42, 6.22, 7.0, 7.98, 8.9, 11.38, 13.66, 14.54, 16.04, 17.56, 18.02, 19.44, 20.64, 22.5, 24.04, 25.82, 27.16, 29.02, 30.58, 31.66, 33.94, 35.1, 36.52, 37.66, 38.72, 39.72, 41.58, 44.3, 46.76, 48.52, 49.76, 51.78, 53.02, 55.82];
@@ -403,16 +489,16 @@ const ImgClips: React.FC<{t: number; clips: {src: string; t0: number; t1: number
   );
 };
 
-export const Reel: React.FC<{audio?: string}> = ({audio = 'mix30.wav'}) => {
+export const Reel: React.FC<{audio?: string}> = ({audio = 'mix31.wav'}) => {
   const frame = useCurrentFrame();
   const {width, height} = useVideoConfig();
   const t = frame / FPS;
   const s = shotAt(t);
-  const cut = ['intro', 'loop', 'hook', 'hook2'].includes(s.id) || s.id.startsWith('g_') ? 0 : 1 - easeOut(clamp((t - s.start) / 0.28));
+  const cut = ['intro', 'loop', 'hook'].includes(s.id) || s.id.startsWith('g_') ? 0 : 1 - easeOut(clamp((t - s.start) / 0.28));
   let punch = 0;
-  for (const p of PUNCH30) if (t >= p && t < p + 0.3) punch = Math.max(punch, 1 - easeOut((t - p) / 0.3));
+  for (const p of PUNCH31) if (t >= p && t < p + 0.3) punch = Math.max(punch, 1 - easeOut((t - p) / 0.3));
   const zoom = 1 + 0.09 * cut + 0.05 * punch;
-  const B0: Record<string, number> = {enquete: 50.4};
+  const B0: Record<string, number> = {parcial: 55.8, enquete: 61.3};
   const blur = s.id in B0 ? 6 * easeOut(clamp((t - B0[s.id]) / 0.3)) : 0;
   const P = PPL as any;
   const rt = t >= LOOP_AT ? t - TOTAL_SEC : t;
@@ -428,73 +514,64 @@ export const Reel: React.FC<{audio?: string}> = ({audio = 'mix30.wav'}) => {
       </AbsoluteFill>
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 70%, rgba(0,0,0,.25) 100%)'}} />
       <ImgClips t={t} clips={[
-        {src: 'l27_n_Video.png', t0: 35.0, t1: 41.62, zoom: [1.0, 1.12]},
-        {src: 'l27_n1.png', t0: 41.62, t1: 42.85, zoom: [1.02, 1.08]},
-        {src: 'l27_n_c1.png', t0: 42.85, t1: 43.52, zoom: [1.02, 1.08]},
-        {src: 'l27_n_c2.png', t0: 43.52, t1: 44.16, zoom: [1.02, 1.08]},
-        {src: 'l27_n_Personagens.png', t0: 44.16, t1: 45.5, zoom: [1.02, 1.1]},
-        {src: 'l27_n_Comercios.png', t0: 45.5, t1: 46.2, zoom: [1.02, 1.08]},
-        {src: 'l27_n_Veiculos.png', t0: 46.2, t1: 46.98, zoom: [1.02, 1.08]},
-        {src: 'l27_n_Pets.png', t0: 46.98, t1: 47.55, zoom: [1.02, 1.08]},
-        {src: 'l27_n1.png', t0: 47.55, t1: 49.5, zoom: [1.0, 1.08]},
+        {src: 'pd_f2.png', t0: 9.4, t1: 12.96, zoom: [1.0, 1.1]},
+        {src: 'pd_f0.png', t0: 35.92, t1: 37.2, zoom: [1.0, 1.06]},
+        {src: 'pd_f1.png', t0: 37.2, t1: 38.95, zoom: [1.0, 1.08]},
+        {src: 'pd_f3.png', t0: 38.95, t1: 44.6, zoom: [1.0, 1.0]},
       ]} />
       <Header t={t} />
-      {/* hook: "vou parar de te seguir porque meu nome não apareceu" */}
-      {bubble(-0.6, 3.6, 'fornodebarroo', 'Vou para de te seguir porque meu nome não apareceu')}
-      <Flash t={t} t0={3.68} dur={0.35} color="#fff3a0" max={0.85} />
-      <Callout t={t} t0={4.0} t1={6.95} text="✨ AGORA TODO MUNDO VÊ!" top={1420} rot={-3} size={70} bg="#ffd21e" />
-      <Confetti t={t} t0={4.3} />
-      <Moradores t={t} t0={7.3} t1={10.55} to={(CFG as any).seguidores} />
-      <Names t={t} t0={11.5} t1={12.1} title="😬 SÓ COMENTARAM" names={['tina_vilao', 'beatriz_adao_rodrigues']} bg="#8d8478" />
-      <Names t={t} t0={12.82} t1={13.4} title="🏠 SEGUIRAM = CASA LEGAL" names={P.casa_legal_ep30} bg="#2f6fd6" />
-      <Card t={t} t0={13.45} t1={15.4} top={1180}>
+      {/* hook: a real paid order becomes true */}
+      <OrderCard t={t} t0={0.0} t1={4.95} />
+      <Flash t={t} t0={5.0} dur={0.35} color="#fff3a0" max={0.85} />
+      <Callout t={t} t0={5.2} t1={9.4} text="🏛️ PEDIDO REALIZADO!" top={1420} rot={-3} size={74} bg="#ffd21e" />
+      <Confetti t={t} t0={5.3} />
+      <Callout t={t} t0={9.42} t1={12.96} text="🛒 FEITO PELO SITE DA LOJA!" top={330} rot={-3} size={58} bg="#ffd21e" />
+      <PhoneCTA t={t} t0={12.0} t1={12.96} tap={12.5} label="🛒 LINK NA BIO!" />
+      {/* second beat: vampires */}
+      {bubble(13.0, 15.7, 'bryanr8664', 'Eu quero ser vampiro')}
+      {bubble(15.75, 17.42, '_anacxs01', 'Quero ser a vampira da cidade', 2)}
+      <Countdown t={t} items={[[15.82, '3'], [16.4, '2'], [17.0, '1']]} />
+      <Flash t={t} t0={17.46} dur={0.35} color="#3b0a1a" max={0.8} />
+      <Confetti t={t} t0={17.6} />
+      <Moradores t={t} t0={20.9} t1={23.6} to={(CFG as any).seguidores} />
+      {bubble(24.65, 27.0, 'luna2442636', 'Oii eu quero ser dona de uma cafeteria e eu não quero ser capivara e quero um vestido roxo')}
+      {bubble(27.02, 28.1, 'manda_santanna_macha', '(...) e eu virar uma policial', 2)}
+      {bubble(28.12, 30.0, 'anthony_olivsouza', 'Quero ser um roqueiro com uma banda de famosa')}
+      {bubble(30.02, 31.2, 'sobreirajuliia', 'Quero jogar basquete por favor eu tô te seguindo', 2)}
+      {bubble(31.22, 32.7, 'misael_fyppp', 'Eu fiz tudo (...) quer ser jogador de futsal')}
+      {bubble(32.72, 34.4, 'antonio_f._rapozi', 'Eu quero ser o mais rico da cidade', 2)}
+      {bubble(34.42, 35.9, 'manuelamsilvav', 'Eu quero ter uma filha de 1 ano e eu c blusa rosa e ela blusa lilás tênis branco')}
+      <Confetti t={t} t0={24.9} />
+      {/* store: write your wish */}
+      <Callout t={t} t0={35.95} t1={37.2} text="🌟 QUER O SEU DESEJO?" top={330} rot={-3} size={64} bg="#ffd21e" />
+      <Callout t={t} t0={37.2} t1={38.95} text="🔗 LINK NA BIO → LOJA" top={330} rot={3} size={62} bg="#ffffff" />
+      <Typed t={t} t0={39.0} t1={40.5} show0={39.0} show1={44.6} text="quero ser a governadora" />
+      <Callout t={t} t0={38.98} t1={40.62} text="✍️ ESCREVE O SEU DESEJO" top={330} rot={-2} size={56} bg="#ffd21e" />
+      <Callout t={t} t0={40.66} t1={41.72} text="💰 A PARTIR DE R$ 10" top={330} rot={3} size={66} bg="#ffd21e" />
+      <Callout t={t} t0={41.74} t1={43.0} text="⏳ 5 VAGAS POR SEMANA" top={330} rot={-3} size={62} bg="#ff3040" />
+      <Callout t={t} t0={43.02} t1={44.6} text="🎬 NUM VÍDEO AQUI!" top={330} rot={3} size={66} bg="#ffffff" />
+      {/* houses: comment + like + repost = mansion */}
+      <Card t={t} t0={44.62} t1={47.3} top={1360}>
         <div style={{...box, width: 760, padding: '14px 26px'}}>
-          <Check t={t} at={13.7} e="💬" label="COMENTOU" />
-          <Check t={t} at={14.3} e="❤️" label="CURTIU" />
-          <Check t={t} at={14.7} e="🔁" label="REPUBLICOU" />
+          <Check t={t} at={44.82} e="💬" label="COMENTA" />
+          <Check t={t} at={45.54} e="❤️" label="CURTE" />
+          <Check t={t} at={45.92} e="🔁" label="REPUBLICA" />
         </div>
       </Card>
-      <Callout t={t} t0={15.42} t1={16.5} text="✨ DESEJO REALIZADO!" top={1400} rot={-3} size={70} bg="#ffd21e" />
-      <Confetti t={t} t0={15.6} />
-      <VoteResult t={t} t0={16.6} t1={18.35} />
-      <Confetti t={t} t0={16.8} />
-      <Callout t={t} t0={18.42} t1={21.1} text="🧱 PAREDES · TELHADO · MÁQUINAS · NEON" top={1440} rot={-2} size={46} bg="#4ff0ff" />
-      {bubble(21.15, 23.65, 'henrique_____sp', 'Fliperama')}
-      {bubble(23.75, 25.75, 'laralealbraga', 'Euuuu filha da rainha')}
-      {bubble(25.85, 27.65, 'felipemuniz5882', 'Quero ser um lobisomem', 2)}
-      {bubble(27.75, 29.45, 'cecilirebecam17', 'Quero. Ser. Manicure cabelo ondulado blusa azul saia azul escuro')}
-      {bubble(29.55, 31.35, 'helenacaetano2015', 'A influêncer da cidade/ a famosa', 2)}
-      {bubble(31.45, 33.25, 'bebe_cbjrr', 'quero ter um skate e ser mais do rock')}
-      {bubble(33.35, 34.95, 'mayra26309', 'Eu quero ser professor por favor me escolhe 🙏🙏', 2)}
-      {/* store: your wish first */}
-      {t >= 35.04 && t < 41.62 ? (
-        <div style={{position: 'absolute', top: 240, left: 0, right: 0, display: 'flex', justifyContent: 'center', transform: `scale(${pop(t, 35.04, 0.3)}) rotate(-2deg)`}}>
-          <div style={{...box, width: 930, padding: '16px 26px'}}>
-            <div style={{fontFamily: LILITA, fontSize: 66}}>🌟 QUER O SEU DESEJO?</div>
-            <div style={{fontFamily: LILITA, fontSize: 48, marginTop: 8, textAlign: 'left', transform: `scale(${pop(t, 36.2, 0.3)})`}}>✍️ ESCREVE ELE NO SITE</div>
-            <div style={{fontFamily: LILITA, fontSize: 48, marginTop: 4, textAlign: 'left', transform: `scale(${pop(t, 37.44, 0.3)})`}}>📹 NO "PEDIDO NO VÍDEO"</div>
-            <div style={{fontFamily: LILITA, fontSize: 48, marginTop: 4, textAlign: 'left', color: '#d62976', transform: `scale(${pop(t, 38.52, 0.3)})`}}>🎬 E ELE APARECE NUM PRÓXIMO VÍDEO!</div>
-            <div style={{fontFamily: INTER, fontWeight: 800, fontSize: 28, marginTop: 10, color: '#555', transform: `scale(${pop(t, 39.4, 0.3)})`}}>5 vagas por semana · sai em até 14 dias depois de aprovado</div>
-          </div>
+      <Names t={t} t0={47.38} t1={48.95} title="😬 SÓ COMENTARAM" names={P.casa_ruim_ep31} bg="#8d8478" />
+      <Names t={t} t0={48.96} t1={50.35} title="🏠 SEGUIRAM = CASA LEGAL" names={P.casa_legal_ep31} bg="#2f6fd6" />
+      <Callout t={t} t0={50.38} t1={52.4} text="COMENTOU+CURTIU+REPUBLICOU" top={1440} rot={-2} size={46} bg="#ffffff" />
+      <Callout t={t} t0={52.46} t1={55.7} text="🏰 GANHA UMA MANSÃO!" top={1440} rot={-3} size={70} bg="#ffd21e" />
+      <Confetti t={t} t0={52.6} />
+      {t >= 53.4 && t < 55.7 ? (
+        <div style={{position: 'absolute', top: 330, left: 0, right: 0, display: 'flex', justifyContent: 'center', transform: `scale(${pop(t, 53.4, 0.3)}) rotate(-3deg)`}}>
+          <div style={{background: '#fff', border: '7px solid #111', borderRadius: 30, padding: '10px 30px', boxShadow: '0 10px 0 rgba(0,0,0,.3)', fontFamily: INTER, fontWeight: 900, fontSize: 54}}>@seu.nome 👑 <span style={{fontFamily: LILITA, color: '#d62976'}}>pode ser você!</span></div>
         </div>
       ) : null}
-      <Callout t={t} t0={41.66} t1={42.85} text="🏠 CASA COM SEU @" top={300} rot={-3} size={66} bg="#ffd21e" />
-      <Callout t={t} t0={42.88} t1={43.52} text="🏰 MANSÃO" top={300} rot={3} size={70} bg="#ffffff" />
-      <Callout t={t} t0={43.56} t1={44.16} text="🏯 CASTELO" top={300} rot={-3} size={70} bg="#ff9fd0" />
-      <Callout t={t} t0={44.2} t1={45.5} text="🧑 PERSONAGEM DO SEU JEITO" top={300} rot={2} size={54} bg="#ffd21e" />
-      <Callout t={t} t0={45.54} t1={46.2} text="🍕 PIZZARIA" top={300} rot={-3} size={70} bg="#ff8f1f" />
-      <Callout t={t} t0={46.24} t1={46.98} text="🚗 CARRO" top={300} rot={3} size={70} bg="#2fb5ff" />
-      <Callout t={t} t0={47.02} t1={47.55} text="🐉 DRAGÃO" top={300} rot={-3} size={70} bg="#5ec26a" />
-      {t >= 47.58 && t < 49.5 ? (
-        <div style={{position: 'absolute', top: 260, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', transform: `scale(${pop(t, 47.58, 0.3)}) rotate(-3deg)`}}>
-          <div style={{background: '#ff3040', color: '#fff', fontFamily: LILITA, fontSize: 76, padding: '10px 34px', borderRadius: 34, border: '7px solid #111', boxShadow: '0 12px 0 rgba(0,0,0,.35)', textAlign: 'center', lineHeight: 1.05}}>⏰ PREÇO DE LANÇAMENTO<br />SÓ ATÉ 30/11</div>
-          <div style={{marginTop: 14, background: '#fff', fontFamily: INTER, fontWeight: 800, fontSize: 30, padding: '6px 20px', borderRadius: 18, border: '4px solid #111'}}>compras opcionais · desejos nos comentários continuam grátis</div>
-        </div>
-      ) : null}
-      <PhoneCTA t={t} t0={49.5} t1={50.4} tap={49.8} label="🛒 LINK NA BIO!" />
-      <PollCard t={t} t0={50.45} t1={55.15} />
-      <Callout t={t} t0={56.0} t1={57.45} text="🐺 AUUUUUU!" top={1440} rot={-4} size={84} bg="#9aa3ad" />
-      <Flash t={t} t0={56.44} dur={0.4} color="#ffffff" max={0.6} />
+      <ParcialG t={t} t0={55.74} t1={61.2} />
+      <PollCard t={t} t0={61.3} t1={65.92} />
+      <Callout t={t} t0={66.0} t1={67.35} text="🧛 CHEGAM NA SUA CASA!" top={1440} rot={-4} size={66} bg="#8e0e24" />
+      <Flash t={t} t0={66.9} dur={0.4} color="#3b0a1a" max={0.7} />
       <Caption t={t} />
       {audio ? <Audio src={staticFile(audio)} /> : null}
     </AbsoluteFill>
